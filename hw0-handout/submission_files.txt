@@ -1,0 +1,10 @@
+.python-version
+pyproject.toml
+uv.lock
+part1_training.py
+part2_attacking.py
+part3_editing.py
+utils.py
+artifacts/model.pt
+artifacts/adversarial_examples.pt
+artifacts/edited_last_layer.pt
