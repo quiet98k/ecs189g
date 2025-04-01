@@ -86,7 +86,7 @@ for epoch in range(epochs):
         outputs = model(images)
         loss = criterion(outputs, labels)
 
-        # Backward pass and optimization
+        # Backward pass 
         optimizer.zero_grad()
         loss.backward()
         optimizer.step()
