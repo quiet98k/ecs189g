@@ -10,7 +10,8 @@ dependencies = [
     "torchattacks==3.5.1",
     "torchvision>=0.21.0",
     "tqdm==4.67.1",
-    "gurobipy==12.0.1"
+    "gurobipy==12.0.1",
+    "matplotlib>=3.10.1",
 ]
 
 [tool.uv.sources]
