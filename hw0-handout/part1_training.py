@@ -23,16 +23,13 @@ import torchvision
 import torchvision.datasets as datasets
 import torchvision.transforms as transforms
 import matplotlib.pyplot as plt
+from utils import rotate
 
 
 
 model = Model()
 
-rotate = transforms.Compose([
-    transforms.ToTensor(),
-    transforms.Lambda(lambda x: torch.rot90(x, k=-1, dims=(1, 2))), 
-    transforms.Lambda(lambda x: x.contiguous().reshape(-1))
-])
+
 
 # # Load the MNIST dataset with and without the rotation
 # mnist_original = torchvision.datasets.MNIST(root='./data', train=True, download=True, transform=transforms.ToTensor())
