@@ -117,10 +117,32 @@ def example_edit_method(
     else:
         return None
 
-def your_edit(model, *args, **kwargs):
-    raise NotImplementedError(
-        "Editing method for `part1.py` not implemented."
-    )
+def your_edit(model, inputs, labels, layer=-1, lb=-10., ub=10.):
+    # raise NotImplementedError(
+    #     "Editing method for `part1.py` not implemented."
+    # )
+    
+    model = deepcopy(model)
+
+    editable_model = st.nn.to_editable(model)
+
+    editable_model.solver.verbose_(False)
+    
+    editable_model[layer:].requires_edit_(lb=lb, ub=ub)
+    
+    symbolic_outputs = editable_model(inputs).data
+    
+    output_constraints = symbolic_outputs.argmax(-1) == labels
+    output_constraints.assert_()
+    
+    objective = editable_model.param_delta().norm_ub('linf+l1n')
+    
+    if editable_model.optimize(minimize=objective):
+        return model
+
+    else:
+        return None
+    
 
 if __name__ == "__main__":
 
@@ -148,7 +170,10 @@ if __name__ == "__main__":
     """
     edited_model = your_edit(model,
         inputs=all_images,
-        labels=all_labels)
+        labels=all_labels,
+        layer=-1,
+        lb=-10., ub=10.,
+        )
 
     if edited_model is None:
         print("Editing failed.")
