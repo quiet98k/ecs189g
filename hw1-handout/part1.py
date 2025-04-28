@@ -50,13 +50,13 @@ def example_edit_method(
     # editable_model[layer].requires_edit_(lb=lb, ub=ub)
 
     # Example 2: Edit all layers from layer to the end of the model
-    editable_model[layer:].requires_edit_(lb=lb, ub=ub)
+    # editable_model[layer:].requires_edit_(lb=lb, ub=ub)
 
     # Example 3: Edit part of the parameters, specified by a boolean mask.
-    # editable_model[layer].weight.requires_edit_(
-    #     mask=editable_model[layer].weight > 0.,
-    #     lb=lb, ub=ub,
-    # )
+    editable_model[layer].weight.requires_edit_(
+        mask=editable_model[layer].weight > 0.,
+        lb=lb, ub=ub,
+    )
 
 
     """ Symbolic Forward Pass
@@ -128,7 +128,7 @@ def your_edit(model, inputs, labels, layer=-1, lb=-10., ub=10.):
 
     editable_model.solver.verbose_(False)
     
-    editable_model[layer:].requires_edit_(lb=lb, ub=ub)
+    editable_model[layer].requires_edit_(lb=lb, ub=ub)
     
     symbolic_outputs = editable_model(inputs).data
     
@@ -168,12 +168,13 @@ if __name__ == "__main__":
                 lb=-10., ub=10.,
             )
     """
-    edited_model = your_edit(model,
+    edited_model = example_edit_method(model,
         inputs=all_images,
         labels=all_labels,
         layer=-1,
         lb=-10., ub=10.,
-        )
+    )
+
 
     if edited_model is None:
         print("Editing failed.")
