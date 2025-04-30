@@ -189,6 +189,7 @@ def your_edit(model, inputs, labels,
 
 def run_hyperparameter_search(model, all_images, all_lables):
     best_models = []
+    results = []
     norms_options = [
         ['l1'],
         ['l1n'],
@@ -270,75 +271,89 @@ def run_hyperparameter_search(model, all_images, all_lables):
                 test_acc = test(edited_model, test_dataset)
                 
                 
-                best_models.append({
-                    "model": edited_model,
-                    "params": {
-                        "layer": layer,
-                        "multi_layer": multi_layer,
-                        "partial_layer": partial_layer,
-                        "lb": lb,
-                        "ub": ub,
-                        "norms": norms,
-                        "mask_fn": mask_fn.__name__,
-                        "threshold": threshold,
-                        "edit_acc": edit_acc,
-                        "test_acc": test_acc
-                    }
-                })
+                result = {
+                    "status": "success",
+                    "layer": layer,
+                    "multi_layer": multi_layer,
+                    "partial_layer": partial_layer,
+                    "lb": lb,
+                    "ub": ub,
+                    "norms": norms,
+                    "mask_fn": mask_fn.__name__,
+                    "threshold": threshold,
+                    "edit_acc": edit_acc,
+                    "test_acc": test_acc,
+                    "error": ""
+                }
+
                 
-                model_id = len(best_models) - 1
+                model_id = len(best_models)
                 base_dir = f"my_model/part1/model_{model_id}"
                 os.makedirs(base_dir, exist_ok=True)
 
-                # Save model
                 save_model(edited_model, os.path.join(base_dir, "model.pt"))
-
-                # Save params
                 with open(os.path.join(base_dir, "params.json"), "w") as f:
-                    json.dump(best_models[-1]["params"], f, indent=2)
-                    
+                    json.dump(result, f, indent=2)
+
+                best_models.append({"model": edited_model, "params": result})
+                
+            else:
+                result = {
+                    "status": "null_model",
+                    "layer": layer,
+                    "multi_layer": multi_layer,
+                    "partial_layer": partial_layer,
+                    "lb": lb,
+                    "ub": ub,
+                    "norms": norms,
+                    "mask_fn": mask_fn.__name__,
+                    "threshold": threshold,
+                    "edit_acc": None,
+                    "test_acc": None,
+                    "error": "edited_model is None"
+                }
+
         except Exception as e:
             print(f"❌ Failed with error: {e}")
-
-
-    summary_path = "my_model/part1/summary.csv"
-    os.makedirs(os.path.dirname(summary_path), exist_ok=True)
-
-    fieldnames = [
-        "model_id", "layer", "multi_layer", "partial_layer",
-        "lb", "ub", "norms", "mask_fn", "threshold",
-        "edit_acc", "test_acc"
-    ]
-
-    with open(summary_path, "w", newline="") as csvfile:
-        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
-        writer.writeheader()
-
-        for i, entry in enumerate(best_models):
-            params = entry["params"]
-            row = {
-                "model_id": i,
-                "layer": params["layer"],
-                "multi_layer": params["multi_layer"],
-                "partial_layer": params["partial_layer"],
-                "lb": params["lb"],
-                "ub": params["ub"],
-                "norms": " ".join(params["norms"]),
-                "mask_fn": params["mask_fn"],
-                "threshold": params["threshold"],
-                "edit_acc": params["edit_acc"],
-                "test_acc": params["test_acc"]
+            result = {
+                "status": "error",
+                "layer": layer,
+                "multi_layer": multi_layer,
+                "partial_layer": partial_layer,
+                "lb": lb,
+                "ub": ub,
+                "norms": norms,
+                "mask_fn": mask_fn.__name__,
+                "threshold": threshold,
+                "edit_acc": None,
+                "test_acc": None,
+                "error": str(e)
             }
-            writer.writerow(row)
-    
-    for i, entry in enumerate(best_models):
-        print(f"--- Model {i+1} ---")
-        print("Parameters:")
-        for k, v in entry["params"].items():
-            print(f"  {k}: {v}")
-        print("Model:")
-        print(entry["model"])
-        print()
+
+        results.append(result)
+
+        with open("my_model/part1/full_results.csv", "a", newline="") as csvfile:
+            writer = csv.DictWriter(csvfile, fieldnames=[
+                "status", "layer", "multi_layer", "partial_layer",
+                "lb", "ub", "norms", "mask_fn", "threshold",
+                "edit_acc", "test_acc", "error"
+            ])
+            if csvfile.tell() == 0:
+                writer.writeheader()
+            writer.writerow({
+                "status": result["status"],
+                "layer": result["layer"],
+                "multi_layer": result["multi_layer"],
+                "partial_layer": result["partial_layer"],
+                "lb": result["lb"],
+                "ub": result["ub"],
+                "norms": " ".join(result["norms"]),
+                "mask_fn": result["mask_fn"],
+                "threshold": result["threshold"],
+                "edit_acc": result["edit_acc"],
+                "test_acc": result["test_acc"],
+                "error": result["error"]
+            })
 
 
 
@@ -372,11 +387,11 @@ if __name__ == "__main__":
     # edited_model = your_edit(model, inputs=all_images, labels=all_labels,
     #                          verbose=True,
     #                          layer=-2,
-    #                          multi_layer=True,
+    #                          multi_layer=False,
     #                          partial_layer=False,
-    #                          lb = -1., ub = 1.,
-    #                          norms=['l1'],
-    #                          mask_fn=operator.gt,
+    #                          lb = -10., ub = 10.,
+    #                          norms=['l1n'],
+    #                          mask_fn=operator.lt,
     #                          threshold=0)
     # if edited_model is None:
     #     print("Editing failed.")
