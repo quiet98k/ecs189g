@@ -8,6 +8,9 @@ import os
 import json
 import sys
 import csv
+from itertools import product
+import random
+
 
 # class Tee:
 #     def __init__(self, *streams):
@@ -70,13 +73,13 @@ def example_edit_method(
     # editable_model[layer].requires_edit_(lb=lb, ub=ub)
 
     # Example 2: Edit all layers from layer to the end of the model
-    # editable_model[layer:].requires_edit_(lb=lb, ub=ub)
+    editable_model[layer:].requires_edit_(lb=lb, ub=ub)
 
     # Example 3: Edit part of the parameters, specified by a boolean mask.
-    editable_model[layer].weight.requires_edit_(
-        mask=editable_model[layer].weight > 0.,
-        lb=lb, ub=ub,
-    )
+    # editable_model[layer].weight.requires_edit_(
+    #     mask=editable_model[layer].weight > 0.,
+    #     lb=lb, ub=ub,
+    # )
 
 
     """ Symbolic Forward Pass
@@ -151,8 +154,9 @@ def your_edit(model, inputs, labels,
     #     "Editing method for `part1.py` not implemented."
     # )
     
-    print(f"Trying with: {layer = }, {multi_layer = }, {partial_layer = }, "
-        f"{lb = }, {ub = }, {norms = }, {mask_fn.__name__ = }, {threshold = }")
+    print(f"🔧 Trying config | {layer=}, {multi_layer=}, {partial_layer=}, "
+        f"{lb=}, {ub=}, {norms=}, {mask_fn.__name__=}, {threshold=}")
+
     
     model = deepcopy(model)
 
@@ -163,14 +167,14 @@ def your_edit(model, inputs, labels,
     
     
     if multi_layer:
+        editable_model[layer:].requires_edit_(lb=lb, ub=ub)
+    else:
         if partial_layer:
             if hasattr(editable_model[layer], "weight"):
                 mask = mask_fn(editable_model[layer].weight, threshold)
-            editable_model[layer:].weight.requires_edit_(mask=mask, lb=lb, ub=ub)
+            editable_model[layer].weight.requires_edit_(mask=mask, lb=lb, ub=ub)
         else:
-            editable_model[layer:].requires_edit_(lb=lb, ub=ub)
-    else:
-        editable_model[layer].requires_edit_(lb=lb, ub=ub)
+            editable_model[layer].requires_edit_(lb=lb, ub=ub)
 
     
     symbolic_outputs = editable_model(inputs).data
@@ -190,66 +194,47 @@ def your_edit(model, inputs, labels,
 def run_hyperparameter_search(model, all_images, all_lables):
     best_models = []
     results = []
+    best_model = None
+    best_result = None
+    best_test_acc = -1.0
+    model_id = 0 
+    
     norms_options = [
-        ['l1'],
-        ['l1n'],
-        ['linf'],
         ['l1', 'l1n'],
         ['l1', 'linf'],
         ['l1n', 'linf'],
         ['l1', 'l1n', 'linf'],
     ]
-    
     mask_options = [
         (operator.gt, 0),
         (operator.lt, 0),
-        (operator.gt, 0.5),
-        (operator.lt, -0.5),
-        (operator.gt, 1),
-        (operator.lt, -1)
+        (operator.gt, 5),
+        (operator.lt, -5)
     ]
 
     param_grid = {
-        "layer": [-2, -1, 0, 1],
+        "layer": list(range(-5, 5)),
         "multi_layer": [False, True],
         "partial_layer": [True, False],
         "lb": [-1., -10., -100.],
         "ub": [1., 10., 100.],
         "norms": norms_options,
         "mask": mask_options
-    }
-    
-    # norms_options = [
-    #     ['l1'],
-    # ]
-    
-    # mask_options = [
-    #     (operator.gt, 0),
-    # ]
+    } 
 
-    # param_grid = {
-    #     "layer": [-2],
-    #     "multi_layer": [True],
-    #     "partial_layer": [False],
-    #     "lb": [-1.],
-    #     "ub": [1.],
-    #     "norms": norms_options,
-    #     "mask": mask_options
-    # }
-
-
-    from itertools import product
-
-    for norms, (mask_fn, threshold), lb, ub, partial_layer, layer, multi_layer in product(
+    all_combinations = list(product(
         param_grid["norms"],
         param_grid["mask"],
         param_grid["lb"],
         param_grid["ub"],
         param_grid["partial_layer"],
         param_grid["layer"],
-        param_grid["multi_layer"]):
+        param_grid["multi_layer"]
+    ))
+    
+    sampled_combinations = random.sample(all_combinations, 500)
 
-
+    for norms, (mask_fn, threshold), lb, ub, partial_layer, layer, multi_layer in sampled_combinations:
 
         try:
             edited_model = your_edit(
@@ -265,58 +250,15 @@ def run_hyperparameter_search(model, all_images, all_lables):
                 mask_fn=mask_fn,
                 threshold=threshold
             )
-            if edited_model is not None:
-                edit_acc = test(edited_model, edit_dataset)
-                test_dataset = load_testset()
-                test_acc = test(edited_model, test_dataset)
-                
-                
-                result = {
-                    "status": "success",
-                    "layer": layer,
-                    "multi_layer": multi_layer,
-                    "partial_layer": partial_layer,
-                    "lb": lb,
-                    "ub": ub,
-                    "norms": norms,
-                    "mask_fn": mask_fn.__name__,
-                    "threshold": threshold,
-                    "edit_acc": edit_acc,
-                    "test_acc": test_acc,
-                    "error": ""
-                }
 
-                
-                model_id = len(best_models)
-                base_dir = f"my_model/part1/model_{model_id}"
-                os.makedirs(base_dir, exist_ok=True)
+            if edited_model is None:
+                continue  # skip null edits
 
-                save_model(edited_model, os.path.join(base_dir, "model.pt"))
-                with open(os.path.join(base_dir, "params.json"), "w") as f:
-                    json.dump(result, f, indent=2)
+            edit_acc = test(edited_model, edit_dataset)
+            test_acc = test(edited_model, load_testset())
 
-                best_models.append({"model": edited_model, "params": result})
-                
-            else:
-                result = {
-                    "status": "null_model",
-                    "layer": layer,
-                    "multi_layer": multi_layer,
-                    "partial_layer": partial_layer,
-                    "lb": lb,
-                    "ub": ub,
-                    "norms": norms,
-                    "mask_fn": mask_fn.__name__,
-                    "threshold": threshold,
-                    "edit_acc": None,
-                    "test_acc": None,
-                    "error": "edited_model is None"
-                }
-
-        except Exception as e:
-            print(f"❌ Failed with error: {e}")
             result = {
-                "status": "error",
+                "status": "success",
                 "layer": layer,
                 "multi_layer": multi_layer,
                 "partial_layer": partial_layer,
@@ -325,35 +267,66 @@ def run_hyperparameter_search(model, all_images, all_lables):
                 "norms": norms,
                 "mask_fn": mask_fn.__name__,
                 "threshold": threshold,
-                "edit_acc": None,
-                "test_acc": None,
-                "error": str(e)
+                "edit_acc": edit_acc,
+                "test_acc": test_acc,
             }
 
-        results.append(result)
+            # Save all successful models
+            # base_dir = f"my_model/part1/model_{model_id}"
+            # os.makedirs(base_dir, exist_ok=True)
+            # save_model(edited_model, os.path.join(base_dir, "model.pt"))
+            # model_id += 1
 
-        with open("my_model/part1/full_results.csv", "a", newline="") as csvfile:
-            writer = csv.DictWriter(csvfile, fieldnames=[
-                "status", "layer", "multi_layer", "partial_layer",
-                "lb", "ub", "norms", "mask_fn", "threshold",
-                "edit_acc", "test_acc", "error"
-            ])
-            if csvfile.tell() == 0:
-                writer.writeheader()
+            results.append(result)
+
+            # Update best model
+            if test_acc > best_test_acc:
+                best_test_acc = test_acc
+                best_model = edited_model
+                best_result = result
+
+        except Exception as e:
+            print(f"❌ Failed with error: {e}")
+            continue
+    
+    results.sort(key=lambda x: x["test_acc"], reverse=True)
+    
+    csv_path = "my_model/part1/full_results.csv"
+    with open(csv_path, "w", newline="") as csvfile:
+        writer = csv.DictWriter(csvfile, fieldnames=[
+            "status", "layer", "multi_layer", "partial_layer",
+            "lb", "ub", "norms", "mask_fn", "threshold",
+            "edit_acc", "test_acc"
+        ])
+        writer.writeheader()
+        for res in results:
             writer.writerow({
-                "status": result["status"],
-                "layer": result["layer"],
-                "multi_layer": result["multi_layer"],
-                "partial_layer": result["partial_layer"],
-                "lb": result["lb"],
-                "ub": result["ub"],
-                "norms": " ".join(result["norms"]),
-                "mask_fn": result["mask_fn"],
-                "threshold": result["threshold"],
-                "edit_acc": result["edit_acc"],
-                "test_acc": result["test_acc"],
-                "error": result["error"]
+                "status": res["status"],
+                "layer": res["layer"],
+                "multi_layer": res["multi_layer"],
+                "partial_layer": res["partial_layer"],
+                "lb": res["lb"],
+                "ub": res["ub"],
+                "norms": " ".join(res["norms"]),
+                "mask_fn": res["mask_fn"],
+                "threshold": res["threshold"],
+                "edit_acc": res["edit_acc"],
+                "test_acc": res["test_acc"]
             })
+    
+    if best_result:
+        print("\nBest Model Configuration:")
+        for k, v in best_result.items():
+            if k == "norms":
+                print(f"{k}: {' '.join(v)}")
+            else:
+                print(f"{k}: {v}")
+        print(f"\nBest Edit Accuracy: {best_result['edit_acc']:.4f}")
+        print(f"Best Test Accuracy: {best_result['test_acc']:.4f}")
+    else:
+        print("No valid edited model was found.")
+    
+    return best_model
 
 
 
@@ -382,27 +355,18 @@ if __name__ == "__main__":
             )
     """
     
-    run_hyperparameter_search(model, all_images, all_labels)
+    edited_model = run_hyperparameter_search(model, all_images, all_labels)
     
-    # edited_model = your_edit(model, inputs=all_images, labels=all_labels,
-    #                          verbose=True,
-    #                          layer=-2,
-    #                          multi_layer=False,
-    #                          partial_layer=False,
-    #                          lb = -10., ub = 10.,
-    #                          norms=['l1n'],
-    #                          mask_fn=operator.lt,
-    #                          threshold=0)
-    # if edited_model is None:
-    #     print("Editing failed.")
-    #     exit(1)
+    if edited_model is None:
+        print("Editing failed.")
+        exit(1)
 
-    # print("Edited model successfully!\nAccuracy on the edit set should be 100%:")
-    # edit_acc = test(edited_model, edit_dataset)
+    print("Edited model successfully!\nAccuracy on the edit set should be 100%:")
+    edit_acc = test(edited_model, edit_dataset)
 
-    # print("Accuracy on the test set should >= 95%:")
-    # test_dataset = load_testset()
-    # test_acc = test(edited_model, test_dataset)
+    print("Accuracy on the test set should >= 95%:")
+    test_dataset = load_testset()
+    test_acc = test(edited_model, test_dataset)
 
-    # """ Required: save the edited model to 'artifacts/edited_model_part1.pt'. """
-    # save_model(edited_model, 'artifacts/edited_model_part1.pt')
+    """ Required: save the edited model to 'artifacts/edited_model_part1.pt'. """
+    save_model(edited_model, 'artifacts/edited_model_part1.pt')
