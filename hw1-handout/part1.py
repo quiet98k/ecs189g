@@ -163,9 +163,7 @@ def your_edit(model, inputs, labels,
     editable_model = st.nn.to_editable(model)
 
     editable_model.solver.verbose_(verbose)
-    
-    
-    
+
     if multi_layer:
         editable_model[layer:].requires_edit_(lb=lb, ub=ub)
     else:
@@ -235,7 +233,6 @@ def run_hyperparameter_search(model, all_images, all_lables):
     sampled_combinations = random.sample(all_combinations, 500)
 
     for norms, (mask_fn, threshold), lb, ub, partial_layer, layer, multi_layer in sampled_combinations:
-
         try:
             edited_model = your_edit(
                 model,
@@ -270,12 +267,6 @@ def run_hyperparameter_search(model, all_images, all_lables):
                 "edit_acc": edit_acc,
                 "test_acc": test_acc,
             }
-
-            # Save all successful models
-            # base_dir = f"my_model/part1/model_{model_id}"
-            # os.makedirs(base_dir, exist_ok=True)
-            # save_model(edited_model, os.path.join(base_dir, "model.pt"))
-            # model_id += 1
 
             results.append(result)
 
