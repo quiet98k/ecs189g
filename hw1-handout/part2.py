@@ -58,7 +58,7 @@ def edit(model, images, labels):
         param_grid["multi_layer"]
     ))
 
-    sampled_combinations = random.sample(all_combinations, 500)
+    sampled_combinations = random.sample(all_combinations, 1000)
 
     for norms, (mask_fn, threshold), lb, ub, partial_layer, layer, multi_layer in sampled_combinations:
         try:
@@ -78,8 +78,9 @@ def edit(model, images, labels):
 
             if edited_model is None:
                 continue  # skip null edits
-
+            print("Edited Accuracy: ")
             edit_acc = test(edited_model, edit_dataset)
+            print("Test Accuracy: ")
             test_acc = test(edited_model, load_testset())
 
             result = {
@@ -96,7 +97,7 @@ def edit(model, images, labels):
                 "test_acc": test_acc,
             }
 
-            results.append(result)
+            results.append((edited_model, result))
 
             # Update best model
             if test_acc > best_test_acc:
@@ -109,8 +110,13 @@ def edit(model, images, labels):
             continue
     
     # Sort by edit_acc descending, filter out test_acc < 90%
-    valid_results = [r for r in results if r["test_acc"] >= 90.0]
-    valid_results.sort(key=lambda x: x["edit_acc"], reverse=True)
+    valid_results = [
+        (model, r) for model, r in results if r["test_acc"] >= 90.0
+    ]
+    valid_results.sort(key=lambda x: x[1]["edit_acc"], reverse=True)
+
+    best_result = valid_results[0][1] if valid_results else None
+    best_valid_model = valid_results[0][0] if valid_results else None
 
     # Write all original results to CSV
     csv_path = "my_model/part2/full_results.csv"
@@ -121,7 +127,7 @@ def edit(model, images, labels):
             "edit_acc", "test_acc"
         ])
         writer.writeheader()
-        for res in results:
+        for _, res in results:
             writer.writerow({
                 "status": res["status"],
                 "layer": res["layer"],
@@ -136,10 +142,10 @@ def edit(model, images, labels):
                 "test_acc": res["test_acc"]
             })
 
-    # Select best valid result
-    best_result = valid_results[0] if valid_results else None
 
     if best_result:
+        with open("my_model/part2/best_config.json", "w") as f:
+            json.dump(best_result, f, indent=2)
         print("\nBest Model Configuration (test_acc ≥ 90%):")
         for k, v in best_result.items():
             print(f"{k}: {' '.join(v) if k == 'norms' else v}")
@@ -148,7 +154,7 @@ def edit(model, images, labels):
     else:
         print("No valid edited model met the accuracy threshold (test_acc ≥ 90%).")
 
-    return best_result["model"] if best_result else None
+    return best_valid_model
 
 
 if __name__ == "__main__":
