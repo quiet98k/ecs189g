@@ -153,8 +153,8 @@ def your_edit(model, inputs, labels,
     # raise NotImplementedError(
     #     "Editing method for `part1.py` not implemented."
     # )
-    
-    print(f"🔧 Trying config | {layer=}, {multi_layer=}, {partial_layer=}, "
+    print("\n" + "=" * 80)
+    print(f"Trying config | {layer=}, {multi_layer=}, {partial_layer=}, "
         f"{lb=}, {ub=}, {norms=}, {mask_fn.__name__=}, {threshold=}")
 
     

@@ -20,7 +20,6 @@ def edit(model, images, labels):
     best_model = None
     best_result = None
     best_test_acc = -1.0
-    model_id = 0 
 
     norms_options = [
         ['l1'],
@@ -34,16 +33,20 @@ def edit(model, images, labels):
     mask_options = [
         (operator.gt, 0),
         (operator.lt, 0),
+        (operator.gt, 1),
+        (operator.lt, -1),
         (operator.gt, 5),
-        (operator.lt, -5)
+        (operator.lt, -5),
+        (operator.ge, 0),
+        (operator.le, 0),
     ]
 
     param_grid = {
-        "layer": list(range(-5, 5)),
+        "layer": list(range(-10, 10)),
         "multi_layer": [False, True],
         "partial_layer": [True, False],
-        "lb": [-1., -10., -100.],
-        "ub": [1., 10., 100.],
+        "lb": [-0.1, -1., -10., -100., -1000.],
+        "ub": [0.1, 1., 10., 100., 1000.],
         "norms": norms_options,
         "mask": mask_options,
     } 
@@ -58,9 +61,9 @@ def edit(model, images, labels):
         param_grid["multi_layer"]
     ))
 
-    sampled_combinations = random.sample(all_combinations, 1000)
+    random_combinations = random.sample(all_combinations, 5000)
 
-    for norms, (mask_fn, threshold), lb, ub, partial_layer, layer, multi_layer in sampled_combinations:
+    for norms, (mask_fn, threshold), lb, ub, partial_layer, layer, multi_layer in all_combinations:
         try:
             edited_model = your_edit(
                 model,
@@ -96,8 +99,9 @@ def edit(model, images, labels):
                 "edit_acc": edit_acc,
                 "test_acc": test_acc,
             }
-
             results.append((edited_model, result))
+            # print(f'{len(results) = }')
+
 
             # Update best model
             if test_acc > best_test_acc:
@@ -111,9 +115,12 @@ def edit(model, images, labels):
     
     # Sort by edit_acc descending, filter out test_acc < 90%
     valid_results = [
-        (model, r) for model, r in results if r["test_acc"] >= 90.0
+        (model, r) for model, r in results if r["test_acc"] >= 0.9
     ]
     valid_results.sort(key=lambda x: x[1]["edit_acc"], reverse=True)
+    
+    # print(f'{len(results) = }')
+    # print(f'{len(valid_results) = }')
 
     best_result = valid_results[0][1] if valid_results else None
     best_valid_model = valid_results[0][0] if valid_results else None

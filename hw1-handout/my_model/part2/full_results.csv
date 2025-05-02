@@ -1,0 +1,6 @@
+status,layer,multi_layer,partial_layer,lb,ub,norms,mask_fn,threshold,edit_acc,test_acc
+success,-1,False,True,-100.0,10.0,l1 l1n,lt,0,0.2034,0.8143
+success,2,True,True,-100.0,10.0,l1 l1n,lt,0,0.1519,0.9499
+success,1,True,True,-100.0,100.0,linf,lt,0,0.1559,0.5659
+success,1,True,False,-1.0,10.0,l1 l1n,lt,-5,0.1519,0.9475
+success,-4,True,False,-10.0,100.0,linf,lt,-5,0.1338,0.9178
