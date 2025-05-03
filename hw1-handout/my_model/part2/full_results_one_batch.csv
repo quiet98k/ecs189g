@@ -1,0 +1,2084 @@
+status,layer,multi_layer,partial_layer,lb,ub,norms,mask_fn,threshold,edit_acc,test_acc
+success,-7,True,False,-10.0,100.0,l1n,ge,0,0.1928,0.9673
+success,-2,True,False,-100.0,0.1,l1 l1n linf,lt,0,0.1108,0.6661
+success,-3,True,True,-1000.0,1000.0,l1,lt,-5,0.1668,0.924
+success,-2,True,True,-1.0,1.0,l1 linf,lt,-1,0.1377,0.7523
+success,-6,True,False,-1000.0,1.0,l1n,lt,-5,0.153,0.9678
+success,-5,True,False,-100.0,0.1,l1 linf,gt,0,0.159,0.9689
+success,3,True,True,-0.1,10.0,linf,ge,0,0.136,0.7949
+success,-7,True,False,-1.0,1.0,l1n linf,lt,-5,0.1483,0.9672
+success,-9,True,True,-10.0,1.0,l1n,lt,-1,0.1696,0.9646
+success,-3,True,False,-1000.0,1.0,linf,gt,5,0.1311,0.9438
+success,3,True,True,-1.0,1.0,l1 l1n linf,ge,0,0.1698,0.971
+success,6,True,False,-1.0,100.0,linf,ge,0,0.1297,0.3886
+success,-8,True,False,-100.0,1000.0,l1n linf,lt,-1,0.1483,0.9672
+success,9,True,True,-0.1,1000.0,l1 linf,lt,-5,0.1105,0.7817
+success,1,True,False,-1000.0,1000.0,l1n linf,le,0,0.1673,0.9493
+success,-1,False,True,-1000.0,100.0,linf,le,0,0.1316,0.6434
+success,3,True,True,-1000.0,100.0,l1,le,0,0.1929,0.9673
+success,-8,True,False,-10.0,10.0,l1 l1n,lt,-5,0.1929,0.9673
+success,1,True,True,-0.1,100.0,l1 linf,gt,5,0.1336,0.8167
+success,9,True,True,-10.0,1.0,l1 linf,lt,0,0.1381,0.7517
+success,-5,True,False,-1000.0,1000.0,l1n linf,lt,-1,0.1324,0.9316
+success,-2,True,False,-100.0,10.0,l1,gt,5,0.1635,0.7781
+success,2,True,True,-1000.0,100.0,l1n,ge,0,0.1519,0.9499
+success,4,True,False,-1000.0,1.0,l1n linf,lt,-1,0.1483,0.9672
+success,6,True,False,-100.0,1000.0,l1 l1n,gt,5,0.1595,0.9678
+success,7,True,True,-10.0,1.0,l1n,lt,0,0.1668,0.924
+success,-7,True,False,-1000.0,1.0,l1 linf,le,0,0.1808,0.9694
+success,5,True,True,-10.0,1000.0,l1 l1n,ge,0,0.1581,0.9678
+success,6,True,False,-100.0,100.0,l1,ge,0,0.1583,0.9678
+success,-7,True,False,-10.0,10.0,linf,le,0,0.1388,0.6662
+success,5,True,True,-1.0,1.0,l1 linf,le,0,0.1607,0.9336
+success,-4,True,True,-1.0,100.0,l1 l1n,gt,5,0.1672,0.9218
+success,5,True,False,-1.0,100.0,l1 l1n linf,lt,-5,0.1558,0.9633
+success,-10,True,True,-1.0,1.0,l1n,ge,0,0.1747,0.953
+success,-5,True,False,-10.0,10.0,l1n,gt,0,0.1582,0.9678
+success,2,True,True,-1.0,1000.0,l1 l1n linf,lt,-1,0.1532,0.9442
+success,7,True,False,-10.0,0.1,linf,lt,-5,0.1416,0.9597
+success,-4,True,True,-10.0,1.0,linf,gt,1,0.1348,0.9471
+success,-8,True,True,-1000.0,0.1,l1 linf,le,0,0.1643,0.966
+success,-10,True,True,-100.0,100.0,l1 l1n,lt,0,0.1519,0.9499
+success,-8,True,True,-1.0,10.0,l1n linf,le,0,0.1483,0.9672
+success,-10,True,True,-1000.0,100.0,l1 l1n linf,lt,-1,0.158,0.9506
+success,-7,True,True,-1.0,10.0,l1n,gt,5,0.1762,0.9697
+success,-1,False,False,-1000.0,100.0,l1 linf,lt,0,0.1381,0.7512
+success,-5,True,False,-10.0,1000.0,l1,gt,0,0.1558,0.9678
+success,4,True,False,-1000.0,10.0,l1n,lt,-5,0.1929,0.9673
+success,1,True,False,-1000.0,10.0,l1n linf,le,0,0.1672,0.9492
+success,-9,True,False,-0.1,1000.0,l1n,le,0,0.132,0.8259
+success,-7,True,True,-10.0,10.0,linf,le,0,0.1388,0.6662
+success,-8,True,False,-1000.0,10.0,l1 l1n,gt,1,0.1929,0.9673
+success,-9,True,True,-10.0,1.0,linf,le,0,0.1538,0.5698
+success,9,True,False,-0.1,10.0,l1,le,0,0.2,0.8234
+success,8,True,False,-1.0,100.0,linf,lt,-1,0.1348,0.9422
+success,6,True,True,-1000.0,0.1,linf,lt,-1,0.1519,0.967
+success,8,True,False,-1.0,10.0,l1,ge,0,0.1672,0.9218
+success,-6,True,True,-1.0,10.0,l1n linf,gt,5,0.1324,0.9316
+success,-3,True,True,-1.0,1000.0,l1n linf,ge,0,0.129,0.9076
+success,2,True,False,-100.0,100.0,l1n linf,ge,0,0.1672,0.9493
+success,-1,False,False,-1.0,10.0,l1n,gt,1,0.1472,0.8029
+success,8,True,True,-1000.0,1.0,l1 l1n,gt,0,0.1668,0.924
+success,-4,True,False,-10.0,0.1,linf,le,0,0.1416,0.9597
+success,-2,True,True,-100.0,1000.0,l1 linf,ge,0,0.1381,0.751
+success,1,True,True,-1000.0,100.0,l1n linf,gt,1,0.1674,0.9493
+success,8,True,False,-10.0,1000.0,l1n,lt,-1,0.1668,0.924
+success,-1,True,True,-10.0,10.0,l1n linf,le,0,0.1603,0.6877
+success,7,True,True,-1000.0,1.0,l1 l1n linf,ge,0,0.165,0.911
+success,-3,True,False,-10.0,1000.0,l1 linf,lt,-1,0.165,0.911
+success,-10,True,False,-10.0,1.0,l1 l1n,lt,-5,0.1696,0.9646
+success,-1,False,False,-0.1,10.0,l1 linf,le,0,0.1107,0.7815
+success,6,True,False,-10.0,100.0,l1n linf,gt,1,0.1324,0.9316
+success,-5,True,True,-10.0,10.0,l1 linf,le,0,0.1808,0.967
+success,1,True,False,-1000.0,10.0,linf,lt,0,0.1544,0.5593
+success,8,True,False,-1.0,1.0,l1n,lt,-5,0.1672,0.9218
+success,-1,True,False,-1000.0,1000.0,l1 l1n linf,lt,-5,0.1379,0.7521
+success,5,True,True,-1000.0,10.0,l1 linf,lt,0,0.1808,0.967
+success,6,True,False,-10.0,100.0,l1n linf,lt,-5,0.1324,0.9316
+success,7,True,False,-1.0,100.0,l1n,gt,0,0.1672,0.9218
+success,-2,True,True,-100.0,0.1,l1 l1n linf,gt,1,0.1108,0.6661
+success,1,True,False,-1000.0,1.0,l1n,lt,-1,0.1696,0.9646
+success,6,True,True,-1.0,1.0,l1 l1n,ge,0,0.1607,0.9336
+success,-10,True,False,-1.0,100.0,linf,lt,-5,0.1568,0.464
+success,8,True,False,-10.0,1000.0,l1n linf,gt,0,0.129,0.9079
+success,1,True,False,-10.0,0.1,l1,gt,0,0.1961,0.9527
+success,-5,True,True,-1.0,10.0,l1 l1n linf,gt,1,0.1558,0.9633
+success,-9,True,False,-1000.0,0.1,l1,gt,5,0.1961,0.9527
+success,2,True,True,-10.0,1000.0,l1n,ge,0,0.1519,0.9499
+success,9,True,True,-1000.0,1000.0,l1n,lt,0,0.1633,0.7795
+success,-1,False,False,-1000.0,10.0,l1n linf,gt,0,0.1603,0.6877
+success,6,True,True,-1000.0,1000.0,linf,le,0,0.1395,0.5449
+success,8,True,True,-100.0,10.0,l1 l1n linf,le,0,0.165,0.911
+success,3,True,False,-10.0,10.0,l1 l1n linf,lt,0,0.199,0.9686
+success,2,True,False,-10.0,10.0,l1n linf,lt,0,0.1672,0.9492
+success,4,True,False,-100.0,1000.0,l1 l1n,le,0,0.1929,0.9673
+success,2,True,False,-1000.0,1.0,l1n,gt,5,0.1696,0.9646
+success,6,True,False,-10.0,0.1,l1,lt,0,0.1568,0.9689
+success,-4,True,False,-10.0,1000.0,l1 l1n,ge,0,0.1668,0.924
+success,2,True,True,-1.0,1000.0,l1n linf,lt,-5,0.1673,0.9492
+success,-2,True,True,-0.1,10.0,l1n linf,ge,0,0.1444,0.7164
+success,5,True,True,-1.0,10.0,l1 l1n,lt,-1,0.1582,0.9638
+success,4,True,True,-100.0,100.0,l1 l1n,le,0,0.1929,0.9673
+success,-7,True,False,-10.0,100.0,l1n,gt,0,0.1928,0.9673
+success,7,True,False,-10.0,10.0,l1n,lt,-5,0.1668,0.924
+success,-10,True,False,-1000.0,10.0,l1 linf,ge,0,0.158,0.9506
+success,1,True,True,-100.0,1.0,l1n linf,le,0,0.1672,0.9493
+success,-4,True,True,-1.0,100.0,l1 l1n,gt,0,0.1672,0.9218
+success,7,True,False,-1.0,100.0,l1 l1n linf,gt,0,0.165,0.911
+success,8,True,True,-10.0,1.0,l1,le,0,0.1668,0.924
+success,-3,True,False,-1.0,10.0,l1 linf,lt,0,0.165,0.911
+success,-8,True,True,-0.1,1000.0,linf,gt,1,0.1338,0.7787
+success,1,True,True,-1.0,10.0,l1,gt,1,0.1519,0.9475
+success,-2,True,False,-100.0,1.0,l1,lt,-5,0.1508,0.7647
+success,-3,True,True,-100.0,1.0,linf,lt,0,0.1329,0.9455
+success,-8,True,True,-10.0,1000.0,l1,lt,-1,0.1929,0.9673
+success,9,True,False,-10.0,1.0,l1n linf,lt,-5,0.1603,0.6877
+success,-7,True,False,-10.0,1.0,l1 l1n,lt,0,0.2019,0.9691
+success,2,True,True,-1000.0,0.1,l1n,gt,0,0.1966,0.9529
+success,4,True,False,-1.0,1000.0,l1n linf,gt,0,0.1483,0.9672
+success,-3,True,False,-10.0,1.0,l1n linf,ge,0,0.129,0.9078
+success,9,True,True,-100.0,0.1,l1n linf,gt,1,0.1196,0.6537
+success,-2,True,False,-0.1,1000.0,l1,lt,0,0.2,0.8234
+success,3,True,False,-0.1,100.0,l1 linf,lt,-1,0.169,0.9463
+success,-1,False,False,-1.0,10.0,l1 linf,lt,0,0.1377,0.7522
+success,8,True,False,-100.0,10.0,l1n,lt,-1,0.1668,0.924
+success,2,True,False,-100.0,1000.0,l1,gt,5,0.1519,0.9499
+success,-10,True,True,-10.0,100.0,l1n linf,lt,-1,0.1672,0.9492
+success,1,True,True,-100.0,10.0,l1n linf,gt,0,0.1674,0.9493
+success,-5,True,True,-10.0,1.0,l1 linf,le,0,0.154,0.9676
+success,-10,True,True,-10.0,10.0,l1n,lt,0,0.1518,0.9499
+success,-10,True,True,-1000.0,100.0,l1 l1n,gt,5,0.1519,0.9499
+success,-2,True,False,-10.0,1.0,l1 l1n,lt,-1,0.1509,0.7644
+success,1,True,False,-100.0,1.0,l1 linf,ge,0,0.1658,0.9656
+success,3,True,False,-100.0,0.1,l1n,le,0,0.1641,0.967
+success,-9,True,True,-100.0,100.0,linf,ge,0,0.1559,0.5659
+success,3,True,True,-10.0,1.0,l1n,lt,-1,0.2019,0.9691
+success,6,True,True,-1.0,10.0,l1,ge,0,0.1582,0.9638
+success,-8,True,True,-1000.0,0.1,l1,gt,5,0.1641,0.967
+success,1,True,True,-10.0,1.0,linf,ge,0,0.1538,0.5698
+success,-1,True,False,-1000.0,1.0,linf,ge,0,0.1429,0.7175
+success,5,True,True,-1.0,100.0,l1 l1n,lt,-1,0.1582,0.9638
+success,3,True,False,-1.0,1000.0,l1,le,0,0.1762,0.9697
+success,-9,True,True,-1.0,1.0,l1 l1n linf,lt,-1,0.1745,0.953
+success,6,True,True,-100.0,1000.0,l1 l1n linf,lt,-1,0.1808,0.967
+success,-7,True,False,-100.0,10.0,l1 l1n linf,ge,0,0.199,0.9686
+success,1,True,True,-100.0,100.0,l1n linf,gt,1,0.1672,0.9493
+success,7,True,True,-1.0,10.0,l1n,lt,-1,0.1672,0.9218
+success,9,True,False,-10.0,1.0,l1n,lt,-1,0.151,0.7647
+success,-6,True,False,-1.0,10.0,l1 l1n,le,0,0.1582,0.9638
+success,-2,True,False,-100.0,1000.0,l1,lt,0,0.1644,0.7708
+success,5,True,False,-100.0,10.0,l1 l1n,le,0,0.1583,0.9678
+success,4,True,True,-100.0,10.0,linf,gt,5,0.1404,0.6577
+success,-7,True,False,-100.0,10.0,l1 l1n,gt,5,0.1929,0.9673
+success,9,True,True,-100.0,100.0,l1 linf,ge,0,0.1378,0.7521
+success,-9,True,False,-1.0,100.0,l1 l1n linf,ge,0,0.1532,0.9442
+success,8,True,False,-100.0,10.0,l1 l1n linf,lt,-1,0.165,0.911
+success,-4,True,True,-1.0,10.0,l1n,lt,-1,0.1672,0.9218
+success,9,True,True,-1000.0,0.1,linf,le,0,0.1429,0.7387
+success,3,True,True,-100.0,100.0,l1 l1n linf,lt,-1,0.199,0.9686
+success,-6,True,True,-100.0,1000.0,linf,lt,0,0.1406,0.5554
+success,1,True,False,-1000.0,0.1,l1 linf,gt,5,0.1811,0.9514
+success,6,True,False,-1000.0,1000.0,l1 l1n linf,lt,-5,0.1808,0.967
+success,9,True,False,-0.1,100.0,linf,gt,0,0.1512,0.7629
+success,-10,True,True,-10.0,1000.0,l1 l1n linf,lt,-1,0.158,0.9506
+success,4,True,False,-1000.0,10.0,l1 linf,gt,5,0.199,0.9686
+success,-3,True,False,-10.0,100.0,l1 linf,lt,-5,0.165,0.911
+success,7,True,False,-1000.0,10.0,linf,ge,0,0.1305,0.8714
+success,7,True,True,-100.0,100.0,l1n linf,gt,0,0.129,0.9079
+success,4,True,True,-100.0,0.1,l1n linf,ge,0,0.1507,0.9639
+success,8,True,False,-1000.0,1.0,l1 l1n,lt,0,0.1668,0.924
+success,2,True,False,-1000.0,1000.0,l1 l1n,lt,0,0.1519,0.9499
+success,1,True,False,-1000.0,100.0,l1,gt,1,0.1519,0.9499
+success,5,True,False,-1000.0,10.0,l1,ge,0,0.1581,0.9678
+success,-9,True,True,-1.0,100.0,linf,lt,-1,0.1568,0.464
+success,-9,True,True,-0.1,100.0,l1n linf,ge,0,0.1281,0.6721
+success,-4,True,True,-100.0,10.0,l1,gt,5,0.1668,0.924
+success,-9,True,True,-0.1,100.0,l1,gt,0,0.132,0.8259
+success,7,True,True,-1.0,10.0,l1,lt,-1,0.1672,0.9218
+success,-5,True,True,-1000.0,100.0,l1 linf,lt,0,0.1808,0.967
+success,6,True,True,-100.0,10.0,l1 linf,le,0,0.1808,0.967
+success,-1,True,False,-1000.0,1000.0,l1,gt,0,0.1635,0.7792
+success,-8,True,False,-100.0,1000.0,linf,gt,5,0.143,0.7659
+success,-9,True,True,-1000.0,100.0,linf,gt,0,0.1537,0.5034
+success,2,True,False,-10.0,10.0,linf,gt,0,0.1529,0.5549
+success,-4,True,True,-1.0,1000.0,l1n,gt,1,0.1672,0.9218
+success,-5,True,False,-100.0,1.0,l1n,lt,-5,0.153,0.9678
+success,3,True,True,-0.1,100.0,l1n,lt,-5,0.1671,0.9452
+success,2,True,False,-1000.0,10.0,linf,ge,0,0.1544,0.5593
+success,-1,True,True,-1000.0,1.0,l1,gt,1,0.1506,0.7665
+success,9,True,True,-1000.0,1.0,l1,gt,0,0.1506,0.7665
+success,2,True,False,-1000.0,100.0,l1n,lt,0,0.1519,0.9499
+success,8,True,True,-1000.0,0.1,l1,gt,5,0.1418,0.9675
+success,-3,True,False,-1.0,1000.0,l1 linf,lt,-1,0.165,0.911
+success,2,True,True,-1000.0,100.0,linf,lt,-1,0.1537,0.5034
+success,3,True,False,-1.0,100.0,l1 linf,ge,0,0.1819,0.9708
+success,-10,True,False,-10.0,10.0,l1n,gt,1,0.1518,0.9499
+success,4,True,True,-1000.0,0.1,l1 l1n linf,ge,0,0.1643,0.966
+success,-10,True,True,-100.0,1.0,l1 linf,lt,0,0.1658,0.9656
+success,-3,True,True,-1000.0,100.0,l1,le,0,0.1668,0.924
+success,3,True,False,-1.0,1.0,linf,ge,0,0.1386,0.6437
+success,9,True,True,-1000.0,0.1,l1,le,0,0.1086,0.6619
+success,-9,True,False,-10.0,1000.0,l1 l1n linf,le,0,0.158,0.9506
+success,-6,True,True,-100.0,100.0,l1 l1n,lt,0,0.1595,0.9678
+success,-2,True,True,-1000.0,100.0,l1,ge,0,0.1633,0.7784
+success,-1,True,False,-1.0,1.0,l1 l1n,gt,1,0.1481,0.8049
+success,3,True,False,-100.0,10.0,l1 l1n linf,gt,5,0.199,0.9686
+success,-1,False,True,-0.1,1000.0,l1,le,0,0.18,0.9092
+success,9,True,True,-1.0,0.1,l1 l1n linf,le,0,0.1217,0.6389
+success,8,True,True,-100.0,10.0,l1 l1n,gt,5,0.1668,0.924
+success,-2,True,False,-1000.0,1000.0,l1 l1n linf,lt,0,0.1379,0.7521
+success,1,True,False,-100.0,100.0,l1,lt,-1,0.1519,0.9499
+success,6,True,False,-1.0,1000.0,l1 l1n,ge,0,0.1582,0.9638
+success,-8,True,True,-0.1,1000.0,l1 l1n linf,le,0,0.169,0.9463
+success,4,True,True,-100.0,1000.0,l1 l1n linf,gt,0,0.199,0.9686
+success,9,True,False,-10.0,1000.0,l1 l1n,ge,0,0.1635,0.7796
+success,-3,True,True,-1000.0,10.0,l1 linf,gt,0,0.165,0.911
+success,8,True,True,-1.0,10.0,l1,lt,-1,0.1672,0.9218
+success,8,True,False,-100.0,1.0,l1n,lt,-1,0.1668,0.924
+success,-7,True,True,-1000.0,0.1,l1 l1n linf,gt,1,0.1643,0.966
+success,-7,True,True,-100.0,100.0,l1 l1n,ge,0,0.1929,0.9673
+success,-4,True,True,-10.0,100.0,linf,lt,0,0.1338,0.9178
+success,-7,True,False,-1000.0,1.0,l1 l1n,lt,0,0.2019,0.9691
+success,-7,True,False,-0.1,100.0,l1 l1n,ge,0,0.1671,0.9452
+success,7,True,False,-1000.0,100.0,l1 l1n,ge,0,0.1668,0.924
+success,-4,True,False,-1.0,10.0,l1n,lt,0,0.1672,0.9218
+success,-1,True,False,-1.0,1000.0,l1 l1n,lt,-1,0.147,0.8039
+success,-5,True,False,-1.0,1.0,l1 linf,lt,0,0.1607,0.9336
+success,3,True,False,-100.0,1000.0,l1 l1n,lt,0,0.1929,0.9673
+success,-1,False,False,-10.0,1000.0,l1 linf,lt,-5,0.1378,0.7521
+success,1,True,True,-100.0,0.1,l1 l1n,gt,5,0.1961,0.9527
+success,8,True,True,-10.0,0.1,linf,lt,0,0.1416,0.9597
+success,1,True,False,-1000.0,10.0,l1n,lt,0,0.1519,0.9499
+success,-2,True,True,-1000.0,10.0,l1 l1n,ge,0,0.1636,0.7788
+success,-2,True,True,-0.1,100.0,linf,gt,0,0.1512,0.7629
+success,4,True,True,-1.0,100.0,linf,gt,0,0.1418,0.5829
+success,1,True,True,-100.0,1000.0,linf,lt,-5,0.1598,0.5502
+success,2,True,True,-1000.0,100.0,l1,ge,0,0.1519,0.9499
+success,-4,True,True,-10.0,10.0,l1n linf,gt,0,0.129,0.9079
+success,1,True,False,-1000.0,1.0,l1 linf,lt,-1,0.1658,0.9656
+success,-7,True,False,-0.1,100.0,l1 linf,ge,0,0.169,0.9463
+success,8,True,False,-10.0,10.0,l1,gt,5,0.1668,0.924
+success,-4,True,True,-10.0,1.0,l1 linf,gt,1,0.165,0.911
+success,-4,True,False,-10.0,1000.0,l1n,le,0,0.1668,0.924
+success,-1,True,True,-100.0,100.0,linf,lt,-5,0.1507,0.8043
+success,-6,True,True,-100.0,0.1,l1 l1n,lt,0,0.1568,0.9689
+success,2,True,False,-1.0,100.0,linf,le,0,0.1568,0.464
+success,-3,True,True,-1000.0,1000.0,linf,lt,-5,0.1308,0.9208
+success,-5,True,True,-1.0,1000.0,l1n linf,ge,0,0.1324,0.9316
+success,8,True,False,-1.0,0.1,l1n,ge,0,0.1392,0.9641
+success,-2,True,False,-100.0,1.0,linf,lt,-5,0.1414,0.6617
+success,-1,False,False,-0.1,1.0,l1 l1n,lt,0,0.1096,0.7846
+success,9,True,False,-0.1,10.0,l1n,gt,0,0.2,0.8234
+success,-1,True,False,-1000.0,1000.0,l1n,lt,-1,0.1633,0.7795
+success,5,True,True,-10.0,1.0,l1 linf,ge,0,0.154,0.9676
+success,-1,True,False,-10.0,100.0,l1,lt,-1,0.1635,0.779
+success,-8,True,False,-10.0,1.0,l1n linf,lt,-5,0.1483,0.9672
+success,-9,True,False,-1000.0,10.0,l1 linf,gt,5,0.158,0.9506
+success,-6,True,False,-100.0,100.0,l1n,ge,0,0.1583,0.9678
+success,7,True,False,-10.0,0.1,l1 l1n linf,lt,-1,0.1416,0.9675
+success,-2,True,False,-100.0,100.0,l1n linf,lt,-1,0.1603,0.6877
+success,-10,True,True,-1000.0,1.0,linf,ge,0,0.1519,0.5786
+success,7,True,False,-1000.0,1.0,l1n linf,gt,5,0.129,0.9079
+success,2,True,False,-100.0,1.0,l1 l1n,gt,1,0.1696,0.9646
+success,6,True,False,-1000.0,1000.0,l1n linf,gt,5,0.1324,0.9316
+success,2,True,False,-100.0,10.0,l1n linf,gt,1,0.1674,0.9493
+success,9,True,False,-100.0,0.1,linf,lt,0,0.1393,0.6522
+success,-7,True,True,-1000.0,100.0,l1n linf,le,0,0.1483,0.9672
+success,3,True,False,-1000.0,0.1,l1 linf,gt,5,0.1643,0.966
+success,1,True,True,-10.0,1000.0,l1n linf,gt,0,0.1674,0.9493
+success,-9,True,True,-1.0,1.0,linf,gt,0,0.1556,0.517
+success,-1,True,False,-100.0,10.0,linf,le,0,0.1462,0.7926
+success,-7,True,True,-1.0,10.0,linf,lt,0,0.1391,0.5756
+success,-6,True,True,-100.0,0.1,l1n,lt,0,0.1568,0.9689
+success,-9,True,False,-100.0,10.0,l1n,lt,0,0.1517,0.9499
+success,2,True,False,-10.0,100.0,l1n,lt,0,0.1519,0.9499
+success,7,True,False,-10.0,1.0,linf,gt,5,0.1348,0.9471
+success,-1,False,False,-1000.0,1000.0,l1n linf,le,0,0.1603,0.6877
+success,1,True,True,-100.0,10.0,l1n,ge,0,0.1517,0.9499
+success,3,True,False,-1.0,1000.0,l1 l1n linf,lt,-5,0.1819,0.9708
+success,2,True,False,-10.0,0.1,linf,gt,0,0.1451,0.9152
+success,1,True,False,-1000.0,1000.0,l1 linf,le,0,0.158,0.9506
+success,2,True,False,-1.0,1000.0,l1 l1n linf,gt,5,0.1532,0.9442
+success,8,True,True,-1.0,0.1,l1 l1n linf,lt,0,0.1392,0.9641
+success,-5,True,True,-1.0,1000.0,l1n linf,lt,-5,0.1324,0.9316
+success,-4,True,False,-10.0,10.0,l1 linf,le,0,0.165,0.911
+success,-1,True,False,-100.0,1.0,l1 l1n,gt,1,0.1509,0.7645
+success,-4,True,False,-100.0,1000.0,l1 linf,lt,-1,0.165,0.911
+success,-1,True,False,-10.0,10.0,l1n linf,lt,0,0.1603,0.6877
+success,-9,True,True,-1.0,1000.0,l1n,le,0,0.1519,0.9475
+success,-2,True,False,-10.0,0.1,l1n linf,ge,0,0.1196,0.6537
+success,-9,True,True,-1.0,1.0,l1 l1n linf,gt,5,0.1745,0.953
+success,3,True,True,-1.0,1.0,l1n linf,gt,1,0.1483,0.9672
+success,-8,True,True,-1.0,1000.0,l1 l1n linf,gt,1,0.1819,0.9708
+success,4,True,False,-1000.0,10.0,linf,gt,1,0.1391,0.6895
+success,-7,True,True,-1.0,1.0,l1n,gt,1,0.1698,0.971
+success,-5,True,False,-1.0,1000.0,l1n linf,lt,-1,0.1324,0.9316
+success,5,True,True,-10.0,100.0,l1n,lt,-1,0.1582,0.9678
+success,-2,True,False,-10.0,100.0,linf,ge,0,0.1453,0.7838
+success,1,True,False,-100.0,0.1,l1,le,0,0.1961,0.9527
+success,8,True,True,-1000.0,1000.0,linf,gt,5,0.1308,0.9208
+success,-8,True,False,-0.1,100.0,l1 l1n,le,0,0.1671,0.9452
+success,-4,True,False,-100.0,10.0,l1 l1n,gt,5,0.1668,0.924
+success,1,True,False,-1000.0,100.0,l1 l1n linf,lt,-1,0.158,0.9506
+success,-5,True,False,-1.0,1000.0,linf,gt,1,0.1305,0.3898
+success,7,True,True,-10.0,10.0,l1 l1n linf,gt,5,0.165,0.911
+success,9,True,True,-10.0,0.1,l1n linf,gt,5,0.1196,0.6537
+success,-10,True,False,-1.0,100.0,l1 l1n linf,lt,-1,0.1532,0.9442
+success,2,True,True,-100.0,1000.0,l1n,lt,-5,0.1519,0.9499
+success,2,True,False,-10.0,1.0,l1 l1n linf,gt,0,0.1658,0.9656
+success,7,True,False,-10.0,0.1,l1,lt,-1,0.1418,0.9675
+success,-4,True,False,-1.0,1000.0,l1,lt,0,0.1672,0.9218
+success,-9,True,True,-1000.0,1000.0,l1,lt,0,0.1519,0.9499
+success,-10,True,False,-1.0,1.0,linf,gt,0,0.1556,0.517
+success,8,True,False,-100.0,0.1,l1n,gt,0,0.1418,0.9675
+success,-1,True,True,-10.0,0.1,l1,gt,5,0.1086,0.6619
+success,1,True,True,-10.0,0.1,l1 l1n linf,lt,-1,0.1811,0.9514
+success,-9,True,True,-1000.0,1000.0,l1 l1n,gt,0,0.1519,0.9499
+success,3,True,False,-100.0,1000.0,l1 linf,le,0,0.199,0.9687
+success,2,True,True,-1.0,1.0,linf,gt,5,0.1556,0.517
+success,4,True,True,-1.0,100.0,l1,gt,1,0.1762,0.9697
+success,-4,True,False,-10.0,1000.0,l1,le,0,0.1668,0.924
+success,4,True,False,-100.0,10.0,linf,lt,-5,0.1404,0.6577
+success,-4,True,False,-10.0,10.0,l1 l1n linf,lt,-5,0.165,0.911
+success,-4,True,True,-1.0,1.0,l1n linf,ge,0,0.129,0.9076
+success,-1,True,True,-0.1,10.0,l1,lt,-5,0.2,0.8234
+success,7,True,False,-1.0,0.1,l1 linf,gt,0,0.1392,0.9641
+success,-2,True,True,-100.0,1.0,l1 linf,lt,0,0.1385,0.7494
+success,6,True,True,-1.0,10.0,linf,lt,-1,0.1274,0.3655
+success,-4,True,False,-1.0,10.0,l1n linf,gt,1,0.129,0.9079
+success,9,True,False,-1.0,0.1,l1 l1n,ge,0,0.1217,0.6389
+success,9,True,True,-1.0,1000.0,l1,gt,0,0.1468,0.804
+success,-3,True,False,-100.0,1.0,l1 l1n,lt,0,0.1668,0.924
+success,-9,True,False,-1.0,100.0,l1 linf,lt,-5,0.1532,0.9442
+success,-10,True,False,-10.0,100.0,linf,lt,0,0.1539,0.523
+success,-10,True,True,-100.0,10.0,l1 linf,le,0,0.158,0.9506
+success,2,True,False,-100.0,100.0,l1 linf,lt,-5,0.158,0.9506
+success,-7,True,True,-100.0,100.0,l1 l1n linf,gt,0,0.199,0.9686
+success,-2,True,True,-100.0,100.0,l1,ge,0,0.164,0.777
+success,3,True,True,-1000.0,0.1,l1n,lt,-1,0.1641,0.967
+success,-8,True,True,-1.0,10.0,l1 l1n,lt,-5,0.1762,0.9697
+success,4,True,True,-1.0,1.0,linf,lt,0,0.1386,0.6437
+success,6,True,True,-100.0,0.1,l1n linf,gt,0,0.1467,0.9558
+success,6,True,False,-1000.0,0.1,l1 l1n linf,gt,5,0.159,0.9689
+success,3,True,True,-0.1,100.0,l1 linf,lt,-5,0.169,0.9463
+success,-6,True,True,-1000.0,100.0,l1n linf,gt,5,0.1324,0.9316
+success,-7,True,True,-100.0,1.0,l1 l1n linf,gt,5,0.1808,0.9694
+success,-2,True,True,-10.0,1.0,l1 l1n linf,gt,0,0.1383,0.7508
+success,6,True,False,-10.0,10.0,l1 linf,lt,0,0.1808,0.967
+success,6,True,True,-10.0,1000.0,l1n,gt,1,0.1583,0.9678
+success,9,True,True,-0.1,1.0,l1,le,0,0.1096,0.7846
+success,-1,True,True,-1.0,1000.0,l1 l1n linf,gt,5,0.1377,0.7521
+success,-10,True,False,-1000.0,100.0,l1,gt,1,0.1519,0.9499
+success,-5,True,False,-10.0,1.0,linf,lt,-1,0.147,0.5706
+success,-4,True,False,-1.0,1000.0,linf,ge,0,0.1343,0.9318
+success,-5,True,False,-1.0,1.0,l1 l1n,lt,-1,0.1607,0.9336
+success,-5,True,False,-100.0,100.0,l1 linf,lt,0,0.1808,0.967
+success,-4,True,True,-100.0,1000.0,l1 l1n,le,0,0.1668,0.924
+success,8,True,False,-1000.0,100.0,l1 linf,gt,1,0.165,0.911
+success,-3,True,True,-100.0,100.0,l1 linf,lt,-1,0.165,0.911
+success,-8,True,True,-100.0,1000.0,l1 l1n,le,0,0.1929,0.9673
+success,-8,True,True,-10.0,10.0,l1 l1n linf,ge,0,0.199,0.9686
+success,2,True,True,-1000.0,1000.0,l1n,gt,0,0.1518,0.9499
+success,-1,False,False,-100.0,1.0,l1 l1n,gt,1,0.1509,0.7645
+success,-1,True,True,-1000.0,10.0,linf,gt,5,0.1507,0.6907
+success,2,True,False,-1000.0,1.0,l1,ge,0,0.1696,0.9646
+success,-3,True,False,-10.0,100.0,l1 l1n linf,lt,-1,0.165,0.911
+success,-2,True,True,-1000.0,1.0,l1n linf,gt,5,0.1603,0.6877
+success,-2,True,True,-1000.0,100.0,l1,lt,-1,0.1633,0.7784
+success,-1,True,True,-100.0,1000.0,l1 l1n linf,lt,0,0.1381,0.7517
+success,9,True,False,-10.0,100.0,l1n linf,lt,-5,0.1603,0.6877
+success,9,True,True,-1000.0,1.0,linf,gt,1,0.1429,0.7175
+success,-8,True,True,-10.0,100.0,l1 l1n linf,lt,-1,0.199,0.9686
+success,-10,True,True,-1000.0,1.0,l1,gt,1,0.1696,0.9646
+success,-2,True,True,-100.0,1000.0,l1,lt,-1,0.1644,0.7708
+success,7,True,True,-1000.0,100.0,linf,lt,0,0.1323,0.9143
+success,6,True,True,-100.0,100.0,l1,gt,1,0.1583,0.9678
+success,-5,True,False,-1.0,1.0,l1 l1n,ge,0,0.1607,0.9336
+success,1,True,False,-1.0,1000.0,l1 l1n linf,lt,0,0.1532,0.9442
+success,1,True,True,-1000.0,100.0,l1 l1n linf,le,0,0.158,0.9506
+success,-2,True,True,-100.0,100.0,l1n,lt,-1,0.1639,0.7738
+success,-1,True,True,-100.0,1.0,l1 linf,gt,0,0.1385,0.7494
+success,-6,True,True,-10.0,10.0,linf,le,0,0.1394,0.5216
+success,-8,True,False,-1000.0,100.0,l1 l1n linf,lt,-5,0.199,0.9686
+success,-6,True,True,-10.0,1000.0,l1 l1n linf,ge,0,0.1808,0.967
+success,-10,True,False,-1000.0,10.0,l1 l1n,gt,1,0.1519,0.9499
+success,7,True,True,-10.0,1000.0,l1 l1n linf,ge,0,0.165,0.911
+success,-9,True,True,-1.0,10.0,linf,lt,-1,0.1548,0.4625
+success,1,True,False,-100.0,1.0,l1 linf,lt,-1,0.1658,0.9656
+success,-4,True,True,-10.0,0.1,l1 linf,lt,-5,0.1416,0.9675
+success,-1,True,False,-10.0,1000.0,l1n linf,gt,5,0.1603,0.6877
+success,5,True,True,-100.0,100.0,l1 l1n,lt,-5,0.1595,0.9678
+success,7,True,True,-1000.0,1.0,l1,lt,-5,0.1668,0.924
+success,-5,True,False,-10.0,1000.0,l1n,gt,5,0.1583,0.9678
+success,-2,True,False,-100.0,1.0,linf,le,0,0.1414,0.6617
+success,-7,True,True,-100.0,1000.0,l1n,gt,1,0.1929,0.9673
+success,1,True,True,-1000.0,1.0,linf,lt,0,0.1519,0.5786
+success,5,True,True,-1000.0,0.1,linf,le,0,0.1519,0.967
+success,-4,True,False,-1.0,1000.0,l1,gt,0,0.1672,0.9218
+success,8,True,False,-10.0,100.0,l1n linf,lt,-5,0.129,0.9076
+success,-6,True,True,-100.0,10.0,l1 l1n linf,gt,5,0.1808,0.967
+success,-2,True,False,-1.0,1000.0,l1n linf,gt,5,0.1603,0.6877
+success,-7,True,True,-1.0,100.0,l1n linf,ge,0,0.1483,0.9672
+success,4,True,False,-100.0,100.0,linf,le,0,0.1399,0.7127
+success,2,True,False,-100.0,1000.0,l1n,gt,1,0.1519,0.9499
+success,-10,True,True,-1.0,10.0,l1,lt,-5,0.1519,0.9475
+success,-4,True,False,-1.0,1000.0,linf,lt,0,0.1343,0.9318
+success,-4,True,True,-1000.0,0.1,l1 l1n,lt,-5,0.1418,0.9675
+success,9,True,False,-1000.0,1000.0,l1,lt,-5,0.1635,0.7792
+success,7,True,False,-100.0,10.0,l1 l1n linf,gt,1,0.165,0.911
+success,-2,True,False,-0.1,100.0,l1,gt,0,0.2001,0.8234
+success,-1,True,True,-0.1,1.0,l1 l1n,le,0,0.1096,0.7846
+success,-5,True,False,-1000.0,10.0,l1n,gt,1,0.1582,0.9678
+success,-2,True,True,-1.0,0.1,linf,lt,-5,0.1405,0.7617
+success,-10,True,False,-10.0,10.0,linf,gt,0,0.1529,0.5549
+success,-1,True,True,-10.0,1000.0,l1n,lt,-5,0.1643,0.7767
+success,-4,True,True,-1000.0,1000.0,l1n linf,lt,-5,0.129,0.9078
+success,3,True,False,-0.1,1000.0,l1n,ge,0,0.1671,0.9452
+success,-3,True,False,-100.0,10.0,l1,le,0,0.1668,0.924
+success,8,True,False,-1.0,100.0,l1 l1n,gt,5,0.1672,0.9218
+success,-1,True,True,-1000.0,1000.0,l1n linf,gt,1,0.1603,0.6877
+success,2,True,False,-100.0,0.1,l1 l1n,ge,0,0.1961,0.9527
+success,1,True,True,-1.0,1.0,l1n linf,lt,0,0.1672,0.9493
+success,5,True,False,-10.0,100.0,l1 l1n linf,gt,0,0.1808,0.967
+success,2,True,True,-0.1,1000.0,l1,ge,0,0.132,0.8259
+success,6,True,False,-1.0,1.0,l1n,gt,0,0.1607,0.9336
+success,-7,True,False,-1.0,1.0,l1n,ge,0,0.1698,0.971
+success,7,True,True,-10.0,100.0,l1,le,0,0.1668,0.924
+success,-10,True,True,-100.0,10.0,l1 l1n,ge,0,0.1519,0.9499
+success,-1,True,False,-1000.0,100.0,l1 l1n linf,ge,0,0.1383,0.7505
+success,1,True,True,-100.0,1000.0,l1n linf,gt,0,0.1673,0.9492
+success,3,True,False,-100.0,10.0,l1 linf,le,0,0.199,0.9686
+success,8,True,True,-1.0,10.0,l1 l1n,gt,1,0.1672,0.9218
+success,-2,True,True,-100.0,1000.0,l1n linf,gt,0,0.1603,0.6877
+success,9,True,False,-0.1,1000.0,l1 l1n linf,ge,0,0.1106,0.7816
+success,-1,True,True,-100.0,100.0,l1,ge,0,0.164,0.777
+success,5,True,True,-10.0,0.1,l1,lt,0,0.1568,0.9689
+success,3,True,False,-100.0,1000.0,linf,gt,1,0.143,0.7659
+success,-7,True,True,-1.0,1.0,l1 l1n,lt,-1,0.1698,0.971
+success,6,True,True,-1.0,1000.0,l1n,lt,0,0.1582,0.9638
+success,-3,True,True,-1.0,100.0,l1,le,0,0.1672,0.9218
+success,-4,True,True,-1000.0,10.0,l1n linf,lt,0,0.129,0.9078
+success,8,True,False,-10.0,100.0,l1,lt,0,0.1668,0.924
+success,-6,True,True,-10.0,100.0,l1 linf,gt,5,0.1808,0.967
+success,-3,True,True,-1000.0,0.1,l1,lt,0,0.1418,0.9675
+success,-9,True,True,-1000.0,100.0,l1,ge,0,0.1519,0.9499
+success,7,True,True,-100.0,0.1,l1n linf,lt,-1,0.1457,0.9567
+success,-2,True,False,-1000.0,10.0,l1,lt,-1,0.1636,0.7784
+success,8,True,False,-1.0,10.0,l1n,gt,1,0.1672,0.9218
+success,5,True,False,-1.0,100.0,l1 linf,le,0,0.1558,0.9633
+success,8,True,True,-100.0,100.0,l1 linf,gt,0,0.165,0.911
+success,4,True,False,-10.0,10.0,l1,ge,0,0.1929,0.9673
+success,6,True,True,-100.0,0.1,l1 l1n,lt,-1,0.1568,0.9689
+success,-2,True,True,-100.0,100.0,l1,lt,0,0.164,0.777
+success,-7,True,True,-100.0,0.1,l1n linf,lt,0,0.1507,0.9639
+success,7,True,True,-10.0,1.0,l1,gt,0,0.1668,0.924
+success,-1,False,False,-0.1,10.0,linf,le,0,0.1515,0.7871
+success,-8,True,False,-10.0,10.0,l1 l1n linf,lt,0,0.199,0.9686
+success,-6,True,True,-10.0,10.0,l1n,gt,0,0.1582,0.9678
+success,-1,False,False,-0.1,1.0,l1n linf,le,0,0.1444,0.7165
+success,-9,True,True,-100.0,1.0,linf,lt,0,0.1545,0.5678
+success,-10,True,True,-100.0,1000.0,linf,lt,-5,0.1598,0.5502
+success,-7,True,False,-1000.0,1000.0,l1 linf,le,0,0.1992,0.9686
+success,-1,True,True,-10.0,100.0,l1,lt,0,0.1635,0.779
+success,3,True,True,-10.0,0.1,l1n linf,gt,1,0.1507,0.9639
+success,7,True,True,-1000.0,0.1,l1 l1n linf,gt,1,0.1416,0.9675
+success,-2,True,True,-1000.0,0.1,l1 linf,ge,0,0.1108,0.6661
+success,-4,True,True,-100.0,100.0,l1 l1n,gt,0,0.1668,0.924
+success,5,True,False,-10.0,1.0,l1n linf,gt,1,0.1324,0.9316
+success,9,True,True,-0.1,100.0,l1 l1n,lt,0,0.2,0.8234
+success,-7,True,False,-1.0,1000.0,linf,gt,5,0.1415,0.5866
+success,6,True,True,-100.0,10.0,l1n,ge,0,0.1583,0.9678
+success,6,True,True,-1000.0,10.0,l1 l1n,lt,-5,0.1594,0.9678
+success,5,True,False,-1.0,10.0,l1 l1n,lt,-1,0.1582,0.9638
+success,-5,True,True,-100.0,100.0,l1n linf,lt,-1,0.1324,0.9316
+success,-3,True,False,-1.0,1.0,l1,gt,0,0.1672,0.9218
+success,1,True,True,-1.0,100.0,l1,gt,1,0.1519,0.9475
+success,-10,True,False,-100.0,100.0,linf,ge,0,0.1559,0.5659
+success,3,True,True,-1.0,1.0,l1 l1n,lt,-5,0.1698,0.971
+success,2,True,True,-10.0,1000.0,l1,ge,0,0.1519,0.9499
+success,6,True,True,-1.0,1.0,l1n linf,lt,-1,0.1324,0.9316
+success,-8,True,False,-1000.0,10.0,linf,lt,-1,0.1391,0.6895
+success,-3,True,True,-1000.0,1000.0,l1 l1n linf,lt,0,0.165,0.911
+success,-8,True,True,-100.0,1000.0,l1 l1n linf,lt,0,0.199,0.9686
+success,4,True,False,-1000.0,1.0,linf,lt,-1,0.1363,0.7732
+success,9,True,False,-1000.0,10.0,l1 l1n linf,lt,-5,0.1381,0.7516
+success,-1,True,False,-10.0,10.0,l1,ge,0,0.1638,0.7778
+success,4,True,False,-10.0,1.0,l1 l1n linf,gt,5,0.1808,0.9694
+success,-6,True,True,-10.0,0.1,l1 l1n,lt,-1,0.1568,0.9689
+success,-1,True,False,-10.0,1.0,linf,lt,-5,0.1403,0.7172
+success,-9,True,True,-100.0,1.0,l1 l1n,lt,0,0.1696,0.9646
+success,-9,True,True,-10.0,100.0,l1,gt,0,0.1519,0.9499
+success,-9,True,False,-1.0,10.0,l1 linf,lt,-5,0.1532,0.9442
+success,3,True,True,-100.0,1000.0,l1 l1n,gt,1,0.1929,0.9673
+success,-6,True,True,-1.0,100.0,l1 l1n linf,lt,-5,0.1558,0.9633
+success,2,True,True,-1000.0,100.0,l1n linf,ge,0,0.1674,0.9493
+success,6,True,False,-1000.0,10.0,l1n,lt,0,0.1582,0.9678
+success,-2,True,True,-100.0,10.0,l1n linf,le,0,0.1603,0.6877
+success,-6,True,False,-10.0,100.0,l1 l1n linf,lt,-5,0.1808,0.967
+success,2,True,True,-100.0,1000.0,l1 linf,gt,5,0.158,0.9506
+success,-10,True,True,-10.0,0.1,l1,gt,0,0.1961,0.9527
+success,-1,False,False,-10.0,100.0,l1n linf,lt,-5,0.1603,0.6877
+success,4,True,True,-1.0,100.0,l1 l1n linf,lt,0,0.1819,0.9708
+success,-1,True,False,-1000.0,100.0,l1n linf,lt,-1,0.1603,0.6877
+success,-6,True,False,-1000.0,1000.0,l1 l1n,gt,0,0.1582,0.9678
+success,-5,True,True,-100.0,100.0,l1 l1n linf,le,0,0.1808,0.967
+success,4,True,True,-10.0,10.0,l1 l1n linf,lt,0,0.199,0.9686
+success,9,True,True,-0.1,1000.0,l1n,gt,1,0.2,0.8234
+success,-1,False,False,-1000.0,10.0,linf,gt,5,0.1507,0.6907
+success,-1,True,True,-10.0,100.0,l1 l1n,gt,1,0.1633,0.7776
+success,-5,True,True,-100.0,1.0,l1 linf,lt,0,0.154,0.9676
+success,-9,True,False,-10.0,1.0,l1n,gt,1,0.1696,0.9646
+success,-8,True,False,-10.0,1.0,l1n linf,lt,0,0.1483,0.9672
+success,-3,True,False,-1000.0,100.0,l1,lt,-5,0.1668,0.924
+success,6,True,False,-10.0,0.1,linf,lt,-5,0.1527,0.9678
+success,-10,True,False,-1000.0,100.0,l1n,lt,0,0.1519,0.9499
+success,7,True,True,-10.0,100.0,l1 l1n,ge,0,0.1668,0.924
+success,5,True,False,-1000.0,100.0,l1 l1n linf,gt,0,0.1808,0.967
+success,4,True,True,-10.0,100.0,l1 linf,le,0,0.199,0.9686
+success,9,True,True,-10.0,1000.0,l1 linf,lt,-5,0.1378,0.7521
+success,7,True,False,-1.0,1.0,l1n,gt,1,0.1672,0.9218
+success,-1,False,True,-1000.0,1.0,linf,lt,0,0.1384,0.112
+success,-1,True,True,-1.0,10.0,l1 l1n,le,0,0.1471,0.8035
+success,-4,True,True,-10.0,10.0,l1 l1n linf,gt,5,0.165,0.911
+success,7,True,False,-10.0,10.0,l1 linf,gt,1,0.165,0.911
+success,3,True,False,-100.0,10.0,l1n linf,le,0,0.1483,0.9672
+success,-4,True,False,-100.0,1000.0,l1 l1n,lt,-5,0.1668,0.924
+success,2,True,True,-10.0,1.0,l1,le,0,0.1696,0.9646
+success,1,True,True,-0.1,1000.0,l1,gt,0,0.132,0.8259
+success,-10,True,False,-1000.0,1000.0,linf,lt,0,0.1541,0.5232
+success,-5,True,False,-1.0,10.0,l1n linf,le,0,0.1324,0.9316
+success,-7,True,False,-1.0,1.0,l1 linf,ge,0,0.1698,0.971
+success,-4,True,True,-1000.0,100.0,l1 linf,gt,1,0.165,0.911
+success,-10,True,True,-1.0,100.0,l1 l1n linf,gt,0,0.1532,0.9442
+success,4,True,True,-1000.0,10.0,l1n,lt,0,0.1929,0.9673
+success,8,True,False,-1000.0,10.0,l1n linf,gt,0,0.129,0.9078
+success,2,True,False,-100.0,1000.0,l1n,gt,0,0.1519,0.9499
+success,9,True,False,-100.0,0.1,l1n linf,lt,0,0.1196,0.6537
+success,-6,True,True,-1.0,10.0,l1n linf,gt,0,0.1324,0.9316
+success,-4,True,True,-1000.0,10.0,l1n,le,0,0.1668,0.924
+success,1,True,True,-10.0,100.0,l1n linf,le,0,0.1672,0.9492
+success,9,True,False,-1000.0,0.1,l1 l1n,lt,0,0.1086,0.6619
+success,3,True,False,-0.1,10.0,l1 l1n linf,le,0,0.1405,0.9297
+success,9,True,True,-1.0,1000.0,linf,le,0,0.1489,0.7834
+success,8,True,True,-1.0,100.0,linf,lt,-5,0.1348,0.9422
+success,-1,False,False,-100.0,100.0,linf,lt,-1,0.1507,0.8043
+success,4,True,True,-1000.0,1000.0,l1n linf,gt,1,0.1483,0.9672
+success,-1,False,True,-100.0,1.0,l1 l1n,lt,0,0.1392,0.6038
+success,3,True,False,-100.0,1.0,l1 l1n linf,le,0,0.1808,0.9694
+success,-7,True,False,-0.1,10.0,linf,gt,5,0.136,0.7949
+success,-4,True,True,-100.0,1000.0,l1n linf,le,0,0.129,0.9079
+success,-5,True,False,-1.0,1.0,l1 l1n linf,lt,0,0.1607,0.9336
+success,9,True,False,-100.0,10.0,linf,gt,5,0.1462,0.7926
+success,7,True,True,-1000.0,100.0,l1 linf,gt,1,0.165,0.911
+success,-9,True,False,-100.0,1.0,l1 l1n linf,gt,5,0.1658,0.9656
+success,3,True,True,-0.1,10.0,l1n linf,gt,1,0.1323,0.9041
+success,-4,True,True,-100.0,10.0,l1n linf,lt,-1,0.129,0.9077
+success,-10,True,True,-100.0,100.0,l1 l1n linf,gt,5,0.158,0.9506
+success,6,True,False,-1000.0,10.0,l1n linf,lt,-1,0.1324,0.9316
+success,7,True,True,-1000.0,0.1,l1 linf,lt,-1,0.1416,0.9675
+success,-9,True,True,-0.1,100.0,l1 l1n,ge,0,0.132,0.8259
+success,-9,True,False,-10.0,10.0,linf,le,0,0.1529,0.5549
+success,-5,True,False,-10.0,0.1,l1 l1n,lt,-5,0.1568,0.9689
+success,-4,True,False,-10.0,10.0,l1 l1n,le,0,0.1668,0.924
+success,6,True,False,-1000.0,0.1,l1n,gt,5,0.1568,0.9689
+success,6,True,True,-1000.0,0.1,l1 l1n linf,lt,-1,0.159,0.9689
+success,-9,True,False,-1000.0,1.0,l1 l1n linf,gt,0,0.1658,0.9656
+success,6,True,True,-1000.0,0.1,l1 l1n linf,le,0,0.159,0.9689
+success,8,True,False,-10.0,0.1,l1 l1n,lt,-1,0.1418,0.9675
+success,-3,True,True,-10.0,1.0,l1 l1n,gt,5,0.1668,0.924
+success,6,True,True,-100.0,0.1,l1n,le,0,0.1568,0.9689
+success,-5,True,False,-10.0,0.1,l1 linf,ge,0,0.159,0.9689
+success,-4,True,False,-1000.0,10.0,l1 l1n,lt,0,0.1668,0.924
+success,-1,True,True,-0.1,1000.0,l1,lt,0,0.2,0.8234
+success,-9,True,False,-1.0,100.0,l1n,gt,5,0.1519,0.9475
+success,-3,True,True,-10.0,1000.0,l1n,le,0,0.1668,0.924
+success,-2,True,False,-0.1,100.0,linf,lt,0,0.1512,0.7629
+success,9,True,True,-0.1,1.0,l1 linf,lt,-1,0.1104,0.7817
+success,-4,True,True,-1000.0,100.0,l1 l1n,lt,0,0.1668,0.924
+success,-9,True,True,-100.0,0.1,l1 l1n linf,gt,5,0.1811,0.9514
+success,-10,True,True,-100.0,1000.0,linf,gt,5,0.1598,0.5502
+success,1,True,True,-1.0,1.0,l1n,gt,0,0.1747,0.953
+success,5,True,True,-1000.0,1.0,l1 linf,lt,0,0.154,0.9676
+success,-9,True,True,-100.0,1.0,l1 linf,gt,5,0.1658,0.9656
+success,5,True,False,-1.0,10.0,l1 l1n linf,gt,5,0.1558,0.9633
+success,-4,True,False,-100.0,1.0,l1,ge,0,0.1668,0.924
+success,-10,True,False,-100.0,1000.0,l1 l1n linf,le,0,0.158,0.9506
+success,8,True,True,-1000.0,1.0,l1,gt,0,0.1668,0.924
+success,-5,True,True,-10.0,10.0,l1,gt,0,0.1571,0.9678
+success,-7,True,False,-1.0,100.0,l1,gt,1,0.1762,0.9697
+success,-3,True,True,-100.0,0.1,l1 linf,ge,0,0.1416,0.9675
+success,1,True,True,-10.0,1.0,l1 l1n linf,gt,5,0.1658,0.9656
+success,9,True,True,-10.0,0.1,l1,gt,1,0.1086,0.6619
+success,-1,True,True,-1.0,0.1,l1n,lt,-1,0.1217,0.6389
+success,-10,True,False,-1.0,1000.0,l1 l1n linf,gt,0,0.1532,0.9442
+success,2,True,True,-1000.0,10.0,l1n linf,ge,0,0.1672,0.9492
+success,-4,True,False,-1.0,100.0,l1,gt,0,0.1672,0.9218
+success,2,True,True,-1000.0,1000.0,l1 l1n,gt,5,0.1519,0.9499
+success,3,True,True,-100.0,0.1,l1n linf,ge,0,0.1507,0.9639
+success,4,True,True,-10.0,1.0,l1n linf,lt,-1,0.1483,0.9672
+success,-1,True,True,-0.1,10.0,l1,gt,1,0.2,0.8234
+success,2,True,True,-1.0,1000.0,l1 l1n linf,le,0,0.1532,0.9442
+success,-9,True,False,-100.0,1.0,l1,lt,-1,0.1696,0.9646
+success,9,True,False,-100.0,0.1,linf,lt,-5,0.1393,0.6522
+success,-2,True,True,-10.0,0.1,l1 linf,gt,0,0.1108,0.6661
+success,-6,True,True,-10.0,100.0,l1n linf,lt,0,0.1324,0.9316
+success,9,True,True,-10.0,0.1,l1 l1n linf,ge,0,0.1108,0.6661
+success,-4,True,False,-10.0,0.1,l1n linf,lt,-5,0.1457,0.9567
+success,-4,True,False,-1.0,10.0,l1,lt,-1,0.1672,0.9218
+success,8,True,False,-10.0,1000.0,l1n,lt,-5,0.1668,0.924
+success,1,True,False,-1.0,1.0,l1 l1n linf,gt,0,0.1745,0.953
+success,-1,False,False,-1.0,1000.0,linf,lt,-5,0.1489,0.7834
+success,-6,True,False,-1.0,1.0,linf,gt,0,0.1368,0.4519
+success,5,True,False,-100.0,1.0,l1 l1n linf,lt,0,0.154,0.9676
+success,8,True,True,-1.0,10.0,l1 l1n linf,lt,-1,0.165,0.911
+success,4,True,False,-1.0,1.0,l1 l1n linf,lt,0,0.1698,0.971
+success,9,True,True,-0.1,1000.0,linf,lt,-5,0.1515,0.7839
+success,-10,True,True,-1.0,1000.0,l1 l1n linf,gt,0,0.1532,0.9442
+success,6,True,False,-1000.0,0.1,l1n linf,le,0,0.1467,0.9558
+success,7,True,False,-1000.0,0.1,l1,gt,1,0.1418,0.9675
+success,-3,True,False,-1000.0,10.0,l1 linf,lt,0,0.165,0.911
+success,-4,True,True,-1.0,0.1,l1n linf,lt,0,0.1457,0.9567
+success,-3,True,False,-100.0,1000.0,l1,lt,-5,0.1668,0.924
+success,-1,True,False,-1000.0,100.0,l1n linf,gt,0,0.1603,0.6877
+success,2,True,True,-1000.0,100.0,l1 l1n linf,ge,0,0.158,0.9506
+success,-1,True,False,-100.0,10.0,l1 l1n,lt,-5,0.1635,0.7793
+success,-4,True,True,-10.0,1000.0,l1 l1n linf,ge,0,0.165,0.911
+success,9,True,True,-1000.0,100.0,l1 linf,lt,-5,0.1381,0.7512
+success,-7,True,True,-10.0,1.0,l1 l1n linf,le,0,0.1808,0.9694
+success,8,True,True,-100.0,1.0,l1 linf,gt,1,0.165,0.911
+success,-3,True,False,-1.0,100.0,l1n,lt,-5,0.1672,0.9218
+success,6,True,False,-10.0,100.0,l1 l1n,gt,0,0.1581,0.9678
+success,-7,True,True,-10.0,1000.0,linf,gt,1,0.1384,0.6628
+success,-6,True,True,-100.0,0.1,l1 l1n,lt,-1,0.1568,0.9689
+success,-4,True,True,-100.0,10.0,l1n linf,gt,0,0.129,0.9077
+success,-6,True,False,-1000.0,10.0,l1n linf,lt,-5,0.1324,0.9316
+success,7,True,False,-1.0,0.1,l1n,lt,-5,0.1392,0.9641
+success,-6,True,False,-1000.0,1.0,l1 l1n linf,lt,-5,0.154,0.9676
+success,9,True,True,-1.0,100.0,l1 l1n linf,lt,-5,0.1378,0.7521
+success,1,True,False,-10.0,10.0,l1 linf,lt,-5,0.158,0.9506
+success,-6,True,True,-1000.0,0.1,l1n linf,lt,0,0.1467,0.9558
+success,-1,False,False,-100.0,100.0,l1n linf,lt,-5,0.1603,0.6877
+success,8,True,True,-1.0,1.0,l1n linf,gt,1,0.129,0.9076
+success,9,True,True,-10.0,10.0,l1 l1n,gt,0,0.1634,0.78
+success,-8,True,False,-10.0,0.1,l1 l1n linf,gt,1,0.1643,0.966
+success,7,True,False,-1.0,1.0,l1 linf,gt,1,0.165,0.911
+success,9,True,True,-100.0,0.1,l1,le,0,0.1086,0.6619
+success,2,True,False,-1.0,10.0,l1 l1n linf,le,0,0.1532,0.9442
+success,-9,True,False,-1.0,10.0,l1 linf,le,0,0.1532,0.9442
+success,7,True,False,-1000.0,10.0,l1n,ge,0,0.1668,0.924
+success,1,True,True,-10.0,1000.0,l1n linf,ge,0,0.1674,0.9493
+success,7,True,False,-10.0,10.0,l1,lt,0,0.1668,0.924
+success,-1,True,True,-1000.0,0.1,linf,gt,0,0.1429,0.7387
+success,-5,True,True,-1000.0,1000.0,l1 l1n,gt,0,0.1582,0.9678
+success,-7,True,False,-100.0,10.0,l1 l1n linf,lt,-1,0.199,0.9686
+success,6,True,False,-1.0,1.0,l1n,lt,-5,0.1607,0.9336
+success,-1,False,False,-1000.0,1000.0,l1,gt,5,0.1635,0.7792
+success,-1,True,False,-100.0,100.0,l1 l1n,lt,-5,0.1634,0.7793
+success,1,True,False,-100.0,10.0,l1n,ge,0,0.1517,0.9499
+success,-1,True,True,-10.0,1000.0,l1n linf,gt,5,0.1603,0.6877
+success,4,True,False,-100.0,0.1,l1n linf,le,0,0.1507,0.9639
+success,-5,True,True,-1000.0,10.0,l1 l1n,le,0,0.1594,0.9678
+success,-10,True,True,-1.0,1000.0,l1 linf,lt,-5,0.1532,0.9442
+success,4,True,True,-10.0,1.0,l1 l1n,gt,0,0.2019,0.9691
+success,-3,True,True,-100.0,1.0,l1,gt,5,0.1668,0.924
+success,-6,True,True,-1000.0,0.1,linf,gt,5,0.1519,0.967
+success,6,True,True,-100.0,1.0,l1,lt,-5,0.153,0.9678
+success,6,True,False,-10.0,0.1,l1n linf,lt,-1,0.1467,0.9558
+success,6,True,False,-100.0,10.0,l1 linf,gt,1,0.1808,0.967
+success,-7,True,False,-1.0,1.0,l1 linf,lt,-5,0.1698,0.971
+success,-1,False,False,-0.1,1.0,l1 linf,gt,0,0.1104,0.7817
+success,7,True,True,-1.0,1.0,l1 l1n,lt,-1,0.1672,0.9218
+success,-1,False,True,-1000.0,1.0,l1 l1n,lt,0,0.1392,0.6038
+success,-4,True,True,-1000.0,0.1,l1,le,0,0.1418,0.9675
+success,-5,True,False,-1.0,10.0,l1 l1n,ge,0,0.1582,0.9638
+success,2,True,True,-1000.0,1.0,l1,le,0,0.1696,0.9646
+success,-5,True,True,-10.0,1.0,l1 l1n,le,0,0.153,0.9678
+success,-7,True,True,-1000.0,100.0,l1,le,0,0.1929,0.9673
+success,-7,True,True,-100.0,100.0,l1n linf,gt,1,0.1483,0.9672
+success,-10,True,True,-10.0,1.0,l1 l1n,lt,0,0.1696,0.9646
+success,9,True,False,-10.0,0.1,l1n,lt,0,0.1086,0.6619
+success,6,True,False,-10.0,1.0,l1n,le,0,0.153,0.9678
+success,-5,True,True,-1000.0,1000.0,l1n linf,lt,-5,0.1324,0.9316
+success,-2,True,False,-10.0,10.0,l1 l1n linf,le,0,0.1381,0.7517
+success,-5,True,False,-10.0,0.1,l1 linf,gt,5,0.159,0.9689
+success,-9,True,True,-10.0,1000.0,l1n linf,gt,5,0.1674,0.9493
+success,-8,True,False,-10.0,100.0,linf,lt,-5,0.1369,0.7222
+success,-5,True,False,-10.0,1000.0,l1 l1n,lt,0,0.1581,0.9678
+success,-7,True,False,-1.0,1.0,linf,le,0,0.1386,0.6437
+success,2,True,False,-1000.0,100.0,l1n,lt,-5,0.1519,0.9499
+success,-1,True,True,-100.0,1000.0,l1n,lt,0,0.1636,0.7788
+success,8,True,True,-100.0,1.0,l1,lt,-1,0.1668,0.924
+success,8,True,False,-100.0,0.1,l1 linf,lt,0,0.1416,0.9675
+success,-4,True,True,-1000.0,10.0,l1n linf,gt,5,0.129,0.9078
+success,7,True,True,-10.0,1000.0,l1,lt,-1,0.1668,0.924
+success,2,True,False,-1000.0,10.0,l1 l1n linf,ge,0,0.158,0.9506
+success,-9,True,False,-1000.0,1.0,l1 linf,gt,5,0.1658,0.9656
+success,9,True,True,-0.1,1.0,l1n,ge,0,0.1095,0.7847
+success,-6,True,True,-1000.0,0.1,l1 l1n linf,ge,0,0.159,0.9689
+success,4,True,False,-1.0,10.0,linf,ge,0,0.1391,0.5756
+success,-5,True,True,-1000.0,1000.0,l1n linf,lt,0,0.1324,0.9316
+success,2,True,True,-1.0,1.0,linf,lt,-1,0.1556,0.517
+success,-2,True,True,-1.0,0.1,l1,gt,0,0.1217,0.6389
+success,-6,True,True,-1000.0,1.0,l1 linf,lt,-5,0.154,0.9676
+success,-7,True,False,-0.1,100.0,l1n,gt,1,0.1671,0.9452
+success,-2,True,True,-10.0,0.1,l1n,gt,0,0.1086,0.6619
+success,-2,True,False,-10.0,1000.0,l1n linf,lt,0,0.1603,0.6877
+success,-1,True,False,-1000.0,10.0,l1n linf,gt,5,0.1603,0.6877
+success,-9,True,True,-1.0,10.0,l1 l1n,lt,-5,0.1519,0.9475
+success,2,True,True,-1000.0,1000.0,l1 linf,gt,5,0.158,0.9506
+success,-1,False,False,-10.0,10.0,l1 linf,lt,-1,0.1379,0.7519
+success,-10,True,False,-10.0,1.0,l1n,lt,-5,0.1696,0.9646
+success,-3,True,True,-1.0,1000.0,l1,lt,-1,0.1672,0.9218
+success,-10,True,False,-1000.0,1.0,l1 linf,le,0,0.1658,0.9656
+success,-1,False,False,-100.0,1000.0,l1 linf,gt,5,0.1381,0.751
+success,-1,True,True,-0.1,10.0,linf,gt,1,0.1515,0.7871
+success,-8,True,True,-10.0,10.0,l1n linf,gt,0,0.1483,0.9672
+success,7,True,False,-1000.0,1.0,l1n linf,lt,-5,0.129,0.9079
+success,-1,True,True,-1000.0,1000.0,l1 linf,le,0,0.1379,0.7519
+success,-5,True,False,-1.0,1.0,l1n linf,le,0,0.1324,0.9316
+success,-1,False,False,-0.1,10.0,l1 l1n,lt,0,0.2,0.8234
+success,-2,True,False,-1.0,100.0,l1 l1n,gt,1,0.147,0.8039
+success,1,True,True,-1000.0,0.1,l1 l1n linf,le,0,0.1811,0.9514
+success,-5,True,False,-1000.0,1000.0,l1n linf,lt,-5,0.1324,0.9316
+success,3,True,False,-0.1,100.0,linf,lt,0,0.1329,0.7974
+success,9,True,False,-0.1,10.0,l1n,gt,5,0.2,0.8234
+success,-2,True,False,-0.1,10.0,l1n,le,0,0.2,0.8234
+success,9,True,False,-1000.0,0.1,l1 l1n,ge,0,0.1086,0.6619
+success,5,True,True,-100.0,10.0,l1 l1n linf,gt,1,0.1808,0.967
+success,-4,True,False,-1000.0,100.0,linf,lt,0,0.1323,0.9143
+success,-2,True,False,-1.0,0.1,linf,gt,1,0.1405,0.7617
+success,-6,True,False,-1.0,100.0,l1n,gt,5,0.1582,0.9638
+success,9,True,True,-10.0,0.1,l1 l1n linf,lt,-5,0.1108,0.6661
+success,-2,True,True,-100.0,0.1,l1,gt,0,0.1086,0.6619
+success,-2,True,False,-0.1,1000.0,l1n linf,lt,-5,0.1444,0.7165
+success,-5,True,True,-100.0,1.0,l1n linf,ge,0,0.1324,0.9316
+success,-4,True,False,-10.0,100.0,linf,ge,0,0.1338,0.9178
+success,4,True,True,-10.0,100.0,l1n,lt,-1,0.1928,0.9673
+success,-2,True,True,-1.0,1.0,l1 l1n linf,ge,0,0.1378,0.7521
+success,7,True,False,-100.0,100.0,l1 l1n linf,lt,0,0.165,0.911
+success,-1,True,False,-100.0,10.0,l1 l1n,gt,5,0.1635,0.7793
+success,8,True,False,-100.0,1.0,l1 linf,ge,0,0.165,0.911
+success,-3,True,True,-100.0,10.0,l1 linf,gt,1,0.165,0.911
+success,-3,True,True,-1.0,10.0,l1 linf,lt,-5,0.165,0.911
+success,7,True,True,-1.0,1000.0,l1n,gt,0,0.1672,0.9218
+success,-6,True,True,-1.0,1.0,l1 l1n linf,lt,-1,0.1607,0.9336
+success,-1,False,False,-1.0,0.1,l1 linf,gt,5,0.1217,0.6389
+success,5,True,True,-10.0,1000.0,linf,gt,5,0.144,0.5263
+success,7,True,True,-10.0,100.0,l1 l1n,gt,1,0.1668,0.924
+success,-1,True,True,-1.0,100.0,linf,ge,0,0.1525,0.758
+success,-1,True,True,-1.0,0.1,l1n,gt,5,0.1217,0.6389
+success,-1,True,True,-100.0,0.1,l1n linf,gt,1,0.1196,0.6537
+success,-7,True,True,-1.0,100.0,l1 l1n,lt,0,0.1762,0.9697
+success,-8,True,True,-100.0,0.1,linf,lt,-5,0.1574,0.9372
+success,-10,True,False,-1000.0,100.0,l1n,lt,-1,0.1519,0.9499
+success,-3,True,True,-100.0,0.1,l1 l1n,gt,0,0.1418,0.9675
+success,-5,True,True,-10.0,1.0,l1 l1n,gt,1,0.153,0.9678
+success,5,True,True,-100.0,0.1,l1 l1n,lt,-1,0.1568,0.9689
+success,2,True,True,-1.0,1000.0,l1n,lt,-5,0.1519,0.9475
+success,4,True,True,-100.0,0.1,l1 linf,lt,-1,0.1643,0.966
+success,9,True,True,-100.0,0.1,l1n,lt,-1,0.1086,0.6619
+success,5,True,False,-1000.0,0.1,l1 linf,gt,1,0.159,0.9689
+success,-2,True,False,-10.0,100.0,linf,gt,5,0.1453,0.7838
+success,-7,True,False,-1.0,100.0,l1,gt,5,0.1762,0.9697
+success,-9,True,True,-1000.0,0.1,l1 l1n,gt,1,0.1961,0.9527
+success,4,True,False,-1.0,10.0,l1,gt,0,0.1762,0.9697
+success,7,True,False,-1000.0,1.0,l1n,lt,0,0.1668,0.924
+success,-10,True,False,-100.0,0.1,l1 l1n linf,gt,0,0.1811,0.9514
+success,8,True,True,-1000.0,0.1,l1n linf,le,0,0.1457,0.9567
+success,-4,True,False,-100.0,100.0,l1 l1n linf,lt,-1,0.165,0.911
+success,-4,True,False,-1.0,1.0,linf,lt,0,0.1332,0.9205
+success,1,True,False,-100.0,10.0,l1n,lt,-5,0.1517,0.9499
+success,6,True,True,-100.0,1000.0,l1n,gt,0,0.1581,0.9678
+success,-4,True,True,-1000.0,1.0,linf,ge,0,0.1311,0.9438
+success,-7,True,True,-1.0,10.0,l1 linf,ge,0,0.1819,0.9708
+success,8,True,False,-1.0,1.0,l1,gt,5,0.1672,0.9218
+success,-7,True,True,-10.0,1000.0,l1,lt,-1,0.1929,0.9673
+success,4,True,False,-0.1,1000.0,l1,ge,0,0.1671,0.9452
+success,-9,True,True,-1000.0,0.1,linf,le,0,0.1462,0.9154
+success,-10,True,False,-0.1,100.0,l1,lt,0,0.132,0.8259
+success,5,True,True,-10.0,100.0,l1n linf,ge,0,0.1324,0.9316
+success,4,True,True,-1.0,10.0,linf,lt,0,0.1391,0.5756
+success,6,True,True,-100.0,1.0,l1 linf,gt,5,0.154,0.9676
+success,-4,True,True,-100.0,10.0,linf,gt,0,0.1329,0.937
+success,5,True,False,-1000.0,1.0,l1 l1n linf,le,0,0.154,0.9676
+success,-1,False,False,-1000.0,1000.0,l1n linf,lt,-5,0.1603,0.6877
+success,8,True,False,-10.0,1.0,l1n,lt,-5,0.1668,0.924
+success,-4,True,True,-10.0,1000.0,l1,lt,-1,0.1668,0.924
+success,-10,True,False,-1000.0,100.0,l1n linf,ge,0,0.1674,0.9493
+success,9,True,False,-100.0,1.0,l1 linf,le,0,0.1385,0.7494
+success,-3,True,False,-100.0,0.1,l1n,lt,-1,0.1418,0.9675
+success,4,True,True,-10.0,0.1,linf,gt,1,0.1592,0.9438
+success,-8,True,True,-1.0,10.0,l1n,ge,0,0.1762,0.9697
+success,2,True,True,-100.0,0.1,l1n linf,lt,-1,0.1635,0.9267
+success,9,True,True,-10.0,0.1,l1 linf,gt,1,0.1108,0.6661
+success,-6,True,True,-10.0,1.0,l1n,gt,5,0.153,0.9678
+success,-7,True,True,-10.0,10.0,linf,lt,-5,0.1388,0.6662
+success,2,True,True,-10.0,10.0,l1n,lt,-5,0.1518,0.9499
+success,1,True,False,-1000.0,100.0,l1,le,0,0.1519,0.9499
+success,6,True,False,-1000.0,100.0,linf,lt,-1,0.1364,0.4702
+success,-7,True,False,-0.1,100.0,l1n,gt,0,0.1671,0.9452
+success,-6,True,True,-1000.0,1.0,l1 linf,gt,1,0.154,0.9676
+success,7,True,False,-100.0,100.0,l1n,lt,-1,0.1668,0.924
+success,-8,True,False,-1000.0,10.0,l1 l1n,lt,0,0.1929,0.9673
+success,4,True,True,-1.0,1000.0,l1 l1n,lt,0,0.1762,0.9697
+success,6,True,False,-1000.0,100.0,l1n,lt,-1,0.1577,0.9678
+success,-3,True,True,-100.0,1000.0,l1,lt,-1,0.1668,0.924
+success,-10,True,True,-1000.0,10.0,l1n linf,ge,0,0.1672,0.9492
+success,4,True,False,-1000.0,10.0,l1n linf,gt,1,0.1483,0.9672
+success,-9,True,True,-1000.0,1.0,l1n,lt,-5,0.1696,0.9646
+success,-2,True,True,-1.0,100.0,l1n,lt,-1,0.147,0.804
+success,3,True,True,-100.0,100.0,l1n,lt,-5,0.1929,0.9673
+success,2,True,True,-0.1,100.0,l1 linf,lt,-1,0.1336,0.8167
+success,1,True,True,-1000.0,10.0,l1n linf,gt,5,0.1672,0.9492
+success,-5,True,False,-10.0,0.1,l1n linf,lt,-5,0.1467,0.9558
+success,8,True,False,-10.0,1000.0,l1 l1n,gt,5,0.1668,0.924
+success,-7,True,True,-10.0,0.1,l1 linf,gt,1,0.1643,0.966
+success,-4,True,False,-1.0,100.0,l1n,gt,5,0.1672,0.9218
+success,3,True,True,-1000.0,10.0,l1,gt,0,0.1929,0.9673
+success,-1,False,True,-1.0,100.0,l1 l1n linf,le,0,0.1942,0.8442
+success,4,True,True,-0.1,100.0,l1n linf,gt,0,0.1323,0.9041
+success,3,True,True,-1.0,100.0,l1 l1n,lt,-1,0.1762,0.9697
+success,-4,True,True,-100.0,1000.0,l1n linf,gt,1,0.129,0.9079
+success,4,True,True,-1.0,10.0,l1n,lt,-1,0.1762,0.9697
+success,-2,True,True,-10.0,1000.0,linf,gt,5,0.146,0.7912
+success,2,True,False,-1.0,100.0,l1 l1n,lt,-1,0.1519,0.9475
+success,-2,True,False,-1.0,1000.0,linf,gt,1,0.1489,0.7834
+success,-9,True,False,-100.0,100.0,linf,le,0,0.1559,0.5659
+success,6,True,True,-100.0,1000.0,l1,gt,0,0.1581,0.9678
+success,9,True,False,-1000.0,100.0,l1n,ge,0,0.1633,0.7779
+success,3,True,True,-1000.0,1000.0,l1 l1n,le,0,0.1929,0.9673
+success,-9,True,False,-10.0,10.0,l1n linf,lt,0,0.1672,0.9492
+success,4,True,True,-10.0,100.0,l1n linf,le,0,0.1483,0.9672
+success,-9,True,False,-100.0,1000.0,linf,lt,-5,0.1598,0.5502
+success,-6,True,True,-1000.0,1.0,l1n linf,ge,0,0.1324,0.9316
+success,9,True,True,-10.0,100.0,l1 l1n linf,lt,-5,0.1379,0.7518
+success,7,True,True,-10.0,10.0,l1 linf,ge,0,0.165,0.911
+success,-2,True,True,-1.0,100.0,l1n,lt,-5,0.147,0.804
+success,4,True,True,-0.1,1000.0,linf,lt,-1,0.1338,0.7787
+success,8,True,False,-10.0,0.1,l1n linf,lt,-1,0.1457,0.9567
+success,-8,True,False,-1.0,1.0,l1,gt,1,0.1698,0.971
+success,4,True,True,-100.0,0.1,l1n linf,lt,0,0.1507,0.9639
+success,3,True,False,-100.0,0.1,l1n linf,lt,-1,0.1507,0.9639
+success,-9,True,False,-1000.0,1000.0,l1n,lt,-1,0.1518,0.9499
+success,8,True,True,-1000.0,0.1,l1 l1n linf,lt,0,0.1416,0.9675
+success,-8,True,True,-1000.0,10.0,l1 l1n,le,0,0.1929,0.9673
+success,9,True,False,-1.0,0.1,l1,lt,-1,0.1217,0.6389
+success,-7,True,True,-100.0,10.0,l1 l1n,lt,-5,0.1929,0.9673
+success,-9,True,False,-10.0,1.0,l1n linf,ge,0,0.1674,0.9493
+success,6,True,False,-1.0,1.0,l1,lt,-1,0.1607,0.9336
+success,-5,True,False,-10.0,100.0,l1 linf,le,0,0.1808,0.967
+success,-4,True,True,-10.0,100.0,l1,ge,0,0.1668,0.924
+success,6,True,True,-10.0,1.0,l1n,gt,5,0.153,0.9678
+success,9,True,True,-10.0,100.0,l1n,lt,-5,0.1634,0.7786
+success,8,True,False,-10.0,1.0,l1,gt,1,0.1668,0.924
+success,-8,True,False,-0.1,100.0,linf,lt,-5,0.1329,0.7974
+success,3,True,True,-1000.0,0.1,l1 linf,gt,1,0.1643,0.966
+success,-6,True,True,-10.0,1.0,l1 l1n,lt,0,0.153,0.9678
+success,-10,True,True,-100.0,100.0,l1 linf,gt,0,0.158,0.9506
+success,8,True,True,-1.0,100.0,l1 l1n linf,ge,0,0.165,0.911
+success,6,True,False,-1.0,100.0,l1n linf,lt,0,0.1324,0.9316
+success,-7,True,True,-100.0,1.0,l1,gt,1,0.2019,0.9691
+success,3,True,False,-1.0,1.0,linf,le,0,0.1386,0.6437
+success,-4,True,False,-1000.0,0.1,l1 l1n linf,gt,1,0.1416,0.9675
+success,9,True,False,-100.0,0.1,l1n linf,gt,1,0.1196,0.6537
+success,-4,True,False,-1.0,10.0,l1,lt,0,0.1672,0.9218
+success,-8,True,False,-100.0,10.0,l1 linf,gt,5,0.199,0.9686
+success,-2,True,False,-1.0,10.0,linf,gt,1,0.1538,0.7792
+success,-5,True,False,-1.0,10.0,l1n,gt,5,0.1582,0.9638
+success,1,True,False,-100.0,10.0,l1,gt,5,0.1519,0.9499
+success,7,True,False,-100.0,1.0,l1n,lt,0,0.1668,0.924
+success,-3,True,True,-1.0,100.0,l1 l1n linf,lt,0,0.165,0.911
+success,-3,True,False,-1.0,10.0,l1,gt,0,0.1672,0.9218
+success,-1,True,False,-100.0,100.0,linf,lt,-1,0.1507,0.8043
+success,-5,True,True,-1.0,100.0,l1,gt,1,0.1582,0.9638
+success,-1,True,True,-100.0,1000.0,linf,gt,5,0.1564,0.7869
+success,-2,True,False,-100.0,10.0,l1n,gt,1,0.1635,0.7781
+success,-8,True,True,-0.1,100.0,l1n linf,gt,5,0.1323,0.9041
+success,-6,True,False,-1000.0,10.0,l1n,ge,0,0.1582,0.9678
+success,9,True,False,-0.1,10.0,linf,gt,1,0.1515,0.7871
+success,8,True,False,-1.0,0.1,l1n linf,gt,0,0.1457,0.9567
+success,-7,True,False,-10.0,100.0,l1 linf,gt,0,0.199,0.9686
+success,4,True,False,-0.1,100.0,l1 linf,lt,-5,0.169,0.9463
+success,-4,True,True,-1000.0,0.1,l1 linf,lt,0,0.1416,0.9675
+success,-5,True,True,-1000.0,1.0,l1n linf,gt,5,0.1324,0.9316
+success,-1,False,False,-1000.0,1.0,l1 l1n linf,le,0,0.1385,0.7493
+success,-1,True,False,-1.0,1.0,l1,lt,-5,0.148,0.8051
+success,9,True,False,-1000.0,100.0,linf,lt,-5,0.1429,0.7954
+success,-8,True,True,-1000.0,0.1,l1n linf,lt,-5,0.1507,0.9639
+success,-4,True,True,-1.0,10.0,l1n,gt,1,0.1672,0.9218
+success,6,True,True,-1.0,1.0,l1n,lt,-5,0.1607,0.9336
+success,-4,True,True,-10.0,1.0,linf,lt,0,0.1348,0.9471
+success,-5,True,False,-10.0,1.0,l1 l1n linf,gt,1,0.154,0.9676
+success,4,True,True,-1.0,10.0,l1 l1n linf,lt,-1,0.1819,0.9708
+success,9,True,False,-0.1,1000.0,l1n linf,lt,0,0.1444,0.7165
+success,7,True,False,-10.0,1.0,l1 l1n,gt,5,0.1668,0.924
+success,-9,True,False,-1.0,10.0,l1n linf,gt,1,0.1672,0.9493
+success,2,True,True,-10.0,100.0,l1n linf,lt,-1,0.1672,0.9492
+success,-7,True,True,-1000.0,1.0,l1 linf,lt,0,0.1808,0.9694
+success,7,True,True,-10.0,10.0,l1n,lt,-5,0.1668,0.924
+success,-5,True,False,-100.0,1000.0,linf,lt,-1,0.1406,0.5554
+success,-2,True,False,-1.0,1.0,l1,lt,-5,0.148,0.8051
+success,-6,True,True,-10.0,10.0,l1 linf,gt,0,0.1808,0.967
+success,3,True,True,-10.0,0.1,l1 linf,gt,5,0.1643,0.966
+success,-10,True,True,-1.0,100.0,l1,gt,0,0.1519,0.9475
+success,3,True,True,-100.0,10.0,l1 linf,ge,0,0.199,0.9686
+success,-2,True,False,-10.0,0.1,l1 linf,lt,-5,0.1108,0.6661
+success,-3,True,False,-1000.0,100.0,l1n,lt,-5,0.1668,0.924
+success,-8,True,False,-0.1,10.0,linf,gt,5,0.136,0.7949
+success,1,True,True,-1000.0,1000.0,l1,gt,1,0.1519,0.9499
+success,-1,False,False,-1000.0,0.1,l1n,ge,0,0.1086,0.6619
+success,7,True,False,-1.0,1000.0,l1 l1n linf,lt,0,0.165,0.911
+success,3,True,False,-100.0,1.0,linf,gt,1,0.1355,0.7756
+success,2,True,True,-100.0,1000.0,l1n,gt,5,0.1519,0.9499
+success,1,True,False,-10.0,0.1,l1 l1n,le,0,0.1961,0.9527
+success,-4,True,True,-1000.0,1000.0,l1 l1n,lt,-5,0.1668,0.924
+success,8,True,False,-1.0,0.1,l1,lt,-5,0.1392,0.9641
+success,-9,True,False,-10.0,100.0,l1 l1n,lt,-1,0.1519,0.9499
+success,-1,False,False,-1.0,100.0,l1 linf,lt,-1,0.1376,0.7523
+success,-5,True,True,-10.0,10.0,l1,ge,0,0.1571,0.9678
+success,-4,True,False,-1000.0,0.1,l1n,le,0,0.1418,0.9675
+success,2,True,True,-1.0,1000.0,linf,le,0,0.1541,0.4435
+success,-1,True,False,-10.0,1000.0,l1,gt,5,0.1644,0.7776
+success,7,True,False,-10.0,1.0,linf,lt,-1,0.1348,0.9471
+success,-5,True,False,-10.0,10.0,l1,lt,0,0.1571,0.9678
+success,1,True,False,-100.0,1000.0,linf,lt,-1,0.1598,0.5502
+success,-1,True,True,-1.0,1000.0,l1 linf,lt,-5,0.1377,0.7521
+success,5,True,False,-1000.0,100.0,l1 l1n,gt,1,0.1582,0.9678
+success,6,True,False,-10.0,10.0,l1 l1n,ge,0,0.157,0.9678
+success,-7,True,True,-1.0,100.0,l1,ge,0,0.1762,0.9697
+success,-2,True,False,-1000.0,1.0,l1 l1n linf,ge,0,0.1385,0.7493
+success,-1,False,False,-0.1,1.0,l1 l1n,lt,-1,0.1096,0.7846
+success,9,True,False,-10.0,100.0,l1 linf,lt,-5,0.1378,0.7521
+success,-1,False,True,-0.1,10.0,l1 l1n linf,le,0,0.1977,0.8859
+success,7,True,False,-10.0,1000.0,linf,lt,-5,0.1322,0.9433
+success,8,True,True,-100.0,1000.0,linf,gt,0,0.1323,0.9273
+success,-2,True,False,-0.1,1.0,l1n,lt,-5,0.1095,0.7847
+success,4,True,False,-100.0,0.1,l1,gt,1,0.1641,0.967
+success,-1,False,False,-0.1,1000.0,l1,lt,-1,0.2,0.8234
+success,-7,True,True,-10.0,10.0,linf,lt,0,0.1388,0.6662
+success,1,True,False,-1000.0,0.1,l1n,lt,-5,0.1966,0.9529
+success,1,True,False,-1.0,10.0,l1,ge,0,0.1519,0.9475
+success,-9,True,True,-1.0,1.0,l1n linf,lt,-5,0.1672,0.9493
+success,-3,True,True,-1.0,1.0,l1,lt,0,0.1672,0.9218
+success,-9,True,False,-1000.0,1000.0,linf,lt,0,0.1541,0.5232
+success,1,True,False,-10.0,1.0,l1n,lt,-1,0.1696,0.9646
+success,5,True,True,-1.0,1000.0,linf,gt,1,0.1305,0.3898
+success,-2,True,False,-1000.0,100.0,l1,gt,1,0.1633,0.7784
+success,4,True,False,-0.1,10.0,l1n linf,lt,0,0.1323,0.9041
+success,9,True,False,-1000.0,10.0,l1n linf,lt,-1,0.1603,0.6877
+success,-8,True,False,-1.0,10.0,l1n linf,lt,-1,0.1483,0.9672
+success,5,True,True,-10.0,1.0,l1 l1n linf,gt,1,0.154,0.9676
+success,-2,True,False,-0.1,1000.0,l1 l1n,lt,-5,0.2001,0.8234
+success,-6,True,True,-10.0,100.0,l1 l1n,gt,1,0.1581,0.9678
+success,1,True,True,-10.0,0.1,l1 l1n,ge,0,0.1961,0.9527
+success,1,True,False,-1000.0,1000.0,l1n linf,gt,0,0.1673,0.9493
+success,-6,True,True,-1000.0,100.0,l1 l1n,gt,1,0.1582,0.9678
+success,-8,True,False,-1000.0,1000.0,l1n,lt,0,0.1926,0.9673
+success,-6,True,True,-1.0,100.0,l1n,gt,5,0.1582,0.9638
+success,-7,True,True,-1000.0,100.0,linf,lt,0,0.138,0.6045
+success,2,True,False,-10.0,100.0,linf,ge,0,0.1539,0.523
+success,-7,True,True,-100.0,0.1,l1n,ge,0,0.1641,0.967
+success,-1,True,True,-1000.0,100.0,l1 l1n,lt,-1,0.1633,0.7772
+success,-5,True,False,-1000.0,10.0,l1,lt,-5,0.1581,0.9678
+success,7,True,True,-1000.0,1.0,l1n,gt,0,0.1668,0.924
+success,9,True,True,-10.0,1000.0,l1 l1n linf,lt,-5,0.1378,0.7521
+success,8,True,False,-1000.0,1000.0,l1 l1n linf,gt,0,0.165,0.911
+success,-7,True,False,-10.0,1000.0,l1n,lt,0,0.1929,0.9673
+success,-8,True,False,-10.0,100.0,l1,gt,5,0.1929,0.9673
+success,-1,True,False,-10.0,1.0,l1 l1n linf,gt,5,0.1383,0.7508
+success,-10,True,False,-1000.0,1000.0,l1 l1n linf,gt,1,0.158,0.9506
+success,8,True,True,-100.0,1000.0,l1n,lt,0,0.1668,0.924
+success,8,True,True,-10.0,1000.0,l1 l1n linf,ge,0,0.165,0.911
+success,-10,True,False,-100.0,0.1,l1 l1n,le,0,0.1961,0.9527
+success,2,True,True,-1.0,1000.0,l1 l1n,ge,0,0.1519,0.9475
+success,6,True,False,-100.0,1.0,l1n,ge,0,0.153,0.9678
+success,-4,True,True,-1.0,1000.0,l1 l1n linf,lt,0,0.165,0.911
+success,-4,True,False,-10.0,1.0,l1n linf,lt,-5,0.129,0.9078
+success,-4,True,True,-10.0,0.1,linf,le,0,0.1416,0.9597
+success,-9,True,False,-1.0,1.0,l1n linf,lt,-1,0.1672,0.9493
+success,-6,True,True,-1000.0,1.0,l1 l1n linf,le,0,0.154,0.9676
+success,5,True,False,-10.0,10.0,l1 linf,lt,-1,0.1808,0.967
+success,-7,True,True,-1000.0,10.0,l1n,gt,0,0.1929,0.9673
+success,-1,False,False,-0.1,10.0,linf,lt,-1,0.1515,0.7871
+success,2,True,False,-10.0,1000.0,l1,le,0,0.1519,0.9499
+success,-1,True,True,-10.0,10.0,l1n linf,gt,1,0.1603,0.6877
+success,-5,True,False,-100.0,1000.0,l1 l1n linf,gt,1,0.1808,0.967
+success,-1,True,True,-0.1,1.0,l1n linf,gt,1,0.1444,0.7165
+success,1,True,False,-100.0,100.0,l1,lt,0,0.1519,0.9499
+success,-1,True,False,-0.1,10.0,l1 l1n linf,le,0,0.1107,0.7815
+success,6,True,True,-1000.0,0.1,linf,gt,5,0.1519,0.967
+success,-8,True,False,-0.1,10.0,linf,lt,-5,0.136,0.7949
+success,6,True,False,-100.0,10.0,l1 l1n linf,ge,0,0.1808,0.967
+success,-8,True,False,-0.1,100.0,linf,ge,0,0.1329,0.7974
+success,4,True,True,-10.0,1.0,linf,ge,0,0.1389,0.7331
+success,-6,True,True,-1000.0,1000.0,linf,gt,5,0.1395,0.5449
+success,6,True,False,-100.0,1.0,l1n,lt,-1,0.153,0.9678
+success,-2,True,False,-1000.0,100.0,l1 l1n,lt,0,0.1633,0.7772
+success,4,True,True,-10.0,1000.0,l1,gt,1,0.1929,0.9673
+success,1,True,True,-10.0,1.0,l1 l1n,lt,-5,0.1696,0.9646
+success,-2,True,True,-100.0,1000.0,linf,gt,1,0.1564,0.7869
+success,-7,True,True,-100.0,1.0,linf,lt,-5,0.1355,0.7756
+success,-10,True,False,-10.0,1.0,linf,lt,0,0.1538,0.5698
+success,-1,True,True,-1.0,1.0,l1,ge,0,0.148,0.8051
+success,4,True,False,-1.0,1.0,l1n linf,ge,0,0.1483,0.9672
+success,6,True,False,-1.0,100.0,l1 l1n linf,lt,0,0.1558,0.9633
+success,-2,True,False,-1000.0,1000.0,linf,le,0,0.156,0.7878
+success,-2,True,False,-0.1,1000.0,l1n,gt,1,0.2,0.8234
+success,-1,False,False,-1.0,10.0,l1 l1n,ge,0,0.1471,0.8035
+success,-8,True,True,-100.0,0.1,l1 l1n,gt,0,0.1641,0.967
+success,-6,True,False,-1.0,10.0,l1 l1n linf,lt,-1,0.1558,0.9633
+success,9,True,False,-1.0,0.1,l1,ge,0,0.1217,0.6389
+success,-2,True,False,-100.0,1000.0,l1 l1n linf,ge,0,0.1381,0.7517
+success,7,True,True,-1000.0,100.0,l1n linf,lt,0,0.129,0.9079
+success,5,True,True,-100.0,1.0,l1 l1n linf,lt,0,0.154,0.9676
+success,-1,False,True,-100.0,1000.0,linf,ge,0,0.1446,0.4711
+success,-1,False,False,-1.0,1000.0,l1 l1n linf,lt,-1,0.1377,0.7521
+success,4,True,False,-1000.0,0.1,l1n linf,le,0,0.1507,0.9639
+success,4,True,False,-1.0,100.0,l1 linf,lt,-5,0.1819,0.9708
+success,-3,True,False,-10.0,1000.0,l1n linf,lt,-5,0.129,0.9079
+success,-1,True,True,-100.0,100.0,l1 l1n,gt,1,0.1634,0.7793
+success,5,True,False,-1000.0,100.0,l1n linf,gt,5,0.1324,0.9316
+success,3,True,True,-1.0,100.0,linf,gt,0,0.1418,0.5829
+success,-3,True,False,-10.0,0.1,l1 linf,lt,0,0.1416,0.9675
+success,-10,True,False,-0.1,100.0,l1,lt,-1,0.132,0.8259
+success,-3,True,False,-10.0,0.1,l1n linf,gt,5,0.1457,0.9567
+success,9,True,True,-1000.0,1000.0,l1n,gt,0,0.1633,0.7795
+success,4,True,False,-0.1,1000.0,l1 linf,gt,1,0.169,0.9463
+success,8,True,True,-1000.0,100.0,l1 l1n linf,lt,-1,0.165,0.911
+success,-9,True,False,-1.0,1000.0,l1,lt,0,0.1519,0.9475
+success,-9,True,False,-10.0,100.0,l1 linf,le,0,0.158,0.9506
+success,-7,True,True,-100.0,1.0,linf,gt,5,0.1355,0.7756
+success,-2,True,True,-0.1,100.0,l1n,lt,-5,0.2001,0.8234
+success,1,True,False,-1000.0,100.0,l1n,lt,-5,0.1519,0.9499
+success,1,True,False,-10.0,1.0,l1n linf,lt,0,0.1674,0.9493
+success,-4,True,True,-10.0,100.0,l1n linf,lt,-1,0.129,0.9076
+success,4,True,False,-10.0,1000.0,l1,gt,1,0.1929,0.9673
+success,6,True,False,-10.0,10.0,l1 l1n linf,lt,0,0.1808,0.967
+success,4,True,False,-1.0,100.0,l1 linf,lt,0,0.1819,0.9708
+success,9,True,True,-1.0,1000.0,l1,lt,0,0.1468,0.804
+success,-1,False,True,-1000.0,100.0,linf,lt,0,0.1316,0.6434
+success,-9,True,True,-100.0,100.0,linf,lt,-5,0.1559,0.5659
+success,-7,True,True,-10.0,0.1,linf,ge,0,0.1592,0.9438
+success,-3,True,True,-10.0,10.0,l1 l1n,lt,-5,0.1668,0.924
+success,-10,True,False,-1000.0,10.0,l1 l1n,le,0,0.1519,0.9499
+success,-4,True,True,-10.0,1000.0,l1,lt,-5,0.1668,0.924
+success,-1,True,True,-1000.0,100.0,linf,ge,0,0.1429,0.7954
+success,1,True,True,-10.0,100.0,l1,lt,0,0.1519,0.9499
+success,-4,True,False,-1.0,100.0,l1 l1n linf,ge,0,0.165,0.911
+success,5,True,True,-1000.0,1000.0,l1 linf,le,0,0.1808,0.967
+success,-9,True,False,-1000.0,1.0,l1,gt,1,0.1696,0.9646
+success,3,True,False,-1.0,1000.0,l1 linf,lt,0,0.1819,0.9708
+success,-8,True,True,-1000.0,100.0,linf,lt,-5,0.138,0.6045
+success,8,True,True,-100.0,100.0,l1n,lt,0,0.1668,0.924
+success,7,True,True,-10.0,1.0,l1 linf,lt,-1,0.165,0.911
+success,8,True,True,-100.0,1000.0,l1 l1n linf,gt,1,0.165,0.911
+success,5,True,False,-1.0,1.0,linf,gt,1,0.1368,0.4519
+success,-3,True,False,-10.0,100.0,l1 l1n linf,gt,0,0.165,0.911
+success,8,True,True,-10.0,100.0,l1n,gt,1,0.1668,0.924
+success,-7,True,False,-100.0,0.1,l1n linf,lt,0,0.1507,0.9639
+success,-1,True,True,-0.1,100.0,l1 linf,ge,0,0.1104,0.7817
+success,-2,True,True,-10.0,1000.0,l1n linf,ge,0,0.1603,0.6877
+success,2,True,True,-10.0,1.0,l1n linf,lt,-1,0.1674,0.9493
+success,-10,True,True,-1000.0,10.0,l1n,lt,-1,0.1519,0.9499
+success,-6,True,False,-10.0,1.0,l1,gt,5,0.153,0.9678
+success,4,True,True,-10.0,1000.0,l1 l1n linf,ge,0,0.199,0.9686
+success,-1,True,True,-1.0,100.0,l1n,lt,-5,0.147,0.804
+success,-6,True,True,-1.0,10.0,linf,gt,0,0.1274,0.3655
+success,5,True,True,-1000.0,100.0,l1 linf,lt,-1,0.1808,0.967
+success,-2,True,True,-1.0,0.1,l1,lt,0,0.1217,0.6389
+success,9,True,True,-1000.0,1.0,l1 l1n linf,gt,5,0.1385,0.7493
+success,-6,True,True,-10.0,100.0,l1 l1n linf,lt,-5,0.1808,0.967
+success,-2,True,False,-10.0,0.1,l1,gt,0,0.1086,0.6619
+success,-3,True,True,-1.0,1.0,linf,ge,0,0.1332,0.9205
+success,-1,True,False,-0.1,10.0,l1n linf,lt,0,0.1444,0.7164
+success,-4,True,True,-100.0,10.0,l1 linf,lt,0,0.165,0.911
+success,-4,True,False,-100.0,0.1,l1 l1n,lt,-1,0.1418,0.9675
+success,7,True,False,-100.0,1000.0,linf,le,0,0.1323,0.9273
+success,-2,True,True,-10.0,10.0,l1 l1n,lt,0,0.1634,0.78
+success,-4,True,False,-10.0,10.0,l1 l1n linf,gt,0,0.165,0.911
+success,4,True,False,-100.0,0.1,l1,lt,-1,0.1641,0.967
+success,-8,True,False,-1.0,10.0,linf,gt,0,0.1391,0.5756
+success,8,True,True,-1.0,0.1,l1 linf,lt,-1,0.1392,0.9641
+success,4,True,False,-100.0,1.0,l1 l1n,ge,0,0.2019,0.9691
+success,3,True,True,-1000.0,1000.0,l1,gt,1,0.1929,0.9673
+success,-8,True,True,-1.0,1.0,l1n,le,0,0.1698,0.971
+success,3,True,True,-100.0,10.0,l1n,gt,1,0.1929,0.9673
+success,2,True,True,-1000.0,0.1,linf,le,0,0.1462,0.9154
+success,8,True,True,-1.0,0.1,l1 linf,ge,0,0.1392,0.9641
+success,-8,True,True,-0.1,100.0,linf,lt,-1,0.1329,0.7974
+success,9,True,False,-0.1,1.0,l1,gt,1,0.1096,0.7846
+success,-1,False,False,-0.1,1.0,l1 linf,ge,0,0.1104,0.7817
+success,-8,True,True,-1.0,100.0,l1 linf,ge,0,0.1819,0.9708
+success,1,True,False,-10.0,100.0,linf,lt,-1,0.1539,0.523
+success,-2,True,True,-0.1,100.0,l1 l1n linf,lt,-5,0.1107,0.7815
+success,2,True,False,-10.0,0.1,l1 l1n linf,lt,-1,0.1811,0.9514
+success,2,True,True,-1.0,100.0,l1,le,0,0.1519,0.9475
+success,-10,True,False,-1000.0,0.1,l1n linf,lt,-5,0.1635,0.9267
+success,-1,True,False,-1.0,1000.0,l1 linf,lt,0,0.1377,0.7521
+success,-6,True,True,-10.0,1.0,l1n linf,lt,-1,0.1324,0.9316
+success,3,True,True,-100.0,10.0,l1 linf,lt,-1,0.199,0.9686
+success,-9,True,True,-1000.0,1.0,l1n linf,gt,1,0.1672,0.9493
+success,3,True,True,-1.0,10.0,l1n linf,gt,0,0.1483,0.9672
+success,-9,True,False,-1000.0,10.0,l1 l1n linf,gt,0,0.158,0.9506
+success,-10,True,False,-100.0,10.0,l1 l1n,lt,0,0.1519,0.9499
+success,-10,True,False,-10.0,1000.0,linf,le,0,0.1545,0.5353
+success,7,True,False,-1000.0,100.0,l1 l1n,lt,-1,0.1668,0.924
+success,1,True,True,-1000.0,0.1,l1 l1n,le,0,0.1961,0.9527
+success,-7,True,True,-10.0,10.0,l1 linf,gt,0,0.199,0.9686
+success,-4,True,True,-100.0,10.0,l1 l1n linf,lt,-1,0.165,0.911
+success,5,True,True,-100.0,1.0,l1 linf,lt,-1,0.154,0.9676
+success,8,True,True,-100.0,100.0,linf,gt,5,0.1354,0.9296
+success,-3,True,True,-1000.0,1000.0,l1n,lt,-1,0.1668,0.924
+success,8,True,True,-10.0,10.0,l1n linf,gt,0,0.129,0.9079
+success,5,True,True,-100.0,1000.0,l1n linf,lt,-5,0.1324,0.9316
+success,6,True,False,-100.0,100.0,l1 l1n linf,gt,5,0.1808,0.967
+success,-2,True,True,-1000.0,0.1,l1 l1n linf,gt,0,0.1108,0.6661
+success,5,True,True,-1.0,1.0,l1 l1n,gt,0,0.1607,0.9336
+success,9,True,False,-1000.0,0.1,l1 l1n,lt,-5,0.1086,0.6619
+success,-8,True,False,-1.0,1000.0,l1 l1n,gt,1,0.1762,0.9697
+success,-1,False,True,-100.0,1000.0,l1,gt,0,0.1272,0.5542
+success,-8,True,True,-10.0,10.0,l1 l1n,ge,0,0.1929,0.9673
+success,5,True,False,-100.0,0.1,l1,lt,0,0.1568,0.9689
+success,3,True,True,-10.0,1000.0,l1n,lt,-1,0.1929,0.9673
+success,-5,True,False,-1.0,10.0,l1,gt,0,0.1582,0.9638
+success,8,True,True,-100.0,1000.0,l1,lt,-1,0.1668,0.924
+success,4,True,False,-1.0,1.0,l1 l1n linf,gt,0,0.1698,0.971
+success,5,True,False,-100.0,10.0,l1 l1n linf,le,0,0.1808,0.967
+success,9,True,False,-1.0,1000.0,l1n,lt,0,0.1469,0.804
+success,9,True,True,-1000.0,100.0,l1,gt,1,0.1633,0.7784
+success,3,True,False,-10.0,1000.0,l1n,le,0,0.1929,0.9673
+success,7,True,False,-1.0,1.0,linf,gt,5,0.1332,0.9205
+success,6,True,False,-1000.0,100.0,l1n linf,lt,-1,0.1324,0.9316
+success,-5,True,False,-100.0,0.1,l1 linf,le,0,0.159,0.9689
+success,-5,True,True,-100.0,1000.0,linf,gt,0,0.1406,0.5554
+success,-3,True,True,-100.0,100.0,l1n linf,lt,0,0.129,0.9079
+success,6,True,False,-10.0,10.0,l1 linf,gt,5,0.1808,0.967
+success,4,True,False,-10.0,1.0,l1 l1n linf,gt,0,0.1808,0.9694
+success,6,True,False,-1000.0,1.0,linf,lt,-5,0.1496,0.5709
+success,2,True,True,-1000.0,0.1,l1 l1n,lt,-1,0.1961,0.9527
+success,-2,True,False,-0.1,10.0,l1,gt,1,0.2,0.8234
+success,7,True,False,-1000.0,1000.0,l1n,le,0,0.1668,0.924
+success,-2,True,False,-1000.0,100.0,l1,ge,0,0.1633,0.7784
+success,6,True,False,-10.0,1000.0,l1,gt,1,0.1558,0.9678
+success,7,True,True,-100.0,1000.0,l1 l1n linf,lt,-1,0.165,0.911
+success,-3,True,False,-10.0,1000.0,l1 l1n,lt,-1,0.1668,0.924
+success,-7,True,True,-1000.0,1.0,l1n linf,gt,0,0.1483,0.9672
+success,-9,True,True,-1000.0,1000.0,l1 l1n linf,gt,1,0.158,0.9506
+success,-7,True,False,-1000.0,1000.0,l1 l1n linf,gt,1,0.199,0.9686
+success,2,True,True,-1000.0,1000.0,linf,gt,0,0.1541,0.5232
+success,-7,True,True,-10.0,1000.0,l1n,gt,5,0.1929,0.9673
+success,-5,True,True,-1000.0,0.1,l1n,lt,-5,0.1568,0.9689
+success,-9,True,False,-1.0,10.0,l1,ge,0,0.1519,0.9475
+success,6,True,False,-10.0,1000.0,l1n linf,gt,1,0.1324,0.9316
+success,-1,True,False,-1000.0,1.0,l1 l1n linf,lt,-5,0.1385,0.7493
+success,-3,True,True,-1.0,10.0,linf,lt,-5,0.1331,0.9261
+success,-1,True,True,-1.0,10.0,linf,gt,1,0.1538,0.7792
+success,9,True,True,-1.0,0.1,l1 l1n linf,ge,0,0.1217,0.6389
+success,1,True,False,-1.0,10.0,l1n linf,le,0,0.1672,0.9493
+success,5,True,False,-1000.0,1000.0,l1 linf,gt,0,0.1808,0.967
+success,-7,True,False,-1000.0,1.0,l1 l1n,ge,0,0.2019,0.9691
+success,-2,True,False,-100.0,1.0,l1,gt,5,0.1508,0.7647
+success,1,True,False,-0.1,100.0,l1,gt,5,0.132,0.8259
+success,-4,True,True,-10.0,100.0,l1n,gt,1,0.1668,0.924
+success,-3,True,False,-100.0,0.1,l1n linf,lt,-5,0.1457,0.9567
+success,-4,True,False,-1000.0,1.0,l1 l1n linf,lt,-5,0.165,0.911
+success,6,True,True,-10.0,1000.0,l1 linf,ge,0,0.1808,0.967
+success,-1,True,True,-1.0,100.0,l1n,lt,-1,0.147,0.804
+success,-2,True,False,-10.0,1000.0,l1 l1n,lt,-5,0.1635,0.7796
+success,-10,True,True,-1.0,1000.0,l1n,gt,1,0.1519,0.9475
+success,-6,True,False,-10.0,100.0,l1 l1n,lt,-5,0.1581,0.9678
+success,-3,True,True,-1.0,1.0,l1,gt,0,0.1672,0.9218
+success,-3,True,False,-100.0,1000.0,l1n linf,lt,-5,0.129,0.9079
+success,-2,True,True,-1000.0,0.1,l1,gt,0,0.1086,0.6619
+success,-8,True,True,-100.0,1000.0,l1,lt,0,0.1929,0.9673
+success,6,True,True,-100.0,1000.0,l1 linf,lt,0,0.1808,0.967
+success,-4,True,False,-100.0,0.1,l1n linf,lt,-1,0.1457,0.9567
+success,6,True,True,-10.0,1.0,l1 linf,gt,0,0.154,0.9676
+success,-2,True,False,-100.0,0.1,l1 l1n linf,lt,-1,0.1108,0.6661
+success,-10,True,True,-100.0,100.0,l1n,gt,0,0.1518,0.9499
+success,8,True,True,-1.0,10.0,l1n linf,lt,-1,0.129,0.9079
+success,-7,True,False,-1.0,10.0,l1 linf,lt,0,0.1819,0.9708
+success,6,True,False,-100.0,0.1,linf,le,0,0.1524,0.9675
+success,-1,False,False,-0.1,10.0,linf,lt,0,0.1515,0.7871
+success,7,True,False,-10.0,10.0,l1n linf,gt,0,0.129,0.9079
+success,3,True,True,-1.0,1000.0,l1 l1n,ge,0,0.1762,0.9697
+success,-6,True,False,-1000.0,1.0,l1 linf,le,0,0.154,0.9676
+success,-4,True,False,-1000.0,0.1,l1n,gt,0,0.1418,0.9675
+success,-8,True,False,-10.0,0.1,l1,lt,-1,0.1641,0.967
+success,1,True,False,-0.1,100.0,l1n,gt,1,0.132,0.8259
+success,1,True,False,-1000.0,10.0,l1 l1n linf,lt,-1,0.158,0.9506
+success,-1,False,True,-10.0,100.0,l1 l1n linf,le,0,0.1942,0.8442
+success,1,True,False,-100.0,1.0,l1 l1n,lt,-5,0.1696,0.9646
+success,-2,True,True,-0.1,10.0,l1 l1n linf,gt,1,0.1107,0.7815
+success,3,True,False,-1000.0,1.0,l1 linf,gt,5,0.1808,0.9694
+success,6,True,False,-100.0,10.0,l1,gt,5,0.1581,0.9678
+success,8,True,True,-1000.0,10.0,l1n linf,lt,-5,0.129,0.9078
+success,-7,True,False,-1.0,1000.0,l1 linf,gt,5,0.1819,0.9708
+success,3,True,True,-1.0,100.0,l1n,gt,0,0.1762,0.9697
+success,-10,True,True,-10.0,0.1,l1 linf,gt,5,0.1811,0.9514
+success,9,True,True,-100.0,0.1,linf,ge,0,0.1393,0.6522
+success,1,True,True,-10.0,100.0,l1 linf,gt,5,0.158,0.9506
+success,-5,True,True,-100.0,100.0,l1,gt,5,0.1583,0.9678
+success,8,True,True,-10.0,100.0,l1 l1n,le,0,0.1668,0.924
+success,-4,True,False,-100.0,100.0,l1 l1n linf,lt,0,0.165,0.911
+success,5,True,False,-1000.0,1.0,l1,lt,-5,0.153,0.9678
+success,5,True,True,-100.0,0.1,l1 l1n,ge,0,0.1568,0.9689
+success,-4,True,True,-100.0,10.0,l1 l1n linf,lt,0,0.165,0.911
+success,-6,True,False,-10.0,1.0,l1n linf,lt,-1,0.1324,0.9316
+success,1,True,True,-0.1,1000.0,linf,ge,0,0.1222,0.5082
+success,-2,True,True,-1.0,10.0,linf,gt,1,0.1538,0.7792
+success,-1,True,True,-100.0,100.0,l1n linf,gt,0,0.1603,0.6877
+success,3,True,True,-10.0,1.0,l1n linf,gt,5,0.1483,0.9672
+success,4,True,True,-100.0,1.0,l1n,le,0,0.2018,0.9691
+success,5,True,False,-10.0,10.0,l1 l1n,lt,-5,0.157,0.9678
+success,9,True,False,-1000.0,0.1,l1 linf,gt,0,0.1108,0.6661
+success,-1,True,True,-100.0,1000.0,l1,lt,-5,0.1644,0.7708
+success,8,True,False,-100.0,100.0,l1n,gt,0,0.1668,0.924
+success,-7,True,True,-100.0,0.1,l1n,le,0,0.1641,0.967
+success,6,True,True,-1.0,1.0,l1n linf,gt,5,0.1324,0.9316
+success,1,True,True,-1.0,10.0,l1n linf,lt,0,0.1672,0.9493
+success,4,True,True,-1000.0,100.0,l1 l1n linf,gt,1,0.199,0.9686
+success,-9,True,True,-1000.0,100.0,l1n linf,lt,0,0.1674,0.9493
+success,3,True,False,-100.0,1.0,l1 l1n linf,gt,1,0.1808,0.9694
+success,-1,True,False,-0.1,1.0,l1 linf,gt,1,0.1104,0.7817
+success,-2,True,True,-100.0,100.0,l1 l1n,lt,-5,0.1634,0.7793
+success,2,True,False,-1000.0,100.0,l1,gt,0,0.1519,0.9499
+success,2,True,True,-1.0,1.0,l1 l1n,lt,-1,0.1745,0.953
+success,1,True,True,-100.0,0.1,linf,ge,0,0.1444,0.9156
+success,-3,True,False,-10.0,0.1,l1 l1n,le,0,0.1418,0.9675
+success,-10,True,False,-10.0,0.1,l1 linf,lt,0,0.1811,0.9514
+success,-3,True,False,-100.0,0.1,l1,lt,0,0.1418,0.9675
+success,-9,True,True,-1.0,1000.0,linf,ge,0,0.1541,0.4435
+success,-9,True,True,-1.0,10.0,l1n linf,gt,5,0.1672,0.9493
+success,-5,True,False,-10.0,0.1,l1n linf,lt,-1,0.1467,0.9558
+success,-2,True,False,-100.0,10.0,l1n linf,gt,1,0.1603,0.6877
+success,3,True,False,-0.1,10.0,l1 linf,le,0,0.1407,0.9299
+success,3,True,False,-10.0,1000.0,linf,le,0,0.1384,0.6628
+success,-5,True,True,-100.0,100.0,l1 linf,ge,0,0.1808,0.967
+success,9,True,True,-1000.0,1000.0,l1,lt,0,0.1635,0.7792
+success,5,True,False,-100.0,1.0,l1n linf,gt,1,0.1324,0.9316
+success,4,True,True,-1.0,1000.0,l1,gt,1,0.1762,0.9697
+success,3,True,False,-10.0,10.0,l1n,lt,-1,0.1929,0.9673
+success,4,True,True,-100.0,1000.0,l1 l1n linf,gt,5,0.199,0.9686
+success,4,True,False,-10.0,100.0,l1 l1n,le,0,0.1929,0.9673
+success,4,True,True,-1.0,10.0,l1,lt,0,0.1762,0.9697
+success,9,True,True,-100.0,10.0,l1 linf,lt,0,0.1377,0.7521
+success,2,True,True,-10.0,1000.0,l1,gt,1,0.1519,0.9499
+success,-2,True,False,-100.0,100.0,l1n,gt,5,0.1639,0.7738
+success,-5,True,True,-100.0,1000.0,l1n linf,gt,5,0.1324,0.9316
+success,5,True,False,-10.0,100.0,l1n linf,lt,-5,0.1324,0.9316
+success,-2,True,False,-1000.0,0.1,l1 l1n,ge,0,0.1086,0.6619
+success,9,True,False,-1000.0,0.1,l1,gt,0,0.1086,0.6619
+success,-7,True,True,-0.1,100.0,l1 l1n linf,gt,0,0.169,0.9463
+success,-9,True,True,-100.0,0.1,l1 linf,gt,5,0.1811,0.9514
+success,2,True,False,-1.0,1.0,linf,lt,-5,0.1556,0.517
+success,-1,False,True,-0.1,100.0,l1n,lt,0,0.18,0.9092
+success,6,True,False,-1.0,10.0,linf,lt,0,0.1274,0.3655
+success,-9,True,False,-100.0,100.0,l1,lt,0,0.1519,0.9499
+success,9,True,False,-1.0,10.0,l1n,lt,0,0.1472,0.8029
+success,-5,True,False,-1.0,1.0,l1,le,0,0.1607,0.9336
+success,-5,True,True,-1000.0,1.0,l1 l1n linf,gt,0,0.154,0.9676
+success,2,True,False,-10.0,0.1,l1n linf,gt,1,0.1635,0.9267
+success,-1,True,True,-10.0,1.0,l1n linf,ge,0,0.1603,0.6877
+success,6,True,False,-1.0,1000.0,l1 l1n linf,gt,5,0.1558,0.9633
+success,5,True,False,-10.0,1000.0,l1 linf,lt,-1,0.1808,0.967
+success,-10,True,False,-1.0,100.0,l1 l1n linf,gt,0,0.1532,0.9442
+success,-10,True,True,-100.0,10.0,l1 l1n linf,lt,-5,0.158,0.9506
+success,-3,True,True,-1000.0,1000.0,l1 l1n linf,gt,0,0.165,0.911
+success,-10,True,True,-0.1,1000.0,l1 linf,lt,-1,0.1336,0.8167
+success,-6,True,False,-100.0,0.1,l1 l1n linf,ge,0,0.159,0.9689
+success,-5,True,True,-100.0,0.1,l1 l1n linf,lt,0,0.159,0.9689
+success,-2,True,True,-10.0,1.0,l1 l1n,lt,-5,0.1509,0.7644
+success,-9,True,False,-1000.0,10.0,l1 linf,gt,0,0.158,0.9506
+success,-7,True,True,-100.0,100.0,l1 l1n,gt,1,0.1929,0.9673
+success,9,True,True,-0.1,1000.0,l1n linf,lt,-1,0.1444,0.7165
+success,2,True,False,-100.0,1000.0,l1n,ge,0,0.1519,0.9499
+success,-4,True,False,-100.0,10.0,l1n,gt,1,0.1668,0.924
+success,-2,True,True,-0.1,1000.0,l1 linf,le,0,0.1105,0.7817
+success,-4,True,True,-10.0,1000.0,linf,ge,0,0.1322,0.9433
+success,-1,False,True,-10.0,1.0,l1 l1n,lt,0,0.1392,0.6038
+success,-1,True,False,-1000.0,10.0,l1 linf,gt,1,0.1385,0.7493
+success,7,True,False,-1000.0,100.0,l1 l1n linf,le,0,0.165,0.911
+success,-3,True,True,-1.0,100.0,l1 l1n linf,lt,-5,0.165,0.911
+success,-1,True,True,-100.0,1000.0,l1 l1n linf,lt,-5,0.1381,0.7517
+success,-8,True,False,-1000.0,1.0,l1 linf,le,0,0.1808,0.9694
+success,-2,True,False,-1.0,1.0,linf,le,0,0.1442,0.741
+success,5,True,True,-1000.0,1000.0,l1n linf,gt,1,0.1324,0.9316
+success,9,True,False,-1.0,10.0,l1n,gt,0,0.1472,0.8029
+success,-1,False,False,-1000.0,10.0,l1 linf,lt,0,0.1385,0.7493
+success,-3,True,False,-10.0,1000.0,l1n,lt,0,0.1668,0.924
+success,7,True,False,-1.0,0.1,l1 linf,le,0,0.1392,0.9641
+success,3,True,True,-10.0,100.0,l1n,ge,0,0.1928,0.9673
+success,-9,True,False,-1000.0,0.1,l1,gt,0,0.1961,0.9527
+success,9,True,False,-1.0,1.0,l1,gt,1,0.148,0.8051
+success,6,True,True,-10.0,1.0,linf,ge,0,0.147,0.5706
+success,4,True,True,-10.0,1000.0,l1,lt,-1,0.1929,0.9673
+success,-10,True,True,-100.0,10.0,l1 l1n,gt,5,0.1519,0.9499
+success,5,True,False,-10.0,0.1,l1 l1n,gt,5,0.1568,0.9689
+success,1,True,True,-1.0,1.0,l1 linf,le,0,0.1745,0.953
+success,9,True,False,-10.0,0.1,l1 l1n,gt,0,0.1086,0.6619
+success,-5,True,True,-10.0,1.0,l1,ge,0,0.153,0.9678
+success,-7,True,True,-100.0,1.0,linf,gt,1,0.1355,0.7756
+success,-7,True,True,-100.0,1000.0,linf,gt,5,0.143,0.7659
+success,2,True,True,-1.0,100.0,linf,lt,-5,0.1568,0.464
+success,-10,True,False,-1.0,100.0,l1 l1n linf,ge,0,0.1532,0.9442
+success,7,True,True,-100.0,10.0,linf,gt,5,0.1329,0.937
+success,-1,False,False,-10.0,1000.0,l1n linf,lt,0,0.1603,0.6877
+success,-2,True,True,-10.0,10.0,l1 l1n linf,gt,0,0.1381,0.7517
+success,9,True,False,-1.0,100.0,l1,gt,1,0.147,0.8039
+success,6,True,True,-1000.0,1000.0,l1 l1n,le,0,0.1582,0.9678
+success,-5,True,False,-100.0,100.0,l1,le,0,0.1583,0.9678
+success,-4,True,True,-1000.0,100.0,l1 l1n linf,gt,0,0.165,0.911
+success,-5,True,False,-1.0,100.0,l1 linf,gt,1,0.1558,0.9633
+success,1,True,True,-100.0,100.0,linf,ge,0,0.1559,0.5659
+success,-8,True,True,-0.1,100.0,l1n linf,lt,-1,0.1323,0.9041
+success,7,True,False,-1.0,0.1,l1 l1n linf,lt,-5,0.1392,0.9641
+success,-3,True,True,-10.0,1000.0,l1 l1n,ge,0,0.1668,0.924
+success,-3,True,True,-1.0,10.0,linf,gt,1,0.1331,0.9261
+success,1,True,False,-10.0,1.0,l1n,gt,1,0.1696,0.9646
+success,-7,True,False,-100.0,10.0,l1n linf,lt,-1,0.1483,0.9672
+success,9,True,True,-1000.0,100.0,l1 l1n linf,gt,1,0.1383,0.7505
+success,2,True,False,-0.1,100.0,l1 l1n,gt,5,0.132,0.8259
+success,6,True,True,-10.0,100.0,linf,lt,-5,0.1405,0.5003
+success,-1,True,True,-1000.0,1000.0,l1 linf,lt,-5,0.1379,0.7519
+success,-2,True,False,-1000.0,1000.0,l1 l1n linf,gt,0,0.1379,0.7521
+success,6,True,True,-1.0,1.0,l1 l1n,gt,0,0.1607,0.9336
+success,-2,True,True,-10.0,1.0,l1,ge,0,0.1512,0.7645
+success,-6,True,True,-1.0,100.0,l1 l1n,gt,1,0.1582,0.9638
+success,-4,True,False,-1.0,1.0,l1 linf,lt,-5,0.165,0.911
+success,-1,True,True,-0.1,1000.0,l1,lt,-5,0.2,0.8234
+success,-7,True,False,-0.1,10.0,l1 l1n linf,gt,0,0.1405,0.9297
+success,-1,True,False,-1000.0,0.1,l1 linf,le,0,0.1108,0.6661
+success,3,True,False,-10.0,100.0,l1 l1n linf,gt,1,0.199,0.9686
+success,-1,False,False,-10.0,1.0,linf,lt,0,0.1403,0.7172
+success,-5,True,False,-1.0,1000.0,l1 l1n linf,gt,5,0.1558,0.9633
+success,-6,True,False,-10.0,10.0,linf,gt,5,0.1394,0.5216
+success,9,True,False,-1.0,1.0,l1 l1n linf,gt,5,0.1378,0.7521
+success,3,True,False,-1000.0,1.0,l1n linf,lt,0,0.1483,0.9672
+success,1,True,False,-10.0,1000.0,l1,ge,0,0.1519,0.9499
+success,9,True,False,-1000.0,10.0,l1 linf,lt,-5,0.1385,0.7493
+success,7,True,False,-10.0,100.0,l1 l1n,gt,0,0.1668,0.924
+success,6,True,True,-10.0,1.0,l1 linf,ge,0,0.154,0.9676
+success,5,True,False,-1.0,1.0,l1 l1n,ge,0,0.1607,0.9336
+success,7,True,True,-10.0,1000.0,l1,le,0,0.1668,0.924
+success,6,True,False,-1.0,10.0,l1n linf,lt,-1,0.1324,0.9316
+success,-9,True,False,-10.0,1000.0,l1n,lt,0,0.1519,0.9499
+success,-4,True,True,-1.0,100.0,l1n linf,ge,0,0.129,0.9079
+success,-8,True,True,-100.0,100.0,l1n,gt,5,0.1929,0.9673
+success,1,True,True,-10.0,0.1,l1 l1n linf,gt,5,0.1811,0.9514
+success,-1,False,False,-1.0,10.0,l1 l1n,lt,-5,0.1471,0.8035
+success,5,True,False,-10.0,1.0,l1 l1n,gt,1,0.153,0.9678
+success,3,True,False,-100.0,1.0,l1 l1n,ge,0,0.2019,0.9691
+success,9,True,True,-1000.0,1.0,l1n,gt,0,0.1506,0.7665
+success,-4,True,False,-1000.0,1.0,linf,gt,1,0.1311,0.9438
+success,-2,True,True,-1000.0,1000.0,l1n,gt,0,0.1633,0.7795
+success,-4,True,True,-1.0,10.0,l1 l1n,lt,-1,0.1672,0.9218
+success,9,True,False,-10.0,100.0,l1 l1n linf,lt,-5,0.1379,0.7518
+success,-1,False,False,-1000.0,0.1,l1n linf,le,0,0.1196,0.6537
+success,9,True,False,-100.0,10.0,l1 l1n linf,ge,0,0.1382,0.7471
+success,-8,True,False,-100.0,10.0,linf,lt,-1,0.1404,0.6577
+success,-5,True,True,-1.0,1.0,l1n,gt,5,0.1607,0.9336
+success,2,True,False,-1.0,1000.0,l1n,gt,1,0.1519,0.9475
+success,7,True,True,-100.0,0.1,l1,ge,0,0.1418,0.9675
+success,-1,False,False,-0.1,1000.0,linf,gt,1,0.1515,0.7839
+success,-1,True,True,-1000.0,0.1,linf,lt,-1,0.1429,0.7387
+success,-2,True,False,-0.1,10.0,l1 linf,le,0,0.1107,0.7815
+success,1,True,True,-10.0,10.0,l1n linf,le,0,0.1672,0.9492
+success,4,True,True,-100.0,1000.0,l1,le,0,0.1929,0.9673
+success,-4,True,True,-100.0,0.1,l1n linf,gt,0,0.1457,0.9567
+success,9,True,True,-100.0,10.0,linf,gt,5,0.1462,0.7926
+success,3,True,True,-1000.0,10.0,l1n linf,lt,0,0.1483,0.9672
+success,6,True,True,-1.0,1.0,l1,lt,-5,0.1607,0.9336
+success,-1,False,False,-1.0,100.0,l1n linf,le,0,0.1603,0.6877
+success,7,True,False,-1000.0,0.1,l1 l1n linf,lt,0,0.1416,0.9675
+success,7,True,False,-100.0,10.0,l1,gt,5,0.1668,0.924
+success,-7,True,False,-1.0,1.0,l1,le,0,0.1698,0.971
+success,9,True,False,-10.0,100.0,l1 linf,lt,0,0.1378,0.7521
+success,1,True,False,-1000.0,1000.0,l1,ge,0,0.1519,0.9499
+success,-2,True,True,-1000.0,0.1,l1n,le,0,0.1086,0.6619
+success,-7,True,False,-10.0,1.0,linf,lt,0,0.1389,0.7331
+success,1,True,False,-1000.0,1.0,l1 l1n,le,0,0.1696,0.9646
+success,2,True,True,-100.0,1.0,l1n,lt,-5,0.1696,0.9646
+success,-2,True,True,-100.0,10.0,l1n linf,ge,0,0.1603,0.6877
+success,-10,True,True,-10.0,100.0,l1 linf,lt,-5,0.158,0.9506
+success,7,True,False,-1000.0,100.0,l1 l1n linf,gt,5,0.165,0.911
+success,-10,True,False,-1000.0,0.1,l1 l1n linf,ge,0,0.1811,0.9514
+success,5,True,False,-1.0,1.0,l1 l1n linf,ge,0,0.1607,0.9336
+success,1,True,True,-100.0,100.0,l1 linf,lt,-1,0.158,0.9506
+success,7,True,False,-10.0,1.0,l1 linf,lt,0,0.165,0.911
+success,3,True,True,-100.0,1000.0,linf,lt,-1,0.143,0.7659
+success,5,True,True,-10.0,10.0,l1 linf,gt,1,0.1808,0.967
+success,9,True,False,-100.0,10.0,l1n,ge,0,0.1635,0.7781
+success,-5,True,False,-10.0,1.0,linf,gt,1,0.147,0.5706
+success,-10,True,False,-1000.0,1000.0,l1n linf,lt,-5,0.1673,0.9493
+success,-5,True,True,-10.0,10.0,l1n,lt,0,0.1582,0.9678
+success,4,True,False,-0.1,100.0,l1 l1n,gt,1,0.1671,0.9452
+success,-3,True,True,-10.0,0.1,l1n linf,gt,1,0.1457,0.9567
+success,-1,True,False,-1000.0,10.0,l1 l1n linf,le,0,0.1381,0.7516
+success,1,True,False,-100.0,1.0,l1 l1n linf,ge,0,0.1658,0.9656
+success,8,True,False,-100.0,100.0,l1n linf,lt,-1,0.129,0.9079
+success,-7,True,False,-100.0,10.0,l1 linf,gt,5,0.199,0.9686
+success,8,True,True,-10.0,0.1,l1 linf,gt,1,0.1416,0.9675
+success,-5,True,False,-10.0,1000.0,l1 linf,gt,0,0.1808,0.967
+success,7,True,False,-10.0,1.0,l1n linf,gt,0,0.129,0.9078
+success,-7,True,False,-0.1,10.0,l1n linf,lt,-5,0.1323,0.9041
+success,4,True,True,-10.0,100.0,l1 l1n,ge,0,0.1929,0.9673
+success,6,True,True,-1.0,10.0,l1n,gt,1,0.1582,0.9638
+success,6,True,False,-10.0,1.0,linf,lt,-5,0.147,0.5706
+success,-1,True,False,-0.1,1.0,l1 l1n linf,lt,0,0.1105,0.7817
+success,6,True,True,-1000.0,0.1,l1 l1n,ge,0,0.1568,0.9689
+success,-10,True,False,-10.0,100.0,linf,gt,1,0.1539,0.523
+success,-6,True,False,-10.0,1000.0,linf,lt,-5,0.144,0.5263
+success,-1,True,False,-0.1,1.0,linf,gt,1,0.1461,0.7669
+success,-3,True,True,-1.0,1000.0,l1 l1n,gt,5,0.1672,0.9218
+success,7,True,False,-10.0,1000.0,l1n,ge,0,0.1668,0.924
+success,-9,True,False,-10.0,0.1,l1 l1n linf,le,0,0.1811,0.9514
+success,-10,True,False,-1.0,1000.0,l1 l1n,le,0,0.1519,0.9475
+success,-4,True,True,-1.0,1.0,l1n,le,0,0.1672,0.9218
+success,-1,True,True,-10.0,1000.0,l1 l1n,gt,0,0.1635,0.7796
+success,-1,False,False,-1000.0,1.0,linf,ge,0,0.1429,0.7175
+success,-4,True,True,-1.0,10.0,l1 linf,lt,-1,0.165,0.911
+success,-1,False,True,-1.0,1.0,linf,le,0,0.1252,0.0762
+success,4,True,False,-10.0,1.0,l1 l1n,ge,0,0.2019,0.9691
+success,-7,True,True,-1000.0,1000.0,linf,lt,-5,0.1412,0.6139
+success,-3,True,True,-10.0,1000.0,linf,lt,-5,0.1322,0.9433
+success,4,True,True,-100.0,1000.0,l1n,gt,5,0.1929,0.9673
+success,-7,True,True,-10.0,1.0,l1n,le,0,0.2019,0.9691
+success,6,True,False,-1000.0,10.0,l1n linf,le,0,0.1324,0.9316
+success,-8,True,False,-10.0,10.0,l1 l1n,ge,0,0.1929,0.9673
+success,5,True,True,-1000.0,1.0,linf,ge,0,0.1496,0.5709
+success,2,True,False,-1000.0,100.0,l1n linf,gt,0,0.1674,0.9493
+success,-1,True,False,-100.0,0.1,l1n,lt,-1,0.1086,0.6619
+success,-1,False,False,-1000.0,100.0,l1n linf,gt,0,0.1603,0.6877
+success,9,True,True,-1.0,0.1,l1 linf,lt,0,0.1217,0.6389
+success,2,True,False,-1.0,100.0,l1 linf,gt,0,0.1532,0.9442
+success,5,True,True,-100.0,1.0,l1n,le,0,0.153,0.9678
+success,-6,True,False,-10.0,1.0,l1 linf,ge,0,0.154,0.9676
+success,4,True,True,-1.0,1.0,linf,gt,1,0.1386,0.6437
+success,-10,True,False,-1.0,1.0,l1n linf,gt,1,0.1672,0.9493
+success,2,True,False,-1000.0,10.0,l1 linf,le,0,0.158,0.9506
+success,5,True,False,-100.0,100.0,l1 l1n linf,lt,-5,0.1808,0.967
+success,-2,True,False,-1000.0,10.0,l1n linf,lt,-1,0.1603,0.6877
+success,9,True,True,-1.0,10.0,l1 l1n,gt,5,0.1471,0.8035
+success,-10,True,True,-100.0,1000.0,l1n linf,le,0,0.1673,0.9492
+success,-10,True,True,-100.0,10.0,linf,gt,5,0.1553,0.5259
+success,-1,True,True,-100.0,100.0,l1 l1n,lt,-1,0.1634,0.7793
+success,1,True,True,-10.0,1000.0,l1 linf,gt,0,0.158,0.9506
+success,5,True,False,-100.0,1000.0,l1 l1n linf,lt,-5,0.1808,0.967
+success,4,True,True,-100.0,1000.0,l1 l1n,gt,1,0.1929,0.9673
+success,-2,True,True,-0.1,1.0,l1n,le,0,0.1095,0.7847
+success,-2,True,True,-1000.0,1000.0,l1 l1n linf,gt,5,0.1379,0.7521
+success,-3,True,False,-1.0,1000.0,l1 linf,le,0,0.165,0.911
+success,4,True,False,-1000.0,1000.0,l1n linf,lt,-1,0.1483,0.9672
+success,-1,False,False,-0.1,100.0,l1 l1n linf,le,0,0.1107,0.7815
+success,-3,True,True,-1000.0,1.0,l1 l1n linf,lt,-5,0.165,0.911
+success,3,True,False,-1000.0,1000.0,l1 l1n linf,ge,0,0.199,0.9686
+success,-1,True,False,-1.0,0.1,l1n,lt,-1,0.1217,0.6389
+success,8,True,True,-10.0,100.0,l1n linf,le,0,0.129,0.9076
+success,-1,False,False,-1.0,100.0,l1,gt,0,0.147,0.8039
+success,-1,True,False,-0.1,100.0,l1 l1n,gt,5,0.2,0.8234
+success,-5,True,False,-1000.0,0.1,l1 linf,gt,0,0.159,0.9689
+success,3,True,False,-10.0,10.0,linf,gt,1,0.1388,0.6662
+success,-7,True,False,-10.0,1.0,linf,lt,-5,0.1389,0.7331
+success,-5,True,False,-1000.0,10.0,l1 linf,ge,0,0.1808,0.967
+success,-9,True,True,-0.1,1000.0,l1,lt,-1,0.132,0.8259
+success,-4,True,True,-1000.0,0.1,l1,lt,0,0.1418,0.9675
+success,5,True,True,-10.0,0.1,l1,lt,-1,0.1568,0.9689
+success,-1,False,False,-100.0,0.1,linf,ge,0,0.1393,0.6522
+success,3,True,False,-1000.0,1000.0,l1n,lt,-5,0.1926,0.9673
+success,-3,True,True,-100.0,1000.0,l1n,ge,0,0.1668,0.924
+success,1,True,True,-1.0,1000.0,linf,gt,5,0.1541,0.4435
+success,3,True,False,-0.1,100.0,l1n linf,lt,-5,0.1323,0.9041
+success,8,True,True,-1000.0,10.0,l1 l1n linf,le,0,0.165,0.911
+success,3,True,False,-1000.0,1.0,l1n linf,gt,0,0.1483,0.9672
+success,-7,True,True,-10.0,1.0,l1 linf,lt,-1,0.1808,0.9694
+success,-9,True,True,-10.0,100.0,l1n,gt,1,0.1519,0.9499
+success,-3,True,False,-10.0,100.0,l1n,lt,-5,0.1668,0.924
+success,8,True,False,-10.0,100.0,l1,gt,5,0.1668,0.924
+success,-8,True,False,-0.1,10.0,l1 l1n linf,lt,0,0.1405,0.9297
+success,1,True,True,-1000.0,100.0,l1 linf,ge,0,0.158,0.9506
+success,8,True,False,-100.0,1000.0,l1 linf,gt,0,0.165,0.911
+success,2,True,False,-1.0,1.0,l1 l1n linf,le,0,0.1745,0.953
+success,3,True,False,-1000.0,10.0,l1,lt,-1,0.1929,0.9673
+success,-1,True,False,-100.0,0.1,linf,le,0,0.1393,0.6522
+success,9,True,True,-10.0,10.0,l1 l1n linf,ge,0,0.1381,0.7517
+success,-1,True,True,-10.0,0.1,l1 linf,gt,5,0.1108,0.6661
+success,2,True,False,-10.0,0.1,l1 linf,gt,5,0.1811,0.9514
+success,9,True,False,-10.0,10.0,l1 l1n,lt,-1,0.1634,0.78
+success,-10,True,True,-1000.0,0.1,l1n linf,gt,0,0.1635,0.9267
+success,3,True,True,-1000.0,0.1,linf,ge,0,0.1554,0.941
+success,-7,True,True,-10.0,1.0,l1,gt,0,0.2019,0.9691
+success,5,True,False,-1.0,100.0,l1 l1n,le,0,0.1582,0.9638
+success,-4,True,False,-1.0,10.0,linf,gt,1,0.1331,0.9261
+success,3,True,True,-100.0,100.0,l1n linf,gt,5,0.1483,0.9672
+success,9,True,True,-0.1,1000.0,l1n linf,le,0,0.1444,0.7165
+success,-2,True,False,-0.1,1000.0,l1 l1n,lt,-1,0.2001,0.8234
+success,9,True,True,-1000.0,10.0,l1,lt,-1,0.1636,0.7784
+success,-8,True,True,-1.0,1000.0,l1n,lt,-5,0.1762,0.9697
+success,6,True,False,-100.0,1000.0,l1 l1n,lt,-5,0.1595,0.9678
+success,-7,True,False,-0.1,1000.0,linf,lt,0,0.1338,0.7787
+success,3,True,True,-1.0,1.0,l1,lt,-5,0.1698,0.971
+success,-5,True,False,-100.0,100.0,l1 linf,lt,-1,0.1808,0.967
+success,-4,True,True,-10.0,100.0,l1,lt,-1,0.1668,0.924
+success,-3,True,True,-100.0,10.0,linf,gt,1,0.1329,0.937
+success,6,True,False,-100.0,10.0,l1n linf,le,0,0.1324,0.9316
+success,-6,True,True,-1000.0,10.0,l1,lt,-1,0.1581,0.9678
+success,9,True,True,-0.1,1.0,l1n linf,ge,0,0.1444,0.7165
+success,9,True,False,-1.0,100.0,l1 linf,ge,0,0.1376,0.7523
+success,3,True,True,-1.0,100.0,l1 l1n linf,lt,-1,0.1819,0.9708
+success,7,True,True,-100.0,100.0,l1n,le,0,0.1668,0.924
+success,-4,True,False,-1.0,1000.0,l1,le,0,0.1672,0.9218
+success,1,True,False,-1000.0,1.0,l1,gt,0,0.1696,0.9646
+success,-8,True,True,-1000.0,10.0,l1,ge,0,0.1929,0.9673
+success,-7,True,True,-0.1,1000.0,l1,gt,5,0.1671,0.9452
+success,7,True,False,-1000.0,1.0,l1n linf,lt,0,0.129,0.9079
+success,3,True,True,-10.0,100.0,l1n,lt,-1,0.1928,0.9673
+success,7,True,False,-1000.0,10.0,l1,gt,5,0.1668,0.924
+success,-1,True,True,-100.0,10.0,l1,lt,-1,0.1635,0.7781
+success,-1,False,False,-100.0,10.0,l1 l1n,ge,0,0.1635,0.7793
+success,-1,True,False,-0.1,10.0,linf,le,0,0.1515,0.7871
+success,-1,True,True,-10.0,100.0,l1n linf,le,0,0.1603,0.6877
+success,-8,True,True,-1000.0,100.0,l1n linf,gt,5,0.1483,0.9672
+success,5,True,False,-1.0,1000.0,l1 l1n,le,0,0.1582,0.9638
+success,4,True,False,-100.0,100.0,l1n,gt,1,0.1929,0.9673
+success,3,True,False,-10.0,100.0,l1 l1n linf,lt,-5,0.199,0.9686
+success,2,True,True,-1000.0,1000.0,l1n,lt,-1,0.1518,0.9499
+success,-10,True,True,-0.1,100.0,l1n,ge,0,0.132,0.8259
+success,3,True,False,-100.0,1.0,l1 linf,gt,5,0.1808,0.9694
+success,-4,True,False,-1000.0,1.0,linf,lt,-1,0.1311,0.9438
+success,-8,True,True,-1.0,10.0,l1 linf,gt,1,0.1819,0.9708
+success,-7,True,True,-1.0,100.0,l1n linf,lt,-5,0.1483,0.9672
+success,-7,True,True,-100.0,100.0,l1,lt,-1,0.1929,0.9673
+success,4,True,False,-10.0,10.0,l1n,lt,0,0.1929,0.9673
+success,1,True,True,-100.0,100.0,l1 linf,ge,0,0.158,0.9506
+success,9,True,False,-10.0,1000.0,l1n,gt,0,0.1643,0.7767
+success,2,True,True,-1000.0,1000.0,l1n,gt,1,0.1518,0.9499
+success,-6,True,False,-100.0,1.0,l1 l1n linf,gt,0,0.154,0.9676
+success,6,True,True,-10.0,1.0,l1n linf,gt,0,0.1324,0.9316
+success,-9,True,False,-1.0,1000.0,l1n,gt,0,0.1519,0.9475
+success,7,True,True,-1.0,1000.0,l1 l1n linf,lt,0,0.165,0.911
+success,-3,True,False,-1000.0,10.0,l1n,lt,-1,0.1668,0.924
+success,-6,True,True,-100.0,100.0,l1n linf,ge,0,0.1324,0.9316
+success,4,True,True,-1000.0,10.0,l1 l1n,gt,1,0.1929,0.9673
+success,-10,True,False,-1.0,100.0,l1,gt,1,0.1519,0.9475
+success,-6,True,True,-1000.0,10.0,l1 linf,lt,-1,0.1808,0.967
+success,8,True,False,-10.0,10.0,l1,ge,0,0.1668,0.924
+success,-2,True,True,-1000.0,10.0,l1,gt,1,0.1636,0.7784
+success,-7,True,False,-1.0,1000.0,l1 l1n,lt,0,0.1762,0.9697
+success,-1,False,True,-1000.0,1.0,l1n linf,lt,0,0.1332,0.6153
+success,7,True,True,-10.0,1.0,l1n linf,gt,1,0.129,0.9078
+success,-7,True,False,-10.0,0.1,l1 linf,lt,-1,0.1643,0.966
+success,-9,True,False,-1000.0,10.0,l1 l1n,lt,-5,0.1519,0.9499
+success,-8,True,True,-100.0,1.0,linf,gt,1,0.1355,0.7756
+success,-8,True,True,-1000.0,1.0,linf,lt,-5,0.1363,0.7732
+success,-9,True,True,-100.0,1.0,l1n linf,gt,5,0.1672,0.9493
+success,-4,True,True,-1000.0,100.0,l1 l1n linf,lt,-1,0.165,0.911
+success,-3,True,False,-1.0,10.0,linf,lt,0,0.1331,0.9261
+success,-9,True,True,-10.0,1.0,l1n,le,0,0.1696,0.9646
+success,-3,True,False,-10.0,1.0,linf,lt,0,0.1348,0.9471
+success,4,True,False,-1.0,10.0,l1 linf,ge,0,0.1819,0.9708
+success,-4,True,True,-1000.0,1.0,linf,lt,0,0.1311,0.9438
+success,3,True,False,-10.0,0.1,l1n,lt,0,0.1641,0.967
+success,2,True,True,-1.0,10.0,l1 l1n linf,gt,1,0.1532,0.9442
+success,5,True,False,-10.0,1000.0,l1 l1n,lt,-1,0.1581,0.9678
+success,-8,True,True,-0.1,10.0,l1 l1n linf,gt,1,0.1405,0.9297
+success,1,True,True,-0.1,1000.0,linf,gt,5,0.1222,0.5082
+success,-1,True,False,-100.0,1000.0,l1 linf,gt,1,0.1381,0.751
+success,8,True,True,-1.0,0.1,l1,lt,-5,0.1392,0.9641
+success,-1,False,False,-0.1,1000.0,l1,gt,1,0.2,0.8234
+success,-1,False,True,-0.1,1.0,l1 l1n,lt,0,0.131,0.55
+success,-4,True,False,-1.0,0.1,l1n,gt,0,0.1392,0.9641
+success,-5,True,True,-10.0,0.1,l1,ge,0,0.1568,0.9689
+success,3,True,True,-1000.0,1000.0,linf,lt,-1,0.1412,0.6139
+success,-2,True,False,-100.0,1.0,linf,gt,1,0.1414,0.6617
+success,-4,True,False,-1.0,1000.0,linf,le,0,0.1343,0.9318
+success,-9,True,False,-1.0,1.0,l1n linf,gt,1,0.1672,0.9493
+success,-8,True,True,-100.0,0.1,l1 l1n linf,lt,0,0.1643,0.966
+success,5,True,False,-100.0,1.0,l1n,lt,-1,0.153,0.9678
+success,9,True,True,-1.0,10.0,l1,lt,-1,0.1473,0.8026
+success,7,True,True,-1000.0,0.1,l1 l1n linf,le,0,0.1416,0.9675
+success,-1,False,False,-0.1,100.0,l1 l1n,lt,-1,0.2,0.8234
+success,6,True,False,-1000.0,100.0,linf,lt,0,0.1364,0.4702
+success,-1,True,False,-1.0,1.0,linf,gt,0,0.1442,0.741
+success,9,True,True,-10.0,1.0,l1n,gt,5,0.151,0.7647
+success,-1,False,True,-10.0,1.0,l1 linf,lt,0,0.1392,0.6038
+success,8,True,False,-1000.0,0.1,l1 l1n,lt,-5,0.1418,0.9675
+success,-3,True,True,-100.0,100.0,l1n linf,lt,-1,0.129,0.9079
+success,-9,True,True,-1000.0,100.0,l1n,gt,5,0.1519,0.9499
+success,-2,True,True,-1.0,0.1,l1,le,0,0.1217,0.6389
+success,-4,True,True,-10.0,0.1,linf,gt,0,0.1416,0.9597
+success,-2,True,True,-10.0,100.0,linf,ge,0,0.1453,0.7838
+success,-5,True,False,-10.0,100.0,l1 l1n linf,lt,0,0.1808,0.967
+success,1,True,False,-1000.0,0.1,linf,lt,-5,0.1462,0.9154
+success,-8,True,False,-1000.0,1.0,l1 l1n linf,gt,5,0.1808,0.9694
+success,6,True,True,-1.0,1.0,l1 linf,gt,0,0.1607,0.9336
+success,-2,True,False,-10.0,100.0,l1 linf,gt,1,0.1378,0.7521
+success,-4,True,True,-1000.0,1000.0,l1 linf,lt,-1,0.165,0.911
+success,-8,True,False,-10.0,10.0,l1 l1n linf,lt,-5,0.199,0.9686
+success,3,True,False,-1000.0,1.0,l1n linf,gt,1,0.1483,0.9672
+success,-8,True,False,-100.0,10.0,l1 linf,lt,-1,0.199,0.9686
+success,-8,True,False,-0.1,10.0,l1n,gt,0,0.1405,0.9297
+success,-9,True,True,-1.0,100.0,l1 linf,gt,0,0.1532,0.9442
+success,6,True,True,-1000.0,1.0,l1 l1n,gt,5,0.153,0.9678
+success,3,True,True,-1000.0,100.0,l1n,lt,-5,0.1928,0.9673
+success,-10,True,True,-100.0,0.1,l1 l1n,lt,-5,0.1961,0.9527
+success,3,True,True,-1000.0,10.0,l1n linf,lt,-5,0.1483,0.9672
+success,-2,True,False,-0.1,1000.0,l1 linf,ge,0,0.1105,0.7817
+success,-10,True,False,-1.0,1.0,l1 l1n linf,lt,-5,0.1745,0.953
+success,-3,True,False,-100.0,0.1,l1n linf,gt,1,0.1457,0.9567
+success,-7,True,True,-1000.0,1.0,l1 l1n,gt,1,0.2019,0.9691
+success,3,True,False,-10.0,1000.0,l1n linf,ge,0,0.1483,0.9672
+success,3,True,False,-10.0,100.0,l1,gt,1,0.1929,0.9673
+success,-5,True,True,-1000.0,0.1,l1n,gt,0,0.1568,0.9689
+success,-8,True,True,-1000.0,1.0,l1 linf,lt,-1,0.1808,0.9694
+success,-10,True,True,-1000.0,1.0,l1 l1n linf,ge,0,0.1658,0.9656
+success,2,True,True,-100.0,1000.0,linf,le,0,0.1598,0.5502
+success,-6,True,True,-1.0,1.0,l1 linf,lt,-1,0.1607,0.9336
+success,-2,True,False,-10.0,100.0,l1 l1n linf,gt,5,0.1379,0.7518
+success,-5,True,False,-100.0,1000.0,l1n linf,le,0,0.1324,0.9316
+success,4,True,True,-1.0,10.0,linf,ge,0,0.1391,0.5756
+success,-2,True,False,-1.0,100.0,l1 l1n linf,ge,0,0.1378,0.7521
+success,-1,False,True,-1000.0,100.0,l1n,ge,0,0.1272,0.5542
+success,-8,True,False,-1.0,1.0,l1n,le,0,0.1698,0.971
+success,-9,True,True,-1000.0,100.0,linf,lt,0,0.1537,0.5034
+success,4,True,False,-0.1,10.0,l1,ge,0,0.1405,0.9297
+success,5,True,False,-1000.0,10.0,l1 linf,lt,0,0.1808,0.967
+success,-9,True,False,-100.0,1000.0,l1 linf,lt,0,0.158,0.9506
+success,2,True,True,-1.0,1.0,l1n,le,0,0.1747,0.953
+success,3,True,False,-100.0,1.0,linf,lt,-5,0.1355,0.7756
+success,3,True,False,-100.0,1.0,l1n,lt,-5,0.2018,0.9691
+success,8,True,False,-100.0,100.0,l1 linf,gt,0,0.165,0.911
+success,5,True,False,-1000.0,1.0,l1 l1n linf,ge,0,0.154,0.9676
+success,-2,True,True,-1000.0,10.0,l1 l1n linf,gt,5,0.1381,0.7516
+success,-1,False,True,-100.0,100.0,l1 linf,gt,0,0.1298,0.5559
+success,-6,True,True,-1000.0,1.0,l1 l1n linf,gt,5,0.154,0.9676
+success,-4,True,False,-1.0,1.0,l1n,le,0,0.1672,0.9218
+success,-6,True,False,-100.0,10.0,l1 l1n,gt,1,0.1583,0.9678
+success,2,True,True,-10.0,0.1,l1 linf,gt,1,0.1811,0.9514
+success,2,True,True,-100.0,0.1,l1,gt,1,0.1961,0.9527
+success,-3,True,False,-10.0,10.0,l1n,ge,0,0.1668,0.924
+success,2,True,False,-1.0,10.0,l1 l1n linf,gt,1,0.1532,0.9442
+success,2,True,False,-1000.0,1.0,l1,gt,0,0.1696,0.9646
+success,2,True,True,-10.0,1000.0,l1n linf,lt,0,0.1674,0.9493
+success,-1,True,False,-0.1,10.0,l1 l1n,gt,5,0.2,0.8234
+success,-9,True,True,-1.0,1000.0,l1 l1n,gt,5,0.1519,0.9475
+success,-1,False,False,-0.1,1000.0,l1n,le,0,0.2,0.8234
+success,-2,True,True,-1000.0,0.1,l1n linf,lt,-5,0.1196,0.6537
+success,-6,True,False,-100.0,100.0,l1n linf,gt,0,0.1324,0.9316
+success,-6,True,True,-100.0,0.1,l1,gt,1,0.1568,0.9689
+success,-2,True,True,-1000.0,0.1,l1 l1n,gt,1,0.1086,0.6619
+success,-3,True,False,-1.0,10.0,l1,gt,1,0.1672,0.9218
+success,-10,True,False,-1000.0,0.1,l1 l1n,gt,0,0.1961,0.9527
+success,-3,True,False,-1000.0,0.1,l1 l1n,gt,0,0.1418,0.9675
+success,-2,True,True,-0.1,1.0,l1,lt,-1,0.1096,0.7846
+success,1,True,False,-1000.0,100.0,l1n,ge,0,0.1519,0.9499
+success,2,True,False,-100.0,100.0,l1n linf,lt,-1,0.1672,0.9493
+success,-8,True,True,-10.0,0.1,l1 l1n,lt,-1,0.1641,0.967
+success,-8,True,True,-1000.0,10.0,l1 l1n linf,lt,-1,0.199,0.9686
+success,-3,True,False,-10.0,0.1,l1,gt,0,0.1418,0.9675
+success,-3,True,True,-100.0,10.0,l1n linf,lt,-5,0.129,0.9077
+success,-8,True,True,-0.1,100.0,l1 linf,lt,0,0.169,0.9463
+success,7,True,True,-1.0,100.0,l1n linf,lt,0,0.129,0.9079
+success,2,True,True,-100.0,10.0,l1n,gt,1,0.1517,0.9499
+success,-10,True,False,-100.0,100.0,l1 l1n,gt,5,0.1519,0.9499
+success,8,True,False,-100.0,10.0,l1 l1n linf,gt,1,0.165,0.911
+success,-4,True,True,-1000.0,10.0,linf,ge,0,0.1305,0.8714
+success,8,True,True,-1.0,0.1,l1 linf,lt,0,0.1392,0.9641
+success,-1,False,True,-1000.0,1000.0,l1,gt,0,0.1272,0.5542
+success,2,True,False,-1000.0,10.0,l1,lt,0,0.1519,0.9499
+success,6,True,True,-100.0,100.0,l1n,gt,5,0.1583,0.9678
+success,-1,True,True,-1000.0,0.1,linf,gt,5,0.1429,0.7387
+success,4,True,True,-100.0,10.0,l1 l1n linf,ge,0,0.199,0.9686
+success,-1,True,False,-100.0,0.1,l1 l1n linf,lt,-1,0.1108,0.6661
+success,-5,True,True,-10.0,10.0,l1 linf,gt,5,0.1808,0.967
+success,5,True,True,-1.0,100.0,l1n,le,0,0.1582,0.9638
+success,-5,True,False,-1.0,10.0,l1 l1n linf,lt,-1,0.1558,0.9633
+success,-4,True,True,-1000.0,1.0,l1,ge,0,0.1668,0.924
+success,-2,True,False,-0.1,1000.0,l1 linf,lt,-5,0.1105,0.7817
+success,6,True,False,-100.0,1.0,l1,gt,1,0.153,0.9678
+success,-6,True,True,-100.0,1000.0,l1 linf,lt,-5,0.1808,0.967
+success,-10,True,False,-100.0,1000.0,l1 l1n,ge,0,0.1519,0.9499
+success,2,True,False,-1.0,10.0,l1 linf,gt,0,0.1532,0.9442
+success,-6,True,False,-10.0,100.0,l1n,gt,1,0.1582,0.9678
+success,-4,True,True,-1000.0,1000.0,l1n linf,le,0,0.129,0.9078
+success,-1,True,True,-1000.0,10.0,l1 l1n linf,lt,-5,0.1381,0.7516
+success,6,True,True,-1.0,1000.0,linf,lt,-1,0.1305,0.3898
+success,-1,False,False,-1000.0,10.0,l1n linf,lt,0,0.1603,0.6877
+success,-5,True,False,-1000.0,0.1,l1n,gt,0,0.1568,0.9689
+success,-1,True,True,-1.0,1.0,l1n,le,0,0.1481,0.8049
+success,4,True,False,-10.0,1000.0,l1 l1n,gt,1,0.1929,0.9673
+success,5,True,False,-100.0,10.0,l1 l1n,gt,5,0.1583,0.9678
+success,7,True,False,-10.0,1.0,l1 l1n linf,gt,1,0.165,0.911
+success,-8,True,True,-10.0,10.0,l1,lt,-5,0.1929,0.9673
+success,7,True,False,-1.0,10.0,linf,lt,-1,0.1331,0.9261
+success,6,True,True,-10.0,1000.0,l1 linf,lt,0,0.1808,0.967
+success,-3,True,True,-100.0,1.0,l1,gt,0,0.1668,0.924
+success,8,True,False,-1.0,100.0,l1 linf,ge,0,0.165,0.911
+success,-3,True,False,-1000.0,1000.0,l1 l1n linf,lt,0,0.165,0.911
+success,-3,True,True,-1000.0,100.0,l1,gt,5,0.1668,0.924
+success,-2,True,False,-0.1,1.0,l1n,ge,0,0.1095,0.7847
+success,4,True,True,-0.1,1000.0,linf,gt,0,0.1338,0.7787
+success,-1,True,True,-1000.0,100.0,l1 l1n,lt,0,0.1633,0.7772
+success,9,True,False,-10.0,0.1,l1n,gt,0,0.1086,0.6619
+success,-1,True,False,-100.0,100.0,l1n,lt,-1,0.1639,0.7738
+success,2,True,True,-10.0,100.0,l1 l1n,lt,0,0.1519,0.9499
+success,-2,True,False,-10.0,1000.0,l1n,gt,0,0.1643,0.7767
+success,-7,True,True,-10.0,0.1,l1 l1n,le,0,0.1641,0.967
+success,9,True,False,-1.0,100.0,l1n,lt,-5,0.147,0.804
+success,-8,True,True,-0.1,10.0,l1,gt,0,0.1405,0.9297
+success,9,True,False,-10.0,1.0,l1,gt,1,0.1512,0.7645
+success,7,True,True,-10.0,0.1,l1 linf,ge,0,0.1416,0.9675
+success,-1,False,False,-0.1,10.0,l1 l1n,lt,-1,0.2,0.8234
+success,-4,True,True,-100.0,1000.0,l1n linf,ge,0,0.129,0.9079
+success,-6,True,False,-10.0,10.0,l1 linf,gt,0,0.1808,0.967
+success,-1,False,False,-100.0,0.1,l1,lt,0,0.1086,0.6619
+success,5,True,True,-100.0,10.0,linf,gt,5,0.1407,0.4953
+success,7,True,True,-1000.0,10.0,linf,gt,5,0.1305,0.8714
+success,4,True,False,-1.0,100.0,l1 l1n linf,lt,-1,0.1819,0.9708
+success,-6,True,False,-1.0,1.0,l1 l1n linf,lt,-1,0.1607,0.9336
+success,8,True,True,-1.0,0.1,linf,lt,0,0.1402,0.9593
+success,-3,True,False,-1000.0,0.1,l1n linf,le,0,0.1457,0.9567
+success,7,True,True,-100.0,100.0,l1 l1n,lt,-5,0.1668,0.924
+success,7,True,False,-1.0,10.0,l1,lt,0,0.1672,0.9218
+success,1,True,False,-1.0,10.0,l1 l1n linf,ge,0,0.1532,0.9442
+success,7,True,True,-1000.0,1000.0,l1 l1n,le,0,0.1668,0.924
+success,-8,True,False,-1000.0,1000.0,l1 linf,lt,-1,0.1992,0.9686
+success,-6,True,False,-100.0,1.0,l1 linf,gt,0,0.154,0.9676
+success,1,True,True,-1.0,1000.0,l1 l1n,lt,-1,0.1519,0.9475
+success,-10,True,True,-100.0,1.0,l1,le,0,0.1696,0.9646
+success,-3,True,False,-100.0,0.1,l1n,gt,5,0.1418,0.9675
+success,-7,True,False,-1.0,100.0,l1 l1n linf,lt,0,0.1819,0.9708
+success,-1,False,False,-0.1,1000.0,l1,gt,5,0.2,0.8234
+success,6,True,False,-1000.0,100.0,l1 l1n,lt,-5,0.1582,0.9678
+success,2,True,True,-1.0,10.0,linf,gt,0,0.1548,0.4625
+success,-4,True,False,-1.0,1000.0,l1,lt,-1,0.1672,0.9218
+success,9,True,True,-1000.0,100.0,l1n linf,ge,0,0.1603,0.6877
+success,4,True,False,-1000.0,1.0,l1 linf,gt,0,0.1808,0.9694
+success,-8,True,False,-1.0,1.0,l1n,gt,5,0.1698,0.971
+success,-6,True,True,-1000.0,10.0,l1 linf,gt,5,0.1808,0.967
+success,7,True,False,-1.0,100.0,linf,ge,0,0.1348,0.9422
+success,-7,True,False,-100.0,100.0,linf,lt,-5,0.1399,0.7127
+success,-7,True,True,-0.1,100.0,l1 linf,gt,5,0.169,0.9463
+success,6,True,True,-1000.0,100.0,l1 linf,gt,5,0.1808,0.967
+success,6,True,False,-100.0,1000.0,l1 l1n,lt,-1,0.1595,0.9678
+success,-7,True,True,-100.0,10.0,linf,lt,-1,0.1404,0.6577
+success,1,True,False,-1.0,1000.0,l1n linf,lt,-1,0.1673,0.9492
+success,3,True,False,-100.0,100.0,l1 l1n,ge,0,0.1929,0.9673
+success,1,True,True,-100.0,0.1,l1 l1n,gt,0,0.1961,0.9527
+success,-1,False,True,-0.1,1.0,l1,lt,0,0.131,0.55
+success,9,True,False,-0.1,1000.0,l1n linf,lt,-5,0.1444,0.7165
+success,9,True,False,-1000.0,1000.0,l1 linf,lt,-5,0.1379,0.7519
+success,-2,True,False,-100.0,1.0,l1 l1n,gt,0,0.1509,0.7645
+success,-9,True,False,-1.0,100.0,l1n,le,0,0.1519,0.9475
+success,6,True,False,-1000.0,0.1,l1 l1n,gt,5,0.1568,0.9689
+success,-9,True,True,-1000.0,100.0,l1n,gt,1,0.1519,0.9499
+success,-3,True,True,-100.0,10.0,l1n,lt,0,0.1668,0.924
+success,-7,True,False,-100.0,1.0,linf,lt,-1,0.1355,0.7756
+success,-3,True,False,-1.0,100.0,l1n,le,0,0.1672,0.9218
+success,4,True,False,-100.0,10.0,l1n,gt,1,0.1929,0.9673
+success,-5,True,True,-1.0,1000.0,l1 linf,ge,0,0.1558,0.9633
+success,-7,True,False,-10.0,1.0,l1 linf,gt,5,0.1808,0.9694
+success,4,True,True,-1.0,100.0,l1n,gt,1,0.1762,0.9697
+success,-6,True,True,-1.0,1000.0,l1n,lt,-5,0.1582,0.9638
+success,2,True,False,-1.0,10.0,l1n,lt,-1,0.1523,0.9475
+success,-9,True,False,-0.1,1000.0,l1,le,0,0.132,0.8259
+success,4,True,False,-1.0,100.0,l1n linf,ge,0,0.1483,0.9672
+success,-3,True,False,-10.0,0.1,l1 l1n linf,gt,0,0.1416,0.9675
+success,-6,True,True,-100.0,100.0,l1n linf,lt,0,0.1324,0.9316
+success,-6,True,False,-10.0,1000.0,linf,gt,5,0.144,0.5263
+success,-10,True,False,-10.0,1.0,linf,lt,-1,0.1538,0.5698
+success,-10,True,True,-0.1,100.0,l1,ge,0,0.132,0.8259
+success,-8,True,False,-1000.0,1000.0,l1 l1n linf,lt,-5,0.199,0.9686
+success,2,True,False,-1.0,1.0,l1 l1n linf,lt,0,0.1745,0.953
+success,3,True,False,-1000.0,0.1,l1n linf,lt,-1,0.1507,0.9639
+success,5,True,True,-10.0,1.0,linf,gt,1,0.147,0.5706
+success,-5,True,False,-100.0,10.0,l1 l1n,gt,0,0.1583,0.9678
+success,-7,True,False,-100.0,0.1,linf,lt,-1,0.1574,0.9372
+success,-4,True,False,-1000.0,0.1,l1n,lt,0,0.1418,0.9675
+success,1,True,False,-100.0,10.0,l1 l1n linf,lt,-1,0.158,0.9506
+success,-10,True,False,-0.1,100.0,l1 l1n linf,ge,0,0.1336,0.8167
+success,-4,True,False,-100.0,10.0,l1n,lt,-5,0.1668,0.924
+success,-10,True,False,-10.0,1.0,l1 l1n linf,lt,-5,0.1658,0.9656
+success,4,True,False,-100.0,1000.0,l1 linf,gt,1,0.199,0.9687
+success,-2,True,False,-100.0,100.0,l1 l1n linf,ge,0,0.1379,0.7517
+success,-5,True,False,-100.0,100.0,l1 l1n,lt,0,0.1595,0.9678
+success,3,True,False,-1.0,100.0,linf,gt,5,0.1418,0.5829
+success,9,True,False,-1000.0,1.0,l1n,gt,5,0.1506,0.7665
+success,4,True,True,-100.0,10.0,l1,lt,0,0.1929,0.9673
+success,-10,True,True,-10.0,1.0,l1 l1n linf,lt,-1,0.1658,0.9656
+success,-9,True,False,-0.1,100.0,l1n linf,gt,0,0.1281,0.6721
+success,9,True,True,-100.0,0.1,linf,gt,5,0.1393,0.6522
+success,7,True,False,-10.0,1.0,l1n linf,ge,0,0.129,0.9078
+success,-7,True,False,-1.0,1.0,l1,gt,1,0.1698,0.971
+success,4,True,False,-0.1,10.0,linf,lt,-1,0.136,0.7949
+success,4,True,True,-10.0,0.1,linf,gt,0,0.1592,0.9438
+success,3,True,True,-1.0,100.0,linf,lt,-1,0.1418,0.5829
+success,5,True,True,-100.0,10.0,l1,gt,5,0.1581,0.9678
+success,-10,True,True,-100.0,10.0,l1,lt,0,0.1519,0.9499
+success,-10,True,False,-100.0,100.0,l1n linf,lt,0,0.1672,0.9493
+success,5,True,True,-10.0,1000.0,l1n linf,lt,0,0.1324,0.9316
+success,-2,True,True,-0.1,10.0,l1 l1n linf,gt,5,0.1107,0.7815
+success,-6,True,True,-1.0,1.0,l1 l1n linf,lt,0,0.1607,0.9336
+success,-8,True,False,-1000.0,0.1,l1 linf,gt,0,0.1643,0.966
+success,-9,True,False,-0.1,100.0,l1 linf,lt,0,0.1336,0.8167
+success,-5,True,False,-1000.0,1.0,linf,ge,0,0.1496,0.5709
+success,-1,False,False,-100.0,1.0,l1 linf,lt,-5,0.1385,0.7494
+success,4,True,False,-0.1,1000.0,l1 l1n,lt,0,0.1671,0.9452
+success,-1,False,True,-1000.0,100.0,l1 linf,le,0,0.1942,0.8442
+success,-5,True,True,-100.0,1000.0,l1 linf,lt,-1,0.1808,0.967
+success,4,True,True,-1000.0,100.0,l1n linf,gt,5,0.1483,0.9672
+success,3,True,True,-10.0,10.0,linf,le,0,0.1388,0.6662
+success,-4,True,False,-1.0,100.0,l1n linf,gt,0,0.129,0.9079
+success,4,True,False,-10.0,100.0,l1 l1n,lt,0,0.1929,0.9673
+success,7,True,True,-10.0,100.0,l1 l1n linf,lt,-1,0.165,0.911
+success,-1,False,False,-1.0,100.0,linf,gt,5,0.1525,0.758
+success,-9,True,False,-1.0,100.0,l1 l1n linf,gt,0,0.1532,0.9442
+success,6,True,False,-1000.0,10.0,l1n linf,lt,0,0.1324,0.9316
+success,-1,True,True,-10.0,1.0,l1 l1n linf,gt,1,0.1383,0.7508
+success,-8,True,True,-1000.0,0.1,l1n linf,lt,-1,0.1507,0.9639
+success,-4,True,True,-10.0,1000.0,l1n,lt,-1,0.1668,0.924
+success,-10,True,False,-1.0,1.0,l1 l1n,le,0,0.1745,0.953
+success,-2,True,True,-10.0,10.0,l1n,ge,0,0.1637,0.7788
+success,3,True,True,-1000.0,1000.0,linf,lt,0,0.1412,0.6139
+success,-2,True,True,-100.0,1000.0,l1n,lt,-5,0.1636,0.7788
+success,-1,False,False,-1.0,100.0,l1 l1n,lt,-1,0.147,0.8039
+success,-1,False,False,-1000.0,1.0,l1 l1n,gt,1,0.1511,0.7637
+success,2,True,False,-0.1,1000.0,l1 l1n linf,lt,0,0.1336,0.8167
+success,7,True,True,-100.0,1.0,l1 l1n,gt,1,0.1668,0.924
+success,1,True,True,-1000.0,100.0,linf,lt,-5,0.1537,0.5034
+success,-10,True,False,-1000.0,1.0,l1n linf,gt,5,0.1672,0.9493
+success,3,True,True,-10.0,1.0,l1n linf,le,0,0.1483,0.9672
+success,-3,True,False,-100.0,100.0,l1 linf,lt,-1,0.165,0.911
+success,8,True,True,-1000.0,0.1,l1 l1n linf,lt,-1,0.1416,0.9675
+success,1,True,False,-1.0,1000.0,l1,lt,0,0.1519,0.9475
+success,9,True,False,-0.1,100.0,linf,lt,-1,0.1512,0.7629
+success,1,True,False,-10.0,100.0,l1n linf,lt,-5,0.1672,0.9492
+success,3,True,False,-1.0,10.0,l1 l1n,lt,-1,0.1762,0.9697
+success,2,True,True,-0.1,1000.0,l1 l1n linf,gt,0,0.1336,0.8167
+success,-6,True,True,-100.0,10.0,l1 l1n,gt,1,0.1583,0.9678
+success,-5,True,False,-10.0,10.0,l1 l1n,ge,0,0.157,0.9678
+success,-4,True,False,-1.0,10.0,l1n,ge,0,0.1672,0.9218
+success,-1,True,True,-0.1,100.0,l1 linf,gt,1,0.1104,0.7817
+success,1,True,False,-0.1,1000.0,l1,lt,-5,0.132,0.8259
+success,-1,True,True,-10.0,10.0,l1n,le,0,0.1637,0.7788
+success,-2,True,False,-10.0,1000.0,l1 linf,le,0,0.1378,0.7521
+success,-2,True,True,-1.0,100.0,l1 l1n linf,ge,0,0.1378,0.7521
+success,-1,True,True,-1000.0,10.0,l1n linf,lt,0,0.1603,0.6877
+success,-2,True,False,-1000.0,0.1,linf,le,0,0.1429,0.7387
+success,-1,True,False,-1000.0,1.0,l1n linf,lt,-1,0.1603,0.6877
+success,-1,False,False,-1.0,10.0,l1,lt,-1,0.1473,0.8026
+success,3,True,True,-100.0,0.1,l1 linf,lt,-5,0.1643,0.966
+success,5,True,False,-1.0,1.0,l1n linf,lt,0,0.1324,0.9316
+success,-1,True,True,-1000.0,0.1,l1n,lt,-1,0.1086,0.6619
+success,-8,True,False,-100.0,0.1,l1 linf,gt,0,0.1643,0.966
+success,-1,True,True,-1.0,10.0,l1n,gt,1,0.1472,0.8029
+success,1,True,True,-1000.0,10.0,l1 l1n linf,le,0,0.158,0.9506
+success,1,True,False,-10.0,100.0,l1 linf,lt,0,0.158,0.9506
+success,-3,True,True,-10.0,10.0,l1 l1n,lt,-1,0.1668,0.924
+success,1,True,False,-1000.0,10.0,l1n linf,lt,0,0.1672,0.9492
+success,-7,True,False,-10.0,1.0,l1 l1n,gt,1,0.2019,0.9691
+success,-6,True,False,-1.0,100.0,l1 linf,lt,-1,0.1558,0.9633
+success,-4,True,True,-100.0,0.1,l1n linf,ge,0,0.1457,0.9567
+success,-4,True,False,-100.0,10.0,l1 l1n linf,ge,0,0.165,0.911
+success,-4,True,False,-1.0,0.1,l1 l1n,ge,0,0.1392,0.9641
+success,-10,True,True,-0.1,100.0,l1n,gt,5,0.132,0.8259
+success,-4,True,False,-100.0,1000.0,l1 l1n linf,le,0,0.165,0.911
+success,-10,True,False,-1.0,1000.0,l1 linf,le,0,0.1532,0.9442
+success,2,True,False,-1.0,100.0,l1 linf,gt,5,0.1532,0.9442
+success,1,True,False,-100.0,1000.0,l1 linf,gt,1,0.158,0.9506
+success,4,True,True,-100.0,1.0,l1n linf,lt,0,0.1483,0.9672
+success,-8,True,True,-1000.0,1000.0,l1,gt,5,0.1929,0.9673
+success,-8,True,True,-10.0,1.0,linf,lt,-5,0.1389,0.7331
+success,2,True,False,-1000.0,1000.0,l1n,lt,-1,0.1518,0.9499
+success,-6,True,False,-1000.0,10.0,l1 l1n,gt,5,0.1594,0.9678
+success,-6,True,False,-1.0,10.0,l1n,lt,-1,0.1582,0.9638
+success,-6,True,True,-1000.0,1000.0,l1 linf,lt,-1,0.1808,0.967
+success,-1,True,False,-1.0,1.0,l1,lt,-1,0.148,0.8051
+success,-2,True,False,-10.0,100.0,l1 l1n linf,ge,0,0.1379,0.7518
+success,5,True,True,-1.0,100.0,l1,lt,-5,0.1582,0.9638
+success,-3,True,True,-10.0,0.1,linf,lt,-5,0.1416,0.9597
+success,-7,True,True,-1000.0,10.0,l1n,ge,0,0.1929,0.9673
+success,8,True,True,-1.0,100.0,l1 l1n,ge,0,0.1672,0.9218
+success,3,True,False,-1.0,1000.0,l1 l1n linf,gt,0,0.1819,0.9708
+success,-9,True,True,-1.0,100.0,l1n,gt,0,0.1519,0.9475
+success,2,True,True,-100.0,100.0,l1 l1n linf,gt,0,0.158,0.9506
+success,2,True,True,-10.0,100.0,l1n,le,0,0.1519,0.9499
+success,7,True,True,-10.0,1.0,l1n linf,ge,0,0.129,0.9078
+success,-10,True,True,-10.0,100.0,l1,lt,0,0.1519,0.9499
+success,7,True,False,-100.0,0.1,l1n linf,lt,0,0.1457,0.9567
+success,-3,True,True,-10.0,10.0,l1 l1n linf,ge,0,0.165,0.911
+success,9,True,True,-1.0,10.0,l1n,gt,5,0.1472,0.8029
+success,5,True,False,-10.0,1.0,l1,lt,-1,0.153,0.9678
+success,-6,True,True,-1.0,1.0,l1 l1n,gt,0,0.1607,0.9336
+success,3,True,True,-100.0,1000.0,l1 l1n,gt,0,0.1929,0.9673
+success,-10,True,False,-10.0,10.0,l1 linf,lt,0,0.158,0.9506
+success,-9,True,True,-0.1,100.0,l1n,gt,0,0.132,0.8259
+success,1,True,True,-0.1,1000.0,l1 l1n linf,lt,-5,0.1336,0.8167
+success,-9,True,False,-1.0,1.0,linf,gt,1,0.1556,0.517
+success,-1,True,False,-1000.0,10.0,l1n linf,lt,0,0.1603,0.6877
+success,4,True,False,-100.0,1.0,l1 l1n,gt,1,0.2019,0.9691
+success,-9,True,False,-1000.0,10.0,l1 linf,le,0,0.158,0.9506
+success,4,True,True,-0.1,1000.0,l1n,ge,0,0.1671,0.9452
+success,-6,True,False,-1000.0,1000.0,l1 l1n linf,lt,0,0.1808,0.967
+success,-2,True,False,-10.0,1000.0,l1 linf,ge,0,0.1378,0.7521
+success,3,True,False,-1.0,1.0,l1 l1n,gt,5,0.1698,0.971
+success,-3,True,True,-10.0,10.0,l1 linf,gt,0,0.165,0.911
+success,-2,True,True,-0.1,1000.0,l1 l1n linf,ge,0,0.1106,0.7816
+success,1,True,False,-100.0,1000.0,l1n,lt,0,0.1519,0.9499
+success,-2,True,True,-1000.0,100.0,l1n,gt,5,0.1633,0.7779
+success,5,True,False,-10.0,1000.0,l1 linf,gt,0,0.1808,0.967
+success,-1,False,False,-100.0,1.0,l1,lt,0,0.1508,0.7647
+success,-1,True,False,-1.0,1000.0,l1 l1n,gt,5,0.147,0.8039
+success,-3,True,True,-100.0,1.0,l1,lt,-5,0.1668,0.924
+success,-2,True,False,-1000.0,10.0,l1 linf,ge,0,0.1385,0.7493
+success,6,True,True,-100.0,0.1,l1,lt,-5,0.1568,0.9689
+success,1,True,True,-10.0,100.0,l1,ge,0,0.1519,0.9499
+success,7,True,False,-10.0,0.1,l1 l1n linf,le,0,0.1416,0.9675
+success,-7,True,True,-10.0,100.0,linf,lt,0,0.1369,0.7222
+success,2,True,True,-10.0,0.1,l1n linf,lt,0,0.1635,0.9267
+success,-5,True,False,-100.0,1000.0,linf,ge,0,0.1406,0.5554
+success,3,True,True,-10.0,0.1,linf,lt,-1,0.1592,0.9438
+success,7,True,True,-10.0,10.0,linf,lt,-1,0.1338,0.9454
+success,6,True,False,-10.0,1000.0,l1 l1n linf,gt,0,0.1808,0.967
+success,-6,True,False,-100.0,10.0,linf,ge,0,0.1407,0.4953
+success,1,True,True,-10.0,1000.0,l1n,le,0,0.1519,0.9499
+success,-9,True,True,-1000.0,10.0,l1,lt,0,0.1519,0.9499
+success,-7,True,True,-0.1,1000.0,l1n linf,lt,-5,0.1323,0.9042
+success,9,True,False,-100.0,0.1,l1 l1n,ge,0,0.1086,0.6619
+success,-1,False,False,-1.0,1000.0,l1 linf,gt,0,0.1377,0.7521
+success,8,True,True,-100.0,1000.0,l1n linf,lt,0,0.129,0.9079
+success,8,True,True,-10.0,1.0,l1n linf,gt,1,0.129,0.9078
+success,-2,True,True,-1.0,100.0,linf,lt,-1,0.1525,0.758
+success,9,True,False,-10.0,10.0,l1n,lt,0,0.1637,0.7788
+success,8,True,True,-1000.0,10.0,l1,lt,-5,0.1668,0.924
+success,-4,True,False,-100.0,10.0,l1,gt,1,0.1668,0.924
+success,8,True,False,-10.0,0.1,l1 l1n linf,gt,5,0.1416,0.9675
+success,8,True,True,-1.0,1.0,l1n,lt,-5,0.1672,0.9218
+success,4,True,False,-1.0,1000.0,l1,lt,-5,0.1762,0.9697
+success,6,True,True,-1000.0,10.0,linf,gt,0,0.1424,0.55
+success,-5,True,True,-10.0,1.0,l1 l1n linf,lt,0,0.154,0.9676
+success,-3,True,True,-10.0,1.0,l1n,lt,-5,0.1668,0.924
+success,-1,False,False,-1000.0,1.0,linf,lt,-5,0.1429,0.7175
+success,1,True,True,-100.0,0.1,linf,lt,-1,0.1444,0.9156
+success,-6,True,True,-10.0,100.0,l1 l1n,lt,0,0.1581,0.9678
+success,4,True,False,-1.0,10.0,l1 l1n linf,gt,1,0.1819,0.9708
+success,-9,True,False,-1000.0,0.1,l1 linf,le,0,0.1811,0.9514
+success,8,True,False,-10.0,1000.0,l1 l1n linf,gt,1,0.165,0.911
+success,-10,True,True,-0.1,1000.0,linf,ge,0,0.1222,0.5082
+success,-3,True,True,-100.0,100.0,l1,le,0,0.1668,0.924
+success,-5,True,False,-100.0,1000.0,l1,gt,0,0.1581,0.9678
+success,-7,True,False,-0.1,100.0,l1n linf,ge,0,0.1323,0.9041
+success,5,True,True,-1000.0,0.1,l1 l1n,ge,0,0.1568,0.9689
+success,-4,True,True,-1000.0,1000.0,l1 l1n,gt,5,0.1668,0.924
+success,-4,True,True,-10.0,1.0,l1n,lt,0,0.1668,0.924
+success,-10,True,False,-10.0,0.1,l1n,gt,1,0.1962,0.9527
+success,-2,True,True,-0.1,1000.0,l1 l1n linf,gt,5,0.1106,0.7816
+success,1,True,False,-10.0,1000.0,l1n linf,lt,0,0.1674,0.9493
+success,-1,False,True,-1000.0,1000.0,linf,ge,0,0.142,0.4593
+success,-2,True,False,-100.0,1000.0,linf,lt,-1,0.1564,0.7869
+success,-5,True,True,-10.0,100.0,l1,lt,-5,0.1588,0.9678
+success,8,True,False,-1000.0,10.0,l1 l1n,gt,1,0.1668,0.924
+success,-4,True,False,-1.0,10.0,l1 l1n linf,le,0,0.165,0.911
+success,1,True,False,-100.0,100.0,l1n,gt,0,0.1518,0.9499
+success,-3,True,False,-100.0,100.0,l1n,gt,1,0.1668,0.924
+success,7,True,False,-10.0,1.0,l1 linf,gt,5,0.165,0.911
+success,9,True,True,-0.1,1000.0,l1,lt,-5,0.2,0.8234
+success,7,True,False,-100.0,100.0,l1 linf,lt,-1,0.165,0.911
+success,-1,False,False,-0.1,10.0,l1 l1n linf,gt,5,0.1107,0.7815
+success,1,True,False,-1.0,1000.0,l1n,ge,0,0.1519,0.9475
+success,-10,True,True,-0.1,1000.0,l1 linf,lt,0,0.1336,0.8167
+success,-9,True,False,-100.0,1.0,l1 l1n linf,ge,0,0.1658,0.9656
+success,-6,True,True,-1000.0,1.0,l1 l1n linf,ge,0,0.154,0.9676
+success,-9,True,False,-0.1,100.0,l1n,le,0,0.132,0.8259
+success,-8,True,True,-1.0,1.0,l1n linf,gt,5,0.1483,0.9672
+success,7,True,False,-10.0,1000.0,linf,gt,0,0.1322,0.9433
+success,-8,True,True,-10.0,10.0,l1 l1n linf,gt,0,0.199,0.9686
+success,-8,True,True,-10.0,1000.0,l1 l1n linf,gt,1,0.199,0.9686
+success,-6,True,False,-10.0,10.0,l1n,lt,0,0.1582,0.9678
+success,8,True,True,-10.0,1.0,l1 l1n linf,gt,1,0.165,0.911
+success,-5,True,True,-1000.0,0.1,l1 l1n,lt,-5,0.1568,0.9689
+success,1,True,False,-1.0,1.0,l1 l1n linf,gt,1,0.1745,0.953
+success,-4,True,False,-100.0,100.0,l1 l1n,le,0,0.1668,0.924
+success,-2,True,False,-100.0,100.0,l1 l1n linf,gt,1,0.1379,0.7517
+success,-1,False,False,-100.0,1000.0,l1 l1n,lt,-5,0.1635,0.7796
+success,4,True,True,-10.0,0.1,l1 linf,gt,5,0.1643,0.966
+success,-10,True,True,-10.0,1.0,l1n linf,lt,-1,0.1674,0.9493
+success,5,True,True,-10.0,1000.0,l1 l1n,lt,-1,0.1581,0.9678
+success,-7,True,True,-1.0,100.0,linf,le,0,0.1418,0.5829
+success,-2,True,False,-10.0,1000.0,l1 l1n linf,lt,-1,0.1378,0.7521
+success,-1,True,True,-100.0,1000.0,l1n,gt,1,0.1636,0.7788
+success,9,True,False,-1000.0,10.0,l1 linf,gt,0,0.1385,0.7493
+success,-2,True,False,-1000.0,10.0,l1,le,0,0.1636,0.7784
+success,-7,True,False,-1.0,10.0,l1n linf,ge,0,0.1483,0.9672
+success,7,True,True,-1.0,1.0,l1n,lt,0,0.1672,0.9218
+success,1,True,True,-10.0,10.0,l1n,ge,0,0.1518,0.9499
+success,-10,True,True,-1000.0,1000.0,l1 l1n linf,le,0,0.158,0.9506
+success,-2,True,False,-0.1,100.0,l1 l1n linf,gt,1,0.1107,0.7815
+success,-8,True,True,-1.0,1.0,l1n linf,gt,1,0.1483,0.9672
+success,-7,True,True,-0.1,100.0,l1 linf,lt,-1,0.169,0.9463
+success,-8,True,True,-1.0,1000.0,l1,lt,0,0.1762,0.9697
+success,7,True,False,-1.0,100.0,linf,gt,5,0.1348,0.9422
+success,-2,True,False,-1000.0,1000.0,l1,gt,0,0.1635,0.7792
+success,-9,True,False,-1.0,100.0,l1n linf,lt,-5,0.1673,0.9492
+success,-7,True,True,-1.0,1.0,linf,lt,-5,0.1386,0.6437
+success,3,True,True,-1000.0,1.0,l1n,gt,0,0.2019,0.9691
+success,1,True,True,-10.0,100.0,l1 l1n linf,gt,5,0.158,0.9506
+success,-1,True,False,-100.0,100.0,linf,gt,5,0.1507,0.8043
+success,-7,True,False,-1.0,1000.0,l1 linf,gt,0,0.1819,0.9708
+success,-8,True,True,-10.0,1.0,l1n,gt,0,0.2019,0.9691
+success,4,True,False,-1000.0,100.0,linf,gt,0,0.138,0.6045
+success,-1,True,True,-1000.0,10.0,l1 l1n,gt,1,0.1636,0.7788
+success,2,True,True,-10.0,0.1,l1n,le,0,0.1962,0.9527
+success,-4,True,False,-100.0,100.0,l1n linf,gt,5,0.129,0.9079
+success,2,True,False,-10.0,0.1,l1,gt,5,0.1961,0.9527
+success,-9,True,True,-100.0,1.0,l1n linf,gt,1,0.1672,0.9493
+success,9,True,False,-10.0,0.1,l1,gt,1,0.1086,0.6619
+success,-4,True,True,-10.0,1000.0,linf,lt,-1,0.1322,0.9433
+success,-1,True,True,-10.0,10.0,l1 linf,lt,-1,0.1379,0.7519
+success,4,True,False,-1.0,10.0,linf,lt,-5,0.1391,0.5756
+success,7,True,True,-10.0,0.1,l1 linf,gt,1,0.1416,0.9675
+success,3,True,True,-1000.0,1000.0,l1,lt,-5,0.1929,0.9673
+success,7,True,False,-10.0,0.1,l1 l1n,gt,5,0.1418,0.9675
+success,-3,True,True,-1.0,1.0,linf,le,0,0.1332,0.9205
+success,9,True,False,-1000.0,1000.0,l1 l1n,gt,0,0.1636,0.7797
+success,6,True,False,-1.0,100.0,l1n linf,gt,1,0.1324,0.9316
+success,3,True,False,-100.0,0.1,l1n,lt,-1,0.1641,0.967
+success,6,True,False,-1000.0,10.0,l1 linf,lt,-1,0.1808,0.967
+success,-8,True,False,-100.0,100.0,l1 linf,gt,5,0.199,0.9686
+success,-6,True,False,-1.0,1.0,l1 l1n linf,lt,-5,0.1607,0.9336
+success,-8,True,True,-10.0,1000.0,l1 l1n linf,gt,0,0.199,0.9686
+success,-6,True,False,-1.0,100.0,l1 l1n,lt,-5,0.1582,0.9638
+success,-3,True,False,-1000.0,100.0,l1n linf,lt,0,0.129,0.9079
+success,7,True,True,-10.0,10.0,l1,lt,-5,0.1668,0.924
+success,6,True,False,-10.0,0.1,l1 l1n,lt,-1,0.1568,0.9689
+success,-3,True,False,-10.0,1000.0,l1n linf,ge,0,0.129,0.9079
+success,-2,True,False,-1.0,1000.0,l1 l1n,gt,5,0.147,0.8039
+success,3,True,True,-1.0,10.0,l1 l1n linf,lt,-5,0.1819,0.9708
+success,2,True,False,-1000.0,100.0,l1n linf,lt,0,0.1674,0.9493
+success,-8,True,False,-10.0,10.0,l1n linf,ge,0,0.1483,0.9672
+success,-1,False,False,-10.0,1000.0,l1 l1n linf,lt,-1,0.1378,0.7521
+success,2,True,True,-1000.0,100.0,linf,gt,0,0.1537,0.5034
+success,6,True,False,-10.0,0.1,l1 linf,gt,5,0.159,0.9689
+success,9,True,False,-1000.0,100.0,l1 l1n linf,lt,-5,0.1383,0.7505
+success,-1,True,True,-100.0,100.0,l1 l1n linf,gt,0,0.1379,0.7517
+success,6,True,False,-100.0,1.0,l1n,lt,-5,0.153,0.9678
+success,-9,True,True,-100.0,10.0,l1 l1n linf,le,0,0.158,0.9506
+success,-10,True,False,-10.0,1000.0,l1n,lt,0,0.1519,0.9499
+success,-1,True,True,-0.1,10.0,l1,lt,0,0.2,0.8234
+success,6,True,True,-10.0,10.0,l1n linf,le,0,0.1324,0.9316
+success,-5,True,False,-10.0,1.0,l1n,ge,0,0.153,0.9678
+success,-7,True,True,-1000.0,1000.0,l1n linf,ge,0,0.1483,0.9672
+success,7,True,True,-10.0,0.1,l1 l1n,ge,0,0.1418,0.9675
+success,-3,True,False,-1.0,1000.0,l1n linf,ge,0,0.129,0.9076
+success,-10,True,True,-10.0,1.0,l1 l1n linf,gt,0,0.1658,0.9656
+success,9,True,False,-0.1,100.0,linf,gt,5,0.1512,0.7629
+success,-7,True,True,-100.0,0.1,l1 linf,lt,-5,0.1643,0.966
+success,-5,True,False,-10.0,10.0,l1 l1n linf,gt,5,0.1808,0.967
+success,-1,True,False,-10.0,10.0,l1n,lt,-1,0.1637,0.7788
+success,5,True,True,-1000.0,0.1,linf,lt,-5,0.1519,0.967
+success,-2,True,True,-1000.0,1000.0,l1,lt,-1,0.1635,0.7792
+success,7,True,False,-1000.0,1.0,l1 linf,gt,1,0.165,0.911
+success,-5,True,True,-100.0,10.0,l1n,lt,-5,0.1583,0.9678
+success,-1,True,True,-0.1,1000.0,linf,ge,0,0.1515,0.7839
+success,8,True,False,-10.0,1000.0,l1n linf,ge,0,0.129,0.9079
+success,-4,True,False,-1000.0,10.0,l1 l1n,lt,-1,0.1668,0.924
+success,9,True,True,-1000.0,1.0,l1n linf,lt,0,0.1603,0.6877
+success,-8,True,False,-10.0,10.0,l1 linf,gt,0,0.199,0.9686
+success,-10,True,True,-1000.0,10.0,l1,gt,0,0.1519,0.9499
+success,-2,True,False,-1.0,100.0,linf,lt,-5,0.1525,0.758
+success,8,True,False,-1000.0,1.0,linf,lt,-5,0.1311,0.9438
+success,-1,True,True,-0.1,1.0,l1 l1n,gt,5,0.1096,0.7846
+success,2,True,True,-0.1,1000.0,l1,gt,5,0.132,0.8259
+success,9,True,False,-0.1,10.0,linf,gt,0,0.1515,0.7871
+success,-1,True,True,-1000.0,0.1,l1n linf,gt,0,0.1196,0.6537
+success,5,True,True,-1.0,100.0,l1 linf,lt,0,0.1558,0.9633
+success,6,True,False,-1.0,100.0,l1 linf,gt,1,0.1558,0.9633
+success,-8,True,True,-100.0,100.0,l1n,lt,-5,0.1929,0.9673
+success,1,True,False,-100.0,1000.0,l1 l1n,le,0,0.1519,0.9499
+success,-8,True,True,-100.0,0.1,l1 linf,lt,0,0.1643,0.966
+success,-9,True,False,-1000.0,10.0,l1 l1n,gt,5,0.1519,0.9499
+success,2,True,False,-1000.0,0.1,linf,gt,1,0.1462,0.9154
+success,1,True,True,-100.0,10.0,linf,lt,0,0.1553,0.5259
+success,7,True,True,-10.0,0.1,l1,gt,0,0.1418,0.9675
+success,-3,True,False,-1000.0,0.1,l1n linf,lt,-5,0.1457,0.9567
+success,-3,True,False,-100.0,1.0,linf,lt,-5,0.1329,0.9455

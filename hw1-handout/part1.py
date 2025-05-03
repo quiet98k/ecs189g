@@ -148,14 +148,16 @@ def your_edit(model, inputs, labels,
               lb=-10., ub=10.,
               norms=['l1'],
               mask_fn=operator.gt,
-              threshold=0
+              threshold=0,
+              print_config = True
               ):
     # raise NotImplementedError(
     #     "Editing method for `part1.py` not implemented."
     # )
-    print("\n" + "=" * 80)
-    print(f"Trying config | {layer=}, {multi_layer=}, {partial_layer=}, "
-        f"{lb=}, {ub=}, {norms=}, {mask_fn.__name__=}, {threshold=}")
+    if print_config:
+        print("\n" + "=" * 80)
+        print(f"Trying config | {layer = }, {multi_layer = }, {partial_layer = }, "
+            f"{lb = }, {ub = }, {norms = }, {mask_fn.__name__ = }, {threshold = }")
 
     
     model = deepcopy(model)

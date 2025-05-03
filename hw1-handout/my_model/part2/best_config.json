@@ -1,16 +1,16 @@
 {
   "status": "success",
-  "layer": 2,
+  "layer": -7,
   "multi_layer": true,
-  "partial_layer": true,
-  "lb": -100.0,
-  "ub": 10.0,
+  "partial_layer": false,
+  "lb": -10.0,
+  "ub": 1.0,
   "norms": [
     "l1",
     "l1n"
   ],
   "mask_fn": "lt",
   "threshold": 0,
-  "edit_acc": 0.1519,
-  "test_acc": 0.9499
+  "edit_acc": 0.2019,
+  "test_acc": 0.9691
 }

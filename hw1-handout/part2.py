@@ -9,10 +9,40 @@ import os
 import json
 import sys
 import csv
-from itertools import product
+from itertools import product, islice
 import random
+from contextlib import contextmanager
 
-def edit(model, images, labels):
+@contextmanager
+def suppress_stdout():
+    original_stdout = sys.stdout
+    sys.stdout = open(os.devnull, 'w')
+    try:
+        yield
+    finally:
+        sys.stdout.close()
+        sys.stdout = original_stdout
+
+def load_batches(edit_dataset, max_batches):
+    
+    edit_dataloader = torch.utils.data.DataLoader(
+        edit_dataset, batch_size=10, shuffle=False
+    )
+
+    all_images = []
+    all_labels = []
+
+    batch_iter = edit_dataloader if max_batches == 0 else islice(edit_dataloader, max_batches)
+
+    for images, labels in batch_iter:
+        all_images.append(images)
+        all_labels.append(labels)
+
+    all_images = torch.cat(all_images, dim=0)
+    all_labels = torch.cat(all_labels, dim=0)
+    return all_images, all_labels
+
+def edit(model, max_iteration = 500):
     # raise NotImplementedError(
     #     "Editing method for `part2.py` not implemented."
     best_models = []
@@ -42,6 +72,7 @@ def edit(model, images, labels):
     ]
 
     param_grid = {
+        "num_batches": [500,750,1000],
         "layer": list(range(-10, 10)),
         "multi_layer": [False, True],
         "partial_layer": [True, False],
@@ -52,6 +83,7 @@ def edit(model, images, labels):
     } 
 
     all_combinations = list(product(
+        param_grid["num_batches"],
         param_grid["norms"],
         param_grid["mask"],
         param_grid["lb"],
@@ -61,10 +93,14 @@ def edit(model, images, labels):
         param_grid["multi_layer"]
     ))
 
-    random_combinations = random.sample(all_combinations, 5000)
+    random_combinations = random.sample(all_combinations, max_iteration)
 
-    for norms, (mask_fn, threshold), lb, ub, partial_layer, layer, multi_layer in all_combinations:
+    for num_batches, norms, (mask_fn, threshold), lb, ub, partial_layer, layer, multi_layer in random_combinations:
         try:
+            print("\n" + "=" * 80)
+            print(f"Trying config | {num_batches = }, {layer = }, {multi_layer = }, {partial_layer = }, "
+                f"{lb = }, {ub = }, {norms = }, {mask_fn.__name__ = }, {threshold = }")
+            images, labels = load_batches(edit_dataset, num_batches)
             edited_model = your_edit(
                 model,
                 inputs=images,
@@ -76,18 +112,23 @@ def edit(model, images, labels):
                 ub=ub,
                 norms=norms,
                 mask_fn=mask_fn,
-                threshold=threshold
+                threshold=threshold,
+                print_config=False
             )
 
             if edited_model is None:
+                print("=" * 80)
                 continue  # skip null edits
-            print("Edited Accuracy: ")
-            edit_acc = test(edited_model, edit_dataset)
-            print("Test Accuracy: ")
-            test_acc = test(edited_model, load_testset())
+            with suppress_stdout():
+                edit_acc = test(edited_model, edit_dataset)
+                test_acc = test(edited_model, load_testset())
+            print(f"{edit_acc = }")
+            print(f"{test_acc = }")
+                            
 
             result = {
                 "status": "success",
+                "num_batches": num_batches,
                 "layer": layer,
                 "multi_layer": multi_layer,
                 "partial_layer": partial_layer,
@@ -111,7 +152,10 @@ def edit(model, images, labels):
 
         except Exception as e:
             print(f"❌ Failed with error: {e}")
+            print("=" * 80)
             continue
+        
+        print("=" * 80)
     
     # Sort by edit_acc descending, filter out test_acc < 90%
     valid_results = [
@@ -129,7 +173,7 @@ def edit(model, images, labels):
     csv_path = "my_model/part2/full_results.csv"
     with open(csv_path, "w", newline="") as csvfile:
         writer = csv.DictWriter(csvfile, fieldnames=[
-            "status", "layer", "multi_layer", "partial_layer",
+            "status", "num_batches", "layer", "multi_layer", "partial_layer",
             "lb", "ub", "norms", "mask_fn", "threshold",
             "edit_acc", "test_acc"
         ])
@@ -137,6 +181,7 @@ def edit(model, images, labels):
         for _, res in results:
             writer.writerow({
                 "status": res["status"],
+                "num_batches": res["num_batches"],
                 "layer": res["layer"],
                 "multi_layer": res["multi_layer"],
                 "partial_layer": res["partial_layer"],
@@ -172,17 +217,20 @@ if __name__ == "__main__":
     """ Load the edit dataset and test dataset. """
     edit_dataset = load_edit_dataset_part_2()
 
-    edit_dataloader = torch.utils.data.DataLoader(
-        edit_dataset, batch_size=10, shuffle=False
-    )
-
-    images, labels = next(iter(edit_dataloader))
-
     """ TODO: Implement the edit function. The edited_model returned
         by the function should maximize the accuracy on edit_dataset
         while ensuring that the accuracy on the test set is >= 90%.
     """
-    edited_model = edit(model, images, labels)
+    edited_model = edit(model, 500)
+    # edited_model = your_edit(model, inputs=all_images, 
+    #                          labels=all_labels, 
+    #                          layer=-7, 
+    #                          multi_layer=True,
+    #                          partial_layer=False,
+    #                          lb=-10., ub=1.,
+    #                          norms=['l1', 'l1n'],
+    #                          mask_fn=operator.lt,
+    #                          threshold=0)
 
     if edited_model is None:
         print("Editing failed.")
