@@ -13,18 +13,18 @@ from itertools import product, islice
 import random
 from contextlib import contextmanager
 import optuna
-optuna.logging.set_verbosity(optuna.logging.WARNING)
+# optuna.logging.set_verbosity(optuna.logging.WARNING)
 
 
-@contextmanager
-def suppress_stdout():
-    original_stdout = sys.stdout
-    sys.stdout = open(os.devnull, 'w')
-    try:
-        yield
-    finally:
-        sys.stdout.close()
-        sys.stdout = original_stdout
+# @contextmanager
+# def suppress_stdout():
+    # original_stdout = sys.stdout
+    # sys.stdout = open(os.devnull, 'w')
+    # try:
+    #     yield
+    # finally:
+    #     sys.stdout.close()
+    #     sys.stdout = original_stdout
 
 def load_batches(edit_dataset, max_batches):
     
@@ -70,7 +70,7 @@ def edit(model, max_iteration=500):
     edit_dataset = load_edit_dataset_part_2()
 
     def objective(trial):
-        num_batches = trial.suggest_int("num_batches", 1, 1000)
+        num_batches = trial.suggest_int("num_batches", 1, 500, log=True)
         layer = trial.suggest_int("layer", -10, 9)
         multi_layer = trial.suggest_categorical("multi_layer", [True, False])
         partial_layer = trial.suggest_categorical("partial_layer", [True, False])
@@ -114,9 +114,9 @@ def edit(model, max_iteration=500):
             print("=" * 80)
             raise optuna.TrialPruned()
 
-        with suppress_stdout():
-            edit_acc = test(edited_model, edit_dataset)
-            test_acc = test(edited_model, load_testset())
+        # with suppress_stdout():
+        edit_acc = test(edited_model, edit_dataset)
+        test_acc = test(edited_model, load_testset())
 
         print(f"{edit_acc = }")
         print(f"{test_acc = }")
