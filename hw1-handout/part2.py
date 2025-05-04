@@ -12,6 +12,9 @@ import csv
 from itertools import product, islice
 import random
 from contextlib import contextmanager
+import optuna
+optuna.logging.set_verbosity(optuna.logging.WARNING)
+
 
 @contextmanager
 def suppress_stdout():
@@ -42,67 +45,54 @@ def load_batches(edit_dataset, max_batches):
     all_labels = torch.cat(all_labels, dim=0)
     return all_images, all_labels
 
-def edit(model, max_iteration = 500):
-    # raise NotImplementedError(
-    #     "Editing method for `part2.py` not implemented."
-    best_models = []
-    results = []
-    best_model = None
-    best_result = None
-    best_test_acc = -1.0
+norms_dict = {
+    "l1": ['l1'],
+    "l1n": ['l1n'],
+    "linf": ['linf'],
+    "l1_l1n": ['l1', 'l1n'],
+    "l1_linf": ['l1', 'linf'],
+    "l1n_linf": ['l1n', 'linf'],
+    "all": ['l1', 'l1n', 'linf'],
+}
 
-    norms_options = [
-        ['l1'],
-        ['l1n'],
-        ['linf'],
-        ['l1', 'l1n'],
-        ['l1', 'linf'],
-        ['l1n', 'linf'],
-        ['l1', 'l1n', 'linf'],
-    ]
-    mask_options = [
-        (operator.gt, 0),
-        (operator.lt, 0),
-        (operator.gt, 1),
-        (operator.lt, -1),
-        (operator.gt, 5),
-        (operator.lt, -5),
-        (operator.ge, 0),
-        (operator.le, 0),
-    ]
+mask_dict = {
+    "gt_0": (operator.gt, 0),
+    "lt_0": (operator.lt, 0),
+    "gt_1": (operator.gt, 1),
+    "lt_neg1": (operator.lt, -1),
+    "gt_5": (operator.gt, 5),
+    "lt_neg5": (operator.lt, -5),
+    "ge_0": (operator.ge, 0),
+    "le_0": (operator.le, 0),
+}
 
-    param_grid = {
-        "num_batches": [500,750,1000],
-        "layer": list(range(-10, 10)),
-        "multi_layer": [False, True],
-        "partial_layer": [True, False],
-        "lb": [-0.1, -1., -10., -100., -1000.],
-        "ub": [0.1, 1., 10., 100., 1000.],
-        "norms": norms_options,
-        "mask": mask_options,
-    } 
+def edit(model, max_iteration=500):
+    edit_dataset = load_edit_dataset_part_2()
 
-    all_combinations = list(product(
-        param_grid["num_batches"],
-        param_grid["norms"],
-        param_grid["mask"],
-        param_grid["lb"],
-        param_grid["ub"],
-        param_grid["partial_layer"],
-        param_grid["layer"],
-        param_grid["multi_layer"]
-    ))
+    def objective(trial):
+        num_batches = trial.suggest_int("num_batches", 1, 1000)
+        layer = trial.suggest_int("layer", -10, 9)
+        multi_layer = trial.suggest_categorical("multi_layer", [True, False])
+        partial_layer = trial.suggest_categorical("partial_layer", [True, False])
+        lb = trial.suggest_categorical("lb", [-0.1, -1., -10., -100., -1000.])
+        ub = trial.suggest_categorical("ub", [0.1, 1., 10., 100., 1000.])
 
-    random_combinations = random.sample(all_combinations, max_iteration)
+        norm_key = trial.suggest_categorical("norms", list(norms_dict.keys()))
+        norms = norms_dict[norm_key]
 
-    for num_batches, norms, (mask_fn, threshold), lb, ub, partial_layer, layer, multi_layer in random_combinations:
+        mask_key = trial.suggest_categorical("mask", list(mask_dict.keys()))
+        mask_fn, threshold = mask_dict[mask_key]
+
+
+        print("\n" + "=" * 80)
+        print(f"Trying config | {num_batches = }, {layer = }, {multi_layer = }, {partial_layer = }, "
+              f"{lb = }, {ub = }, {norms = }, {mask_fn.__name__ = }, {threshold = }")
+
+        images, labels = load_batches(edit_dataset, num_batches)
+        
         try:
-            print("\n" + "=" * 80)
-            print(f"Trying config | {num_batches = }, {layer = }, {multi_layer = }, {partial_layer = }, "
-                f"{lb = }, {ub = }, {norms = }, {mask_fn.__name__ = }, {threshold = }")
-            images, labels = load_batches(edit_dataset, num_batches)
             edited_model = your_edit(
-                model,
+                deepcopy(model),
                 inputs=images,
                 labels=labels,
                 layer=layer,
@@ -115,98 +105,75 @@ def edit(model, max_iteration = 500):
                 threshold=threshold,
                 print_config=False
             )
-
-            if edited_model is None:
-                print("=" * 80)
-                continue  # skip null edits
-            with suppress_stdout():
-                edit_acc = test(edited_model, edit_dataset)
-                test_acc = test(edited_model, load_testset())
-            print(f"{edit_acc = }")
-            print(f"{test_acc = }")
-                            
-
-            result = {
-                "status": "success",
-                "num_batches": num_batches,
-                "layer": layer,
-                "multi_layer": multi_layer,
-                "partial_layer": partial_layer,
-                "lb": lb,
-                "ub": ub,
-                "norms": norms,
-                "mask_fn": mask_fn.__name__,
-                "threshold": threshold,
-                "edit_acc": edit_acc,
-                "test_acc": test_acc,
-            }
-            results.append((edited_model, result))
-            # print(f'{len(results) = }')
-
-
-            # Update best model
-            if test_acc > best_test_acc:
-                best_test_acc = test_acc
-                best_model = edited_model
-                best_result = result
-
         except Exception as e:
-            print(f"❌ Failed with error: {e}")
+            print(f"❌ your_edit failed: {e}")
             print("=" * 80)
-            continue
-        
+            raise optuna.TrialPruned()
+
+        if edited_model is None:
+            print("=" * 80)
+            raise optuna.TrialPruned()
+
+        with suppress_stdout():
+            edit_acc = test(edited_model, edit_dataset)
+            test_acc = test(edited_model, load_testset())
+
+        print(f"{edit_acc = }")
+        print(f"{test_acc = }")
         print("=" * 80)
-    
-    # Sort by edit_acc descending, filter out test_acc < 90%
-    valid_results = [
-        (model, r) for model, r in results if r["test_acc"] >= 0.9
-    ]
-    valid_results.sort(key=lambda x: x[1]["edit_acc"], reverse=True)
-    
-    # print(f'{len(results) = }')
-    # print(f'{len(valid_results) = }')
 
-    best_result = valid_results[0][1] if valid_results else None
-    best_valid_model = valid_results[0][0] if valid_results else None
+        if test_acc < 0.9:
+            raise optuna.TrialPruned()
 
-    # Write all original results to CSV
-    csv_path = "my_model/part2/full_results.csv"
-    with open(csv_path, "w", newline="") as csvfile:
+        trial.set_user_attr("model", edited_model)
+        trial.set_user_attr("result", {
+            "status": "success",
+            "num_batches": num_batches,
+            "layer": layer,
+            "multi_layer": multi_layer,
+            "partial_layer": partial_layer,
+            "lb": lb,
+            "ub": ub,
+            "norms": norms,
+            "mask_fn": mask_fn.__name__,
+            "threshold": threshold,
+            "edit_acc": edit_acc,
+            "test_acc": test_acc,
+        })
+
+        return edit_acc
+
+    study = optuna.create_study(direction="maximize")
+    study.optimize(objective, n_trials=max_iteration)
+
+    best_trial = study.best_trial
+    best_model = best_trial.user_attrs["model"]
+    best_result = best_trial.user_attrs["result"]
+
+    os.makedirs("my_model/part2", exist_ok=True)
+    with open("my_model/part2/best_config.json", "w") as f:
+        json.dump(best_result, f, indent=2)
+
+    with open("my_model/part2/full_results.csv", "w", newline="") as csvfile:
         writer = csv.DictWriter(csvfile, fieldnames=[
             "status", "num_batches", "layer", "multi_layer", "partial_layer",
-            "lb", "ub", "norms", "mask_fn", "threshold",
-            "edit_acc", "test_acc"
+            "lb", "ub", "norms", "mask_fn", "threshold", "edit_acc", "test_acc"
         ])
         writer.writeheader()
-        for _, res in results:
-            writer.writerow({
-                "status": res["status"],
-                "num_batches": res["num_batches"],
-                "layer": res["layer"],
-                "multi_layer": res["multi_layer"],
-                "partial_layer": res["partial_layer"],
-                "lb": res["lb"],
-                "ub": res["ub"],
-                "norms": " ".join(res["norms"]),
-                "mask_fn": res["mask_fn"],
-                "threshold": res["threshold"],
-                "edit_acc": res["edit_acc"],
-                "test_acc": res["test_acc"]
-            })
+        for trial in study.trials:
+            if "result" in trial.user_attrs:
+                row = trial.user_attrs["result"]
+                row["norms"] = " ".join(row["norms"])
+                writer.writerow(row)
 
+    print("\nBest Model Configuration (test_acc ≥ 90%):")
+    for k, v in best_result.items():
+        print(f"{k}: {' '.join(v) if k == 'norms' else v}")
+    print(f"\nBest Edit Accuracy: {best_result['edit_acc']:.4f}")
+    print(f"Best Test Accuracy: {best_result['test_acc']:.4f}")
 
-    if best_result:
-        with open("my_model/part2/best_config.json", "w") as f:
-            json.dump(best_result, f, indent=2)
-        print("\nBest Model Configuration (test_acc ≥ 90%):")
-        for k, v in best_result.items():
-            print(f"{k}: {' '.join(v) if k == 'norms' else v}")
-        print(f"\nBest Edit Accuracy: {best_result['edit_acc']:.4f}")
-        print(f"Best Test Accuracy: {best_result['test_acc']:.4f}")
-    else:
-        print("No valid edited model met the accuracy threshold (test_acc ≥ 90%).")
+    return best_model
 
-    return best_valid_model
 
 
 if __name__ == "__main__":
@@ -221,7 +188,7 @@ if __name__ == "__main__":
         by the function should maximize the accuracy on edit_dataset
         while ensuring that the accuracy on the test set is >= 90%.
     """
-    edited_model = edit(model, 500)
+    edited_model = edit(model, 50)
     # edited_model = your_edit(model, inputs=all_images, 
     #                          labels=all_labels, 
     #                          layer=-7, 
