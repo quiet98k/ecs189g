@@ -1,0 +1,18 @@
+{
+  "status": "success",
+  "num_batches": 3,
+  "layer": -10,
+  "multi_layer": true,
+  "partial_layer": true,
+  "lb": -1.0,
+  "ub": 100.0,
+  "norms": [
+    "l1",
+    "l1n",
+    "linf"
+  ],
+  "mask_fn": "gt",
+  "threshold": 1,
+  "edit_acc": 0.2344,
+  "test_acc": 0.9491
+}

@@ -188,7 +188,7 @@ if __name__ == "__main__":
         by the function should maximize the accuracy on edit_dataset
         while ensuring that the accuracy on the test set is >= 90%.
     """
-    edited_model = edit(model, 50)
+    edited_model = edit(model, 100)
     # edited_model = your_edit(model, inputs=all_images, 
     #                          labels=all_labels, 
     #                          layer=-7, 

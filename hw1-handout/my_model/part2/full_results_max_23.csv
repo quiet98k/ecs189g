@@ -1,0 +1,12 @@
+status,num_batches,layer,multi_layer,partial_layer,lb,ub,norms,mask_fn,threshold,edit_acc,test_acc
+success,1,3,True,True,-1000.0,100.0,l1 l1n,lt,-5,0.1929,0.9673
+success,1,-8,True,True,-1.0,10.0,l1 l1n linf,lt,-5,0.1818,0.9708
+success,1,-9,True,True,-1.0,10.0,l1 l1n linf,lt,-5,0.1532,0.9442
+success,1,-10,True,True,-1.0,10.0,l1 l1n linf,lt,-5,0.1532,0.9442
+success,2,-8,True,True,-1.0,10.0,l1 l1n linf,lt,-5,0.1667,0.9629
+success,2,-8,True,True,-1.0,10.0,l1 l1n linf,lt,-5,0.1667,0.9629
+success,2,-7,True,True,-1.0,10.0,l1 l1n linf,lt,-5,0.1667,0.9629
+success,3,-10,True,True,-1.0,10.0,l1 l1n linf,gt,1,0.2341,0.9491
+success,3,-10,True,True,-1.0,100.0,l1 l1n linf,gt,1,0.2344,0.9491
+success,3,-9,True,True,-1.0,10.0,l1 l1n linf,ge,0,0.2341,0.9491
+success,3,-10,True,True,-1.0,100.0,l1 l1n linf,ge,0,0.2344,0.9491
