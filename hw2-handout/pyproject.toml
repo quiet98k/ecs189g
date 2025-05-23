@@ -1,0 +1,28 @@
+[project]
+name = "ecs189g-s25-hw2"
+version = "1.0.0"
+description = "ECS 189G Spring 2025 Homework 2"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "captum>=0.8.0",
+    "numpy==1.26.4",
+    "pip>=25.1.1",
+    "torch>=2.5.0",
+    "torchattacks==3.5.1",
+    "torchvision>=0.21.0",
+    "tqdm==4.67.1",
+]
+
+[tool.uv.sources]
+torch = [
+  { index = "pytorch-cpu", marker = "sys_platform == 'linux' or sys_platform == 'win32'" },
+]
+torchvision = [
+  { index = "pytorch-cpu", marker = "sys_platform == 'linux' or sys_platform == 'win32'" },
+]
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
